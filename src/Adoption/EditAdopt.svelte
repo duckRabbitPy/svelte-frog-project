@@ -49,7 +49,7 @@ function cancel() {
     }
 </style>
 
-    <Modal title="Rehome Form" on:cancel>
+    <Modal title="Re-home Form" on:cancel>
     <form on:submit|preventDefault="{submitForm}" in:fade>
         <TextInput 
         Id="title" 

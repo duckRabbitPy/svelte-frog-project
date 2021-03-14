@@ -12,6 +12,7 @@ import About from "./UI/About.svelte";
 
 import Cart from "./Cart/Cart.svelte";
 import Products from "./Products/Products.svelte";
+import Feedback from "./UI/Feedback.svelte";
 
 let mainPage = true;
 let playQuiz = false;
@@ -20,6 +21,7 @@ let showCart = true;
 let editMode = null;
 let adoptMode = null;
 let aboutPage = false;
+let feedback = false;
 
 
     let frogs = [ 
@@ -136,11 +138,12 @@ let aboutPage = false;
 <Header/>
 <main>
     <div class="formControl">
-    <CustomButton btntype="submit" on:click="{() => {mainPage = true; aboutPage = false; playQuiz = false; goShop = false;}}">Main</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {aboutPage = true; mainPage = false; playQuiz = false; goShop = false;}}">About</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {mainPage = true; aboutPage = false; playQuiz = false; goShop = false; feedback = false;}}">Main</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {aboutPage = true; mainPage = false; playQuiz = false; goShop = false; feedback = false;}}">About</CustomButton>
     <CustomButton btntype="submit" on:click="{() => editMode = 'add'}">Re-home your frog</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; }}">Nature Quiz</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false;}}">Frog Shop</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">Nature Quiz</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">Frog Shop</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {feedback = true; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
     <CustomButton btntype="submit"><a target="_blank" href="https://duckrabbitpython.pythonanywhere.com/toad">Toad Game</a></CustomButton>
     </div>
 
@@ -152,11 +155,17 @@ let aboutPage = false;
     <Adopt on:cancel-adopt="{hideAdopt}"/>
     {/if}
 
-    {#if playQuiz === true && goShop === false}
+    {#if playQuiz === true && goShop === false && feedback === false}
     <h1>Nature Quiz</h1>
     <Quiz />
     {/if}
-    {#if mainPage === true && playQuiz === false && goShop === false}
+
+    {#if feedback === true && playQuiz === false  && goShop === false}
+    <Feedback/>
+    {/if}
+
+
+    {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
     <AdoptGrid {frogs} on:toggle-favourite="{toggleFavourite}" on:adopt-event="{showAdopt}"/>
     {/if}

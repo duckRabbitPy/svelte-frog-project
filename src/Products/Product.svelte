@@ -6,6 +6,7 @@
   export let title;
   export let price;
   export let description;
+  export let srcVar;
 
   function addToCart() {
     cartItems.addItem({ id: id, title: title, price: price });
@@ -40,12 +41,17 @@
     margin: 0;
     font-family: "Roboto slab", sans-serif;
   }
+
+  img {
+    max-width: 100px
+  }
 </style>
 
 <div class="product">
   <div>
     <h1>{title}</h1>
     <h2>{price}</h2>
+    <img src="{srcVar}" alt="product">
     <p>{description}</p>
   </div>
   <div>

@@ -18,6 +18,7 @@
       id={product.id}
       title={product.title}
       price={product.price}
-      description={product.description} />
+      description={product.description}
+      srcVar={product.srcVar} />
   {/each}
 </section>
