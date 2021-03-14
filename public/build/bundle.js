@@ -1120,6 +1120,7 @@ var app = (function () {
     	let t0;
     	let t1;
     	let button;
+    	let t2;
     	let mounted;
     	let dispose;
 
@@ -1132,16 +1133,18 @@ var app = (function () {
     			t0 = text(/*counterName*/ ctx[0]);
     			t1 = space();
     			button = element("button");
-    			button.textContent = "Bump up likes";
+    			t2 = text(/*likeStatus*/ ctx[2]);
     			if (img.src !== (img_src_value = "https://www.flaticon.com/svg/vstatic/svg/424/424870.svg?token=exp=1615249621~hmac=e98a24b849aff33ebde9abf8fec9421d")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "frog");
     			attr_dev(img, "width", "40rem");
-    			add_location(img, file$i, 22, 13, 364);
-    			add_location(span, file$i, 22, 7, 358);
-    			attr_dev(p, "class", "svelte-lb4h6p");
-    			add_location(p, file$i, 22, 4, 355);
-    			add_location(button, file$i, 23, 4, 544);
-    			add_location(div, file$i, 21, 0, 345);
+    			add_location(img, file$i, 35, 13, 639);
+    			add_location(span, file$i, 35, 7, 633);
+    			attr_dev(p, "class", "svelte-4vhr8g");
+    			add_location(p, file$i, 35, 4, 630);
+    			button.disabled = /*disabled*/ ctx[1];
+    			attr_dev(button, "class", "svelte-4vhr8g");
+    			add_location(button, file$i, 36, 4, 819);
+    			add_location(div, file$i, 34, 0, 620);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1154,14 +1157,20 @@ var app = (function () {
     			append_dev(span, t0);
     			append_dev(div, t1);
     			append_dev(div, button);
+    			append_dev(button, t2);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*numOfClicks*/ ctx[1], false, false, false);
+    				dispose = listen_dev(button, "click", /*numOfClicks*/ ctx[3], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*counterName*/ 1) set_data_dev(t0, /*counterName*/ ctx[0]);
+    			if (dirty & /*likeStatus*/ 4) set_data_dev(t2, /*likeStatus*/ ctx[2]);
+
+    			if (dirty & /*disabled*/ 2) {
+    				prop_dev(button, "disabled", /*disabled*/ ctx[1]);
+    			}
     		},
     		i: noop,
     		o: noop,
@@ -1187,15 +1196,18 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Social", slots, []);
     	let { counterName } = $$props;
+    	let { disabled } = $$props;
+    	let likeStatus = "like";
     	let num = 0;
     	const dispatch = createEventDispatcher();
 
     	function numOfClicks() {
     		num += 1;
+    		$$invalidate(2, likeStatus = "liked!");
     		dispatch("pass-up-data", num);
     	}
 
-    	const writable_props = ["counterName"];
+    	const writable_props = ["counterName", "disabled"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Social> was created with unknown prop '${key}'`);
@@ -1203,11 +1215,14 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ("counterName" in $$props) $$invalidate(0, counterName = $$props.counterName);
+    		if ("disabled" in $$props) $$invalidate(1, disabled = $$props.disabled);
     	};
 
     	$$self.$capture_state = () => ({
     		counterName,
+    		disabled,
     		createEventDispatcher,
+    		likeStatus,
     		num,
     		dispatch,
     		numOfClicks
@@ -1215,6 +1230,8 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("counterName" in $$props) $$invalidate(0, counterName = $$props.counterName);
+    		if ("disabled" in $$props) $$invalidate(1, disabled = $$props.disabled);
+    		if ("likeStatus" in $$props) $$invalidate(2, likeStatus = $$props.likeStatus);
     		if ("num" in $$props) num = $$props.num;
     	};
 
@@ -1222,13 +1239,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [counterName, numOfClicks];
+    	return [counterName, disabled, likeStatus, numOfClicks];
     }
 
     class Social extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { counterName: 0 });
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { counterName: 0, disabled: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1243,6 +1260,10 @@ var app = (function () {
     		if (/*counterName*/ ctx[0] === undefined && !("counterName" in props)) {
     			console.warn("<Social> was created without expected prop 'counterName'");
     		}
+
+    		if (/*disabled*/ ctx[1] === undefined && !("disabled" in props)) {
+    			console.warn("<Social> was created without expected prop 'disabled'");
+    		}
     	}
 
     	get counterName() {
@@ -1250,6 +1271,14 @@ var app = (function () {
     	}
 
     	set counterName(value) {
+    		throw new Error("<Social>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get disabled() {
+    		throw new Error("<Social>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set disabled(value) {
     		throw new Error("<Social>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -1526,9 +1555,11 @@ var app = (function () {
     }
 
     /* src/Adoption/AdoptItem.svelte generated by Svelte v3.35.0 */
+
+    const { Error: Error_1$1, Object: Object_1, console: console_1$1 } = globals;
     const file$f = "src/Adoption/AdoptItem.svelte";
 
-    // (101:6) {#if isFavItem}
+    // (158:6) {#if isFavItem}
     function create_if_block$6(ctx) {
     	let badge;
     	let current;
@@ -1567,14 +1598,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(101:6) {#if isFavItem}",
+    		source: "(158:6) {#if isFavItem}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:8) <Badge>
+    // (159:8) <Badge>
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -1594,14 +1625,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(102:8) <Badge>",
+    		source: "(159:8) <Badge>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:8) <CustomButton on:click={() => dispatch('adopt-event')} btntype="submit">
+    // (167:8) <CustomButton on:click={() => dispatch('adopt-event')} btntype="submit">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -1621,14 +1652,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(110:8) <CustomButton on:click={() => dispatch('adopt-event')} btntype=\\\"submit\\\">",
+    		source: "(167:8) <CustomButton on:click={() => dispatch('adopt-event')} btntype=\\\"submit\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (111:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">
+    // (168:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">
     function create_default_slot$7(ctx) {
     	let t_value = (/*isFavItem*/ ctx[7]
     	? "Remove from favourites"
@@ -1657,7 +1688,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$7.name,
     		type: "slot",
-    		source: "(111:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype=\\\"submit\\\" stateColour=\\\"{isFavItem ? null : \\\"success\\\"}\\\">",
+    		source: "(168:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype=\\\"submit\\\" stateColour=\\\"{isFavItem ? null : \\\"success\\\"}\\\">",
     		ctx
     	});
 
@@ -1710,7 +1741,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton0.$on("click", /*click_handler*/ ctx[11]);
+    	custombutton0.$on("click", /*click_handler*/ ctx[13]);
 
     	custombutton1 = new CustomButton({
     			props: {
@@ -1722,14 +1753,18 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton1.$on("click", /*click_handler_1*/ ctx[12]);
+    	custombutton1.$on("click", /*click_handler_1*/ ctx[14]);
 
     	social = new Social({
-    			props: { counterName: "Likes " + /*likes*/ ctx[8] },
+    			props: {
+    				disabled: /*disabled*/ ctx[9],
+    				counterName: "Likes " + /*likes*/ ctx[8]
+    			},
     			$$inline: true
     		});
 
-    	social.$on("pass-up-data", /*captureCustomEventData*/ ctx[10]);
+    	social.$on("pass-up-data", /*saveLikesFb*/ ctx[12]);
+    	social.$on("pass-up-data", /*captureCustomEventData*/ ctx[11]);
 
     	const block = {
     		c: function create() {
@@ -1765,34 +1800,34 @@ var app = (function () {
     			t14 = space();
     			create_component(social.$$.fragment);
     			attr_dev(h1, "class", "svelte-zwdw5z");
-    			add_location(h1, file$f, 91, 8, 1533);
+    			add_location(h1, file$f, 148, 8, 2839);
     			attr_dev(h2, "class", "svelte-zwdw5z");
-    			add_location(h2, file$f, 93, 8, 1567);
+    			add_location(h2, file$f, 150, 8, 2873);
     			attr_dev(p0, "class", "svelte-zwdw5z");
-    			add_location(p0, file$f, 94, 8, 1595);
+    			add_location(p0, file$f, 151, 8, 2901);
     			attr_dev(header, "class", "svelte-zwdw5z");
-    			add_location(header, file$f, 90, 4, 1516);
+    			add_location(header, file$f, 147, 4, 2822);
     			if (img.src !== (img_src_value = /*imageUrl*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-zwdw5z");
-    			add_location(img, file$f, 97, 8, 1668);
+    			add_location(img, file$f, 154, 8, 2974);
     			attr_dev(div0, "class", "image svelte-zwdw5z");
-    			add_location(div0, file$f, 96, 4, 1640);
+    			add_location(div0, file$f, 153, 4, 2946);
     			attr_dev(div1, "class", "badge svelte-zwdw5z");
-    			add_location(div1, file$f, 99, 4, 1714);
+    			add_location(div1, file$f, 156, 4, 3020);
     			attr_dev(p1, "class", "svelte-zwdw5z");
-    			add_location(p1, file$f, 105, 8, 1857);
+    			add_location(p1, file$f, 162, 8, 3163);
     			attr_dev(div2, "class", "content svelte-zwdw5z");
-    			add_location(div2, file$f, 104, 4, 1827);
+    			add_location(div2, file$f, 161, 4, 3133);
     			attr_dev(a, "href", a_href_value = "mailto:" + /*email*/ ctx[6]);
-    			add_location(a, file$f, 108, 8, 1910);
+    			add_location(a, file$f, 165, 8, 3216);
     			attr_dev(footer, "class", "svelte-zwdw5z");
-    			add_location(footer, file$f, 107, 4, 1893);
+    			add_location(footer, file$f, 164, 4, 3199);
     			attr_dev(article, "class", "svelte-zwdw5z");
-    			add_location(article, file$f, 89, 0, 1494);
+    			add_location(article, file$f, 146, 0, 2800);
     		},
     		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    			throw new Error_1$1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, article, anchor);
@@ -1866,7 +1901,7 @@ var app = (function () {
 
     			const custombutton0_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 131072) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -1874,12 +1909,13 @@ var app = (function () {
     			const custombutton1_changes = {};
     			if (dirty & /*isFavItem*/ 128) custombutton1_changes.stateColour = /*isFavItem*/ ctx[7] ? null : "success";
 
-    			if (dirty & /*$$scope, isFavItem*/ 8320) {
+    			if (dirty & /*$$scope, isFavItem*/ 131200) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton1.$set(custombutton1_changes);
     			const social_changes = {};
+    			if (dirty & /*disabled*/ 512) social_changes.disabled = /*disabled*/ ctx[9];
     			if (dirty & /*likes*/ 256) social_changes.counterName = "Likes " + /*likes*/ ctx[8];
     			social.$set(social_changes);
     		},
@@ -1938,11 +1974,62 @@ var app = (function () {
     	let { email } = $$props;
     	let { isFavItem } = $$props;
     	let likes = 0;
+    	let stateOfLikes;
+    	let disabled = false;
     	const dispatch = createEventDispatcher();
 
     	function captureCustomEventData(event) {
     		//can access data up from your custom event from detail property 
-    		$$invalidate(8, likes = event.detail);
+    		$$invalidate(8, likes += event.detail);
+    	}
+
+    	function shareLikeState() {
+    		dispatch("share-like", stateOfLikes);
+    	}
+
+    	//GET is default if not specified
+    	fetch("https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json").then(res => {
+    		if (!res.ok) {
+    			throw new Error("Get request failed");
+    		}
+
+    		return res.json();
+    	}).then(data => {
+    		stateOfLikes = data;
+    		$$invalidate(8, likes = stateOfLikes[id]);
+    	}).catch(err => {
+    		console.log(err);
+    	});
+
+    	function saveLikesFb() {
+    		//unpack into an Array
+    		let ObArr = Object.entries(stateOfLikes);
+
+    		let newObj = {};
+
+    		for (let x = 0; x < ObArr.length; x++) {
+    			//if selected frog id matches firestore id, increment by 1
+    			//then add to object
+    			if (ObArr[x][0] === id) {
+    				newObj[ObArr[x][0]] = Number(ObArr[x][1]) + 1;
+    			} else {
+    				newObj[ObArr[x][0]] = Number(ObArr[x][1]);
+    			}
+    		}
+
+    		$$invalidate(9, disabled = true);
+
+    		fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`, {
+    			method: "PUT",
+    			body: JSON.stringify(newObj),
+    			headers: { "Content-Type": "application/json" }
+    		}).then(res => {
+    			if (!res.ok) {
+    				throw new Error("Post request failed");
+    			}
+    		}).catch(err => {
+    			console.log(err); //space for further data manipulatin
+    		});
     	}
 
     	const writable_props = [
@@ -1956,8 +2043,8 @@ var app = (function () {
     		"isFavItem"
     	];
 
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<AdoptItem> was created with unknown prop '${key}'`);
+    	Object_1.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$1.warn(`<AdoptItem> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => dispatch("adopt-event");
@@ -1987,10 +2074,14 @@ var app = (function () {
     		email,
     		isFavItem,
     		likes,
+    		stateOfLikes,
+    		disabled,
     		CustomButton,
     		Badge,
     		dispatch,
-    		captureCustomEventData
+    		captureCustomEventData,
+    		shareLikeState,
+    		saveLikesFb
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2003,6 +2094,8 @@ var app = (function () {
     		if ("email" in $$props) $$invalidate(6, email = $$props.email);
     		if ("isFavItem" in $$props) $$invalidate(7, isFavItem = $$props.isFavItem);
     		if ("likes" in $$props) $$invalidate(8, likes = $$props.likes);
+    		if ("stateOfLikes" in $$props) stateOfLikes = $$props.stateOfLikes;
+    		if ("disabled" in $$props) $$invalidate(9, disabled = $$props.disabled);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2019,8 +2112,10 @@ var app = (function () {
     		email,
     		isFavItem,
     		likes,
+    		disabled,
     		dispatch,
     		captureCustomEventData,
+    		saveLikesFb,
     		click_handler,
     		click_handler_1
     	];
@@ -2052,100 +2147,100 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*id*/ ctx[0] === undefined && !("id" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'id'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'id'");
     		}
 
     		if (/*title*/ ctx[1] === undefined && !("title" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'title'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'title'");
     		}
 
     		if (/*subtitle*/ ctx[2] === undefined && !("subtitle" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'subtitle'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'subtitle'");
     		}
 
     		if (/*imageUrl*/ ctx[3] === undefined && !("imageUrl" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'imageUrl'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'imageUrl'");
     		}
 
     		if (/*description*/ ctx[4] === undefined && !("description" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'description'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'description'");
     		}
 
     		if (/*address*/ ctx[5] === undefined && !("address" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'address'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'address'");
     		}
 
     		if (/*email*/ ctx[6] === undefined && !("email" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'email'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'email'");
     		}
 
     		if (/*isFavItem*/ ctx[7] === undefined && !("isFavItem" in props)) {
-    			console.warn("<AdoptItem> was created without expected prop 'isFavItem'");
+    			console_1$1.warn("<AdoptItem> was created without expected prop 'isFavItem'");
     		}
     	}
 
     	get id() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set id(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get title() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set title(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get subtitle() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set subtitle(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get imageUrl() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set imageUrl(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get description() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set description(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get address() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set address(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get email() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set email(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get isFavItem() {
-    		throw new Error("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set isFavItem(value) {
-    		throw new Error("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error_1$1("<AdoptItem>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 

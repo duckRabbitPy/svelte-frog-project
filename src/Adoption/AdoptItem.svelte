@@ -10,16 +10,73 @@
     export let address;
     export let email;
     export let isFavItem;
+    
     let likes = 0;
+    let stateOfLikes;
+    let disabled = false;
+  
+
+
     import CustomButton from "../UI/CustomButton.svelte";
     import Badge from "../UI/Badge.svelte";
 
+
     const dispatch = createEventDispatcher();
 
-  function captureCustomEventData(event){
+    function captureCustomEventData(event){
       //can access data up from your custom event from detail property 
-      likes = event.detail
+      likes += event.detail 
   }
+
+    function shareLikeState(){
+        dispatch('share-like',stateOfLikes)
+    }
+
+  //GET is default if not specified
+  fetch('https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json')
+  .then(res => {if (!res.ok ){
+  throw new Error('Get request failed');}
+  return res.json()
+  })
+  .then(data => {
+    stateOfLikes = data;
+    likes = stateOfLikes[id];
+  
+
+  }).catch(err => {console.log(err)})
+
+
+  function saveLikesFb(){
+    //unpack into an Array
+    let ObArr = Object.entries(stateOfLikes)
+    
+    let newObj = {};
+
+    for(let x=0; x<ObArr.length; x++){
+      //if selected frog id matches firestore id, increment by 1
+      //then add to object
+      if(ObArr[x][0] === id){
+      newObj[ObArr[x][0]] = (Number(ObArr[x][1]) + 1)}
+      else{
+        newObj[ObArr[x][0]] = (Number(ObArr[x][1]))
+      }
+    }
+
+    disabled = true;
+
+
+    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`, {
+    method: "PUT",
+    body: JSON.stringify(newObj),
+    headers: { 'Content-Type': 'application/json'}
+  }).then(res => {if (!res.ok ){
+    throw new Error('Post request failed')
+  }
+  //space for further data manipulatin
+  }).catch(err => {
+    console.log(err);
+  })
+}
     
 </script>
 
@@ -109,7 +166,7 @@
         <a href="mailto:{email}">Contact</a>
         <CustomButton on:click={() => dispatch('adopt-event')} btntype="submit">Adopt!</CustomButton>
         <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">{isFavItem ? 'Remove from favourites' : 'Add to favourites'}</CustomButton>
-        <Social counterName="Likes {likes}" 
+        <Social on:pass-up-data="{saveLikesFb}" disabled="{disabled}" counterName="Likes {likes}" 
         on:pass-up-data="{captureCustomEventData}"/>
     </footer>
 </article>
