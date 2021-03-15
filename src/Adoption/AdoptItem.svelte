@@ -70,7 +70,7 @@
     body: JSON.stringify(newObj),
     headers: { 'Content-Type': 'application/json'}
   }).then(res => {if (!res.ok ){
-    throw new Error('Post request failed')
+    throw new Error('Put request failed')
   }
   //space for further data manipulatin
   }).catch(err => {

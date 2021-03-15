@@ -2,6 +2,7 @@
     import { createEventDispatcher } from "svelte";
 
 	let options = [
+        { id: 0, text: `no rating`},
 		{ id: 1, text: `🐸` },
 		{ id: 2, text: `🐸🐸` },
         { id: 3, text: `🐸🐸🐸` },

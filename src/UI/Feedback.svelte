@@ -3,14 +3,17 @@
   import CustomButton from "../UI/CustomButton.svelte";
   import Selector from "../UI/Selector.svelte"
 
-
-  export let feedUser
-  export let feedComment
   export let numStars
 
-  let userRating = ''
 
-  //for the defaults
+  let btnMsg = "Share feedback";
+  let disableBtn = false;
+  let newUser = '';
+  let newComment = '';
+  let newRating = '';
+  let storedComments = '';
+
+  //for the incoming
   let frogStars = createFrogStars(numStars)
 
   function createFrogStars(numStars){
@@ -23,9 +26,48 @@
 
   //for the users
   function setStars(event){
-    console.log("hello")
-    userRating = event.detail
+    newRating = event.detail
   }
+
+  function sendToBase(){
+    btnMsg = "Thanks!"
+    disableBtn = true
+    let data = {User: newUser, Comment: newComment, Rating: newRating }
+    saveFeedback(data)
+  }
+
+  //GET is default if not specified
+  function getFeedback(){
+  fetch('https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json')
+  .then(res => {if (!res.ok ){
+  throw new Error('Get request failed');}
+  return res.json()
+  })
+  .then(data => {
+    storedComments = data;
+    storedComments = Object.values(data);
+  }).catch(err => {console.log(err)})};
+
+
+  
+  function saveFeedback(data){
+
+    if(data){
+
+    //must be .json endpoint
+    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json`, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json'}
+  }).then(res => {if (!res.ok ){
+    throw new Error('Post request failed')
+  }
+  //space for further data manipulatin
+  getFeedback()
+  }).catch(err => {
+    console.log(err);
+  })
+}}
 
 </script>
 <style>
@@ -104,6 +146,17 @@ img{
 
 .commentCard {
   padding-left: 1rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70%;
 }
 .grid-container {
   padding-left: 1rem;
@@ -117,11 +170,15 @@ img{
 <h2>🐸🐸🐸🐸</h2>
 </div>
 
-<div class="commentCard">
-    <h3>User: {feedUser}</h3>
-    <p><i>{feedComment}</i></p>
-    <h2>{frogStars}</h2>
-</div>
+
+  {#each storedComments as storedComment }
+  <div class="commentCard">
+    <h3>User: {storedComment.User}</h3>
+    <p><i>{storedComment.Comment}</i></p>
+    <h2>{storedComment.Rating}</h2>
+  </div>
+  {/each}
+
 
 <div class="grid-container">
   <div class="h1">
@@ -132,7 +189,7 @@ img{
   <div class="User">
     <div class="userInput"> 
       <header>Username (Anon by default)</header>
-      <textarea>Anon</textarea>
+      <textarea on:input={event => (newUser = event.target.value)}>Anon</textarea>
     </div>
     <div class="rating">
       <header>Frog star rating</header>
@@ -140,9 +197,9 @@ img{
     </div>
   </div>
   <div class="comment">
-  <textarea class="commentInput"></textarea>
+  <textarea class="commentInput" on:input={event => (newComment = event.target.value)}></textarea>
   <div class="btnPad">
-    <CustomButton>Share feedback</CustomButton>
+    <CustomButton disabled={disableBtn} on:click="{sendToBase}">{btnMsg}</CustomButton>
   </div>
   </div>
 </div>
