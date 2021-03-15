@@ -1,6 +1,5 @@
 <script>
-
-import { handle_promise, select_multiple_value } from "svelte/internal";
+import { fade, fly } from "svelte/transition";
 
 </script>
 <style>
@@ -31,6 +30,7 @@ import { handle_promise, select_multiple_value } from "svelte/internal";
 
     .textInfo {
         font-family: "Roboto Slab", sans-serif;
+        font-size: large;
         padding-left: 1rem;
         padding-right: 2rem;
         margin-right: 1rem;
@@ -56,7 +56,7 @@ import { handle_promise, select_multiple_value } from "svelte/internal";
     }
 </style>
 
-<div class="container">
+<div class="container" in:fly>
     
 <div class="textInfo">
 <h1>Hi i'm Oli</h1>

@@ -91,7 +91,7 @@ let feedback = false;
         updatedFrog.isFavourite = !updatedFrog.isFavourite;
         const frogIndex = frogs.findIndex(m => m.id === id);
         const updatedFrogs = [...frogs];
-        updatedFrogs[frogIndex] = updatedfrog;
+        updatedFrogs[frogIndex] = updatedFrog;
         frogs = updatedFrogs;
     }
 
@@ -143,8 +143,7 @@ let feedback = false;
     <CustomButton btntype="submit" on:click="{() => editMode = 'add'}">Re-home your frog</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">Nature Quiz</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">Frog Shop</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {feedback = true; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
-    <CustomButton btntype="submit"><a target="_blank" href="https://duckrabbitpython.pythonanywhere.com/toad">Toad Game</a></CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
     </div>
 
     {#if editMode === 'add'}
@@ -161,7 +160,7 @@ let feedback = false;
     {/if}
 
     {#if feedback === true && playQuiz === false  && goShop === false}
-    <Feedback/>
+    <Feedback feedUser="Oli" feedComment="Awesome" numStars=5 />
     {/if}
 
 

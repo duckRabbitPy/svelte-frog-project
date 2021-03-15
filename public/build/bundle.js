@@ -174,9 +174,6 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
-    function select_multiple_value(select) {
-        return [].map.call(select.querySelectorAll(':checked'), option => option.__value);
-    }
     function toggle_class(element, name, toggle) {
         element.classList[toggle ? 'add' : 'remove'](name);
     }
@@ -1660,7 +1657,7 @@ var app = (function () {
     }
 
     // (168:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">
-    function create_default_slot$7(ctx) {
+    function create_default_slot$8(ctx) {
     	let t_value = (/*isFavItem*/ ctx[7]
     	? "Remove from favourites"
     	: "Add to favourites") + "";
@@ -1686,7 +1683,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$7.name,
+    		id: create_default_slot$8.name,
     		type: "slot",
     		source: "(168:8) <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype=\\\"submit\\\" stateColour=\\\"{isFavItem ? null : \\\"success\\\"}\\\">",
     		ctx
@@ -1747,7 +1744,7 @@ var app = (function () {
     			props: {
     				btntype: "submit",
     				stateColour: /*isFavItem*/ ctx[7] ? null : "success",
-    				$$slots: { default: [create_default_slot$7] },
+    				$$slots: { default: [create_default_slot$8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1799,31 +1796,31 @@ var app = (function () {
     			create_component(custombutton1.$$.fragment);
     			t14 = space();
     			create_component(social.$$.fragment);
-    			attr_dev(h1, "class", "svelte-zwdw5z");
+    			attr_dev(h1, "class", "svelte-mj1ygn");
     			add_location(h1, file$g, 148, 8, 2839);
-    			attr_dev(h2, "class", "svelte-zwdw5z");
+    			attr_dev(h2, "class", "svelte-mj1ygn");
     			add_location(h2, file$g, 150, 8, 2873);
-    			attr_dev(p0, "class", "svelte-zwdw5z");
+    			attr_dev(p0, "class", "svelte-mj1ygn");
     			add_location(p0, file$g, 151, 8, 2901);
-    			attr_dev(header, "class", "svelte-zwdw5z");
+    			attr_dev(header, "class", "svelte-mj1ygn");
     			add_location(header, file$g, 147, 4, 2822);
     			if (img.src !== (img_src_value = /*imageUrl*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "svelte-zwdw5z");
+    			attr_dev(img, "class", "svelte-mj1ygn");
     			add_location(img, file$g, 154, 8, 2974);
-    			attr_dev(div0, "class", "image svelte-zwdw5z");
+    			attr_dev(div0, "class", "image svelte-mj1ygn");
     			add_location(div0, file$g, 153, 4, 2946);
-    			attr_dev(div1, "class", "badge svelte-zwdw5z");
+    			attr_dev(div1, "class", "badge svelte-mj1ygn");
     			add_location(div1, file$g, 156, 4, 3020);
-    			attr_dev(p1, "class", "svelte-zwdw5z");
+    			attr_dev(p1, "class", "svelte-mj1ygn");
     			add_location(p1, file$g, 162, 8, 3163);
-    			attr_dev(div2, "class", "content svelte-zwdw5z");
+    			attr_dev(div2, "class", "content svelte-mj1ygn");
     			add_location(div2, file$g, 161, 4, 3133);
     			attr_dev(a, "href", a_href_value = "mailto:" + /*email*/ ctx[6]);
     			add_location(a, file$g, 165, 8, 3216);
-    			attr_dev(footer, "class", "svelte-zwdw5z");
+    			attr_dev(footer, "class", "svelte-mj1ygn");
     			add_location(footer, file$g, 164, 4, 3199);
-    			attr_dev(article, "class", "svelte-zwdw5z");
+    			attr_dev(article, "class", "svelte-mj1ygn");
     			add_location(article, file$g, 146, 0, 2800);
     		},
     		l: function claim(nodes) {
@@ -2925,7 +2922,7 @@ var app = (function () {
     const get_footer_slot_context = ctx => ({});
 
     // (72:6) <CustomButton on:click="{closeModel}">
-    function create_default_slot$6(ctx) {
+    function create_default_slot$7(ctx) {
     	let t;
 
     	const block = {
@@ -2942,7 +2939,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$6.name,
+    		id: create_default_slot$7.name,
     		type: "slot",
     		source: "(72:6) <CustomButton on:click=\\\"{closeModel}\\\">",
     		ctx
@@ -2958,7 +2955,7 @@ var app = (function () {
 
     	custombutton = new CustomButton({
     			props: {
-    				$$slots: { default: [create_default_slot$6] },
+    				$$slots: { default: [create_default_slot$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -3474,7 +3471,7 @@ var app = (function () {
     }
 
     // (110:8) <CustomButton btntype="button" on:click="{cancel}">
-    function create_default_slot$5(ctx) {
+    function create_default_slot$6(ctx) {
     	let t;
 
     	const block = {
@@ -3491,7 +3488,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$5.name,
+    		id: create_default_slot$6.name,
     		type: "slot",
     		source: "(110:8) <CustomButton btntype=\\\"button\\\" on:click=\\\"{cancel}\\\">",
     		ctx
@@ -3527,7 +3524,7 @@ var app = (function () {
     	custombutton1 = new CustomButton({
     			props: {
     				btntype: "button",
-    				$$slots: { default: [create_default_slot$5] },
+    				$$slots: { default: [create_default_slot$6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -3873,7 +3870,7 @@ var app = (function () {
     }
 
     // (27:8) <CustomButton btntype="button" on:click="{cancel}">
-    function create_default_slot$4(ctx) {
+    function create_default_slot$5(ctx) {
     	let t;
 
     	const block = {
@@ -3890,7 +3887,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$4.name,
+    		id: create_default_slot$5.name,
     		type: "slot",
     		source: "(27:8) <CustomButton btntype=\\\"button\\\" on:click=\\\"{cancel}\\\">",
     		ctx
@@ -3919,7 +3916,7 @@ var app = (function () {
     	custombutton1 = new CustomButton({
     			props: {
     				btntype: "button",
-    				$$slots: { default: [create_default_slot$4] },
+    				$$slots: { default: [create_default_slot$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5381,7 +5378,7 @@ var app = (function () {
     }
 
     // (91:6) <CustomButton btntype="button" on:click="{hideModal}">
-    function create_default_slot$3(ctx) {
+    function create_default_slot$4(ctx) {
     	let t;
 
     	const block = {
@@ -5398,7 +5395,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$3.name,
+    		id: create_default_slot$4.name,
     		type: "slot",
     		source: "(91:6) <CustomButton btntype=\\\"button\\\" on:click=\\\"{hideModal}\\\">",
     		ctx
@@ -5416,7 +5413,7 @@ var app = (function () {
     	custombutton = new CustomButton({
     			props: {
     				btntype: "button",
-    				$$slots: { default: [create_default_slot$3] },
+    				$$slots: { default: [create_default_slot$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5843,6 +5840,7 @@ var app = (function () {
     	let div1;
     	let img;
     	let img_src_value;
+    	let div2_intro;
 
     	const block = {
     		c: function create() {
@@ -5876,31 +5874,31 @@ var app = (function () {
     			t15 = space();
     			div1 = element("div");
     			img = element("img");
-    			add_location(h1, file$6, 61, 0, 1103);
-    			add_location(h2, file$6, 62, 0, 1123);
-    			attr_dev(h4, "class", "svelte-16prej0");
-    			add_location(h4, file$6, 63, 0, 1174);
+    			add_location(h1, file$6, 61, 0, 1109);
+    			add_location(h2, file$6, 62, 0, 1129);
+    			attr_dev(h4, "class", "svelte-12xhqu3");
+    			add_location(h4, file$6, 63, 0, 1180);
     			attr_dev(a0, "target", "blank");
     			attr_dev(a0, "href", "https://cyclone.pythonanywhere.com/");
-    			add_location(a0, file$6, 66, 317, 1604);
-    			add_location(br0, file$6, 67, 3, 1874);
-    			add_location(br1, file$6, 68, 3, 1882);
+    			add_location(a0, file$6, 66, 317, 1610);
+    			add_location(br0, file$6, 67, 3, 1880);
+    			add_location(br1, file$6, 68, 3, 1888);
     			attr_dev(a1, "target", "blank");
     			attr_dev(a1, "href", "https://duckrabbitpython.pythonanywhere.com/blackJack");
-    			add_location(a1, file$6, 69, 86, 1973);
-    			add_location(br2, file$6, 70, 3, 2243);
-    			add_location(br3, file$6, 71, 3, 2251);
-    			add_location(p, file$6, 66, 0, 1287);
-    			attr_dev(div0, "class", "textInfo svelte-16prej0");
-    			add_location(div0, file$6, 60, 0, 1080);
+    			add_location(a1, file$6, 69, 86, 1979);
+    			add_location(br2, file$6, 70, 3, 2249);
+    			add_location(br3, file$6, 71, 3, 2257);
+    			add_location(p, file$6, 66, 0, 1293);
+    			attr_dev(div0, "class", "textInfo svelte-12xhqu3");
+    			add_location(div0, file$6, 60, 0, 1086);
     			if (img.src !== (img_src_value = "https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "profile");
-    			attr_dev(img, "class", "svelte-16prej0");
-    			add_location(img, file$6, 76, 0, 2721);
-    			attr_dev(div1, "class", "profilePic svelte-16prej0");
-    			add_location(div1, file$6, 75, 0, 2696);
-    			attr_dev(div2, "class", "container svelte-16prej0");
-    			add_location(div2, file$6, 58, 0, 1051);
+    			attr_dev(img, "class", "svelte-12xhqu3");
+    			add_location(img, file$6, 76, 0, 2727);
+    			attr_dev(div1, "class", "profilePic svelte-12xhqu3");
+    			add_location(div1, file$6, 75, 0, 2702);
+    			attr_dev(div2, "class", "container svelte-12xhqu3");
+    			add_location(div2, file$6, 58, 0, 1050);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5933,7 +5931,14 @@ var app = (function () {
     			append_dev(div1, img);
     		},
     		p: noop,
-    		i: noop,
+    		i: function intro(local) {
+    			if (!div2_intro) {
+    				add_render_callback(() => {
+    					div2_intro = create_in_transition(div2, fly, {});
+    					div2_intro.start();
+    				});
+    			}
+    		},
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
@@ -5960,7 +5965,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<About> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ handle_promise, select_multiple_value });
+    	$$self.$capture_state = () => ({ fade, fly });
     	return [];
     }
 
@@ -6134,7 +6139,7 @@ var app = (function () {
     }
 
     // (57:2) <CustomButton on:click={removeFromCart}>
-    function create_default_slot$2(ctx) {
+    function create_default_slot$3(ctx) {
     	let t;
 
     	const block = {
@@ -6151,7 +6156,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$2.name,
+    		id: create_default_slot$3.name,
     		type: "slot",
     		source: "(57:2) <CustomButton on:click={removeFromCart}>",
     		ctx
@@ -6221,7 +6226,7 @@ var app = (function () {
 
     	custombutton1 = new CustomButton({
     			props: {
-    				$$slots: { default: [create_default_slot$2] },
+    				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6713,7 +6718,7 @@ var app = (function () {
     const file$3 = "src/Products/Product.svelte";
 
     // (58:4) <CustomButton on:click={addToCart}>
-    function create_default_slot$1(ctx) {
+    function create_default_slot$2(ctx) {
     	let t;
 
     	const block = {
@@ -6730,7 +6735,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$1.name,
+    		id: create_default_slot$2.name,
     		type: "slot",
     		source: "(58:4) <CustomButton on:click={addToCart}>",
     		ctx
@@ -6760,7 +6765,7 @@ var app = (function () {
 
     	custombutton = new CustomButton({
     			props: {
-    				$$slots: { default: [create_default_slot$1] },
+    				$$slots: { default: [create_default_slot$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -7200,8 +7205,34 @@ var app = (function () {
     }
 
     /* src/UI/Feedback.svelte generated by Svelte v3.35.0 */
-
     const file$1 = "src/UI/Feedback.svelte";
+
+    // (136:4) <CustomButton>
+    function create_default_slot$1(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Share feedback");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$1.name,
+    		type: "slot",
+    		source: "(136:4) <CustomButton>",
+    		ctx
+    	});
+
+    	return block;
+    }
 
     function create_fragment$1(ctx) {
     	let div0;
@@ -7211,20 +7242,57 @@ var app = (function () {
     	let i0;
     	let t3;
     	let h20;
+    	let div0_intro;
     	let t5;
     	let div1;
     	let h31;
+    	let t6;
     	let t7;
+    	let t8;
     	let p1;
     	let i1;
     	let t9;
+    	let t10;
     	let h21;
+    	let t12;
+    	let div8;
+    	let div2;
+    	let h1;
+    	let t14;
+    	let img;
+    	let img_src_value;
+    	let t15;
+    	let div5;
+    	let div3;
+    	let header0;
+    	let t17;
+    	let textarea0;
+    	let t18;
+    	let div4;
+    	let header1;
+    	let t20;
+    	let h22;
+    	let t22;
+    	let div7;
+    	let textarea1;
+    	let t23;
+    	let div6;
+    	let custombutton;
+    	let current;
+
+    	custombutton = new CustomButton({
+    			props: {
+    				$$slots: { default: [create_default_slot$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
     			div0 = element("div");
     			h30 = element("h3");
-    			h30.textContent = "User: Anonymous";
+    			h30.textContent = "User: Anon";
     			t1 = space();
     			p0 = element("p");
     			i0 = element("i");
@@ -7235,26 +7303,83 @@ var app = (function () {
     			t5 = space();
     			div1 = element("div");
     			h31 = element("h3");
-    			h31.textContent = "User: Nick";
-    			t7 = space();
+    			t6 = text("User: ");
+    			t7 = text(/*feedUser*/ ctx[0]);
+    			t8 = space();
     			p1 = element("p");
     			i1 = element("i");
-    			i1.textContent = "\"Nicely done, work on the UI for mobile and cut out what you don't need\"";
-    			t9 = space();
+    			t9 = text(/*feedComment*/ ctx[1]);
+    			t10 = space();
     			h21 = element("h2");
-    			h21.textContent = "🐸🐸🐸";
-    			add_location(h30, file$1, 12, 0, 259);
-    			add_location(i0, file$1, 13, 3, 287);
-    			add_location(p0, file$1, 13, 0, 284);
-    			add_location(h20, file$1, 14, 0, 338);
-    			attr_dev(div0, "class", "comment svelte-zskdij");
-    			add_location(div0, file$1, 11, 0, 237);
-    			add_location(h31, file$1, 18, 4, 390);
-    			add_location(i1, file$1, 19, 7, 417);
-    			add_location(p1, file$1, 19, 4, 414);
-    			add_location(h21, file$1, 20, 4, 505);
-    			attr_dev(div1, "class", "comment svelte-zskdij");
-    			add_location(div1, file$1, 17, 0, 364);
+    			h21.textContent = `${/*frogStars*/ ctx[2]}`;
+    			t12 = space();
+    			div8 = element("div");
+    			div2 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "Feedback makes me hoppy!";
+    			t14 = space();
+    			img = element("img");
+    			t15 = space();
+    			div5 = element("div");
+    			div3 = element("div");
+    			header0 = element("header");
+    			header0.textContent = "Username (Anon by default)";
+    			t17 = space();
+    			textarea0 = element("textarea");
+    			t18 = space();
+    			div4 = element("div");
+    			header1 = element("header");
+    			header1.textContent = "Frog star rating";
+    			t20 = space();
+    			h22 = element("h2");
+    			h22.textContent = "🐸🐸🐸🐸";
+    			t22 = space();
+    			div7 = element("div");
+    			textarea1 = element("textarea");
+    			t23 = space();
+    			div6 = element("div");
+    			create_component(custombutton.$$.fragment);
+    			add_location(h30, file$1, 105, 0, 1976);
+    			add_location(i0, file$1, 106, 3, 1999);
+    			add_location(p0, file$1, 106, 0, 1996);
+    			add_location(h20, file$1, 107, 0, 2050);
+    			attr_dev(div0, "class", "commentCard svelte-11rajjm");
+    			add_location(div0, file$1, 104, 0, 1942);
+    			add_location(h31, file$1, 111, 4, 2106);
+    			add_location(i1, file$1, 112, 7, 2139);
+    			add_location(p1, file$1, 112, 4, 2136);
+    			add_location(h21, file$1, 113, 4, 2168);
+    			attr_dev(div1, "class", "commentCard svelte-11rajjm");
+    			add_location(div1, file$1, 110, 0, 2076);
+    			add_location(h1, file$1, 118, 6, 2251);
+    			if (img.src !== (img_src_value = "https://www.flaticon.com/svg/vstatic/svg/424/424870.svg?token=exp=1615249621~hmac=e98a24b849aff33ebde9abf8fec9421d")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "frog");
+    			attr_dev(img, "class", "svelte-11rajjm");
+    			add_location(img, file$1, 119, 6, 2291);
+    			attr_dev(div2, "class", "h1 svelte-11rajjm");
+    			add_location(div2, file$1, 117, 2, 2228);
+    			attr_dev(header0, "class", "svelte-11rajjm");
+    			add_location(header0, file$1, 124, 6, 2497);
+    			textarea0.value = "Anon";
+    			attr_dev(textarea0, "class", "svelte-11rajjm");
+    			add_location(textarea0, file$1, 125, 6, 2547);
+    			attr_dev(div3, "class", "userInput svelte-11rajjm");
+    			add_location(div3, file$1, 123, 4, 2466);
+    			attr_dev(header1, "class", "svelte-11rajjm");
+    			add_location(header1, file$1, 128, 6, 2615);
+    			add_location(h22, file$1, 129, 6, 2655);
+    			attr_dev(div4, "class", "rating svelte-11rajjm");
+    			add_location(div4, file$1, 127, 4, 2588);
+    			attr_dev(div5, "class", "User svelte-11rajjm");
+    			add_location(div5, file$1, 122, 2, 2443);
+    			attr_dev(textarea1, "class", "commentInput svelte-11rajjm");
+    			add_location(textarea1, file$1, 133, 2, 2719);
+    			attr_dev(div6, "class", "btnPad svelte-11rajjm");
+    			add_location(div6, file$1, 134, 2, 2764);
+    			attr_dev(div7, "class", "comment svelte-11rajjm");
+    			add_location(div7, file$1, 132, 2, 2695);
+    			attr_dev(div8, "class", "grid-container svelte-11rajjm");
+    			add_location(div8, file$1, 116, 0, 2197);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7270,19 +7395,74 @@ var app = (function () {
     			insert_dev(target, t5, anchor);
     			insert_dev(target, div1, anchor);
     			append_dev(div1, h31);
-    			append_dev(div1, t7);
+    			append_dev(h31, t6);
+    			append_dev(h31, t7);
+    			append_dev(div1, t8);
     			append_dev(div1, p1);
     			append_dev(p1, i1);
-    			append_dev(div1, t9);
+    			append_dev(i1, t9);
+    			append_dev(div1, t10);
     			append_dev(div1, h21);
+    			insert_dev(target, t12, anchor);
+    			insert_dev(target, div8, anchor);
+    			append_dev(div8, div2);
+    			append_dev(div2, h1);
+    			append_dev(div2, t14);
+    			append_dev(div2, img);
+    			append_dev(div8, t15);
+    			append_dev(div8, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, header0);
+    			append_dev(div3, t17);
+    			append_dev(div3, textarea0);
+    			append_dev(div5, t18);
+    			append_dev(div5, div4);
+    			append_dev(div4, header1);
+    			append_dev(div4, t20);
+    			append_dev(div4, h22);
+    			append_dev(div8, t22);
+    			append_dev(div8, div7);
+    			append_dev(div7, textarea1);
+    			append_dev(div7, t23);
+    			append_dev(div7, div6);
+    			mount_component(custombutton, div6, null);
+    			current = true;
     		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (!current || dirty & /*feedUser*/ 1) set_data_dev(t7, /*feedUser*/ ctx[0]);
+    			if (!current || dirty & /*feedComment*/ 2) set_data_dev(t9, /*feedComment*/ ctx[1]);
+    			const custombutton_changes = {};
+
+    			if (dirty & /*$$scope*/ 16) {
+    				custombutton_changes.$$scope = { dirty, ctx };
+    			}
+
+    			custombutton.$set(custombutton_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			if (!div0_intro) {
+    				add_render_callback(() => {
+    					div0_intro = create_in_transition(div0, fade, {});
+    					div0_intro.start();
+    				});
+    			}
+
+    			transition_in(custombutton.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(custombutton.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(t12);
+    			if (detaching) detach_dev(div8);
+    			destroy_component(custombutton);
     		}
     	};
 
@@ -7297,22 +7477,64 @@ var app = (function () {
     	return block;
     }
 
-    function instance$1($$self, $$props) {
+    function createFrogStars(numStars) {
+    	let numFrogs = [];
+
+    	for (let x = 0; x < numStars; x++) {
+    		numFrogs += "🐸";
+    	}
+
+    	return numFrogs;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Feedback", slots, []);
-    	const writable_props = [];
+    	let { feedUser } = $$props;
+    	let { feedComment } = $$props;
+    	let { numStars } = $$props;
+    	let frogStars = createFrogStars(numStars);
+    	const writable_props = ["feedUser", "feedComment", "numStars"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Feedback> was created with unknown prop '${key}'`);
     	});
 
-    	return [];
+    	$$self.$$set = $$props => {
+    		if ("feedUser" in $$props) $$invalidate(0, feedUser = $$props.feedUser);
+    		if ("feedComment" in $$props) $$invalidate(1, feedComment = $$props.feedComment);
+    		if ("numStars" in $$props) $$invalidate(3, numStars = $$props.numStars);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		fade,
+    		CustomButton,
+    		Header,
+    		feedUser,
+    		feedComment,
+    		numStars,
+    		frogStars,
+    		createFrogStars
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("feedUser" in $$props) $$invalidate(0, feedUser = $$props.feedUser);
+    		if ("feedComment" in $$props) $$invalidate(1, feedComment = $$props.feedComment);
+    		if ("numStars" in $$props) $$invalidate(3, numStars = $$props.numStars);
+    		if ("frogStars" in $$props) $$invalidate(2, frogStars = $$props.frogStars);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [feedUser, feedComment, frogStars, numStars];
     }
 
     class Feedback extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { feedUser: 0, feedComment: 1, numStars: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7320,6 +7542,45 @@ var app = (function () {
     			options,
     			id: create_fragment$1.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*feedUser*/ ctx[0] === undefined && !("feedUser" in props)) {
+    			console.warn("<Feedback> was created without expected prop 'feedUser'");
+    		}
+
+    		if (/*feedComment*/ ctx[1] === undefined && !("feedComment" in props)) {
+    			console.warn("<Feedback> was created without expected prop 'feedComment'");
+    		}
+
+    		if (/*numStars*/ ctx[3] === undefined && !("numStars" in props)) {
+    			console.warn("<Feedback> was created without expected prop 'numStars'");
+    		}
+    	}
+
+    	get feedUser() {
+    		throw new Error("<Feedback>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set feedUser(value) {
+    		throw new Error("<Feedback>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get feedComment() {
+    		throw new Error("<Feedback>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set feedComment(value) {
+    		throw new Error("<Feedback>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get numStars() {
+    		throw new Error("<Feedback>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set numStars(value) {
+    		throw new Error("<Feedback>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -7327,7 +7588,7 @@ var app = (function () {
     const file = "src/App.svelte";
 
     // (141:4) <CustomButton btntype="submit" on:click="{() => {mainPage = true; aboutPage = false; playQuiz = false; goShop = false; feedback = false;}}">
-    function create_default_slot_8(ctx) {
+    function create_default_slot_7(ctx) {
     	let t;
 
     	const block = {
@@ -7344,7 +7605,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_8.name,
+    		id: create_default_slot_7.name,
     		type: "slot",
     		source: "(141:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {mainPage = true; aboutPage = false; playQuiz = false; goShop = false; feedback = false;}}\\\">",
     		ctx
@@ -7354,7 +7615,7 @@ var app = (function () {
     }
 
     // (142:4) <CustomButton btntype="submit" on:click="{() => {aboutPage = true; mainPage = false; playQuiz = false; goShop = false; feedback = false;}}">
-    function create_default_slot_7(ctx) {
+    function create_default_slot_6(ctx) {
     	let t;
 
     	const block = {
@@ -7371,7 +7632,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7.name,
+    		id: create_default_slot_6.name,
     		type: "slot",
     		source: "(142:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {aboutPage = true; mainPage = false; playQuiz = false; goShop = false; feedback = false;}}\\\">",
     		ctx
@@ -7381,7 +7642,7 @@ var app = (function () {
     }
 
     // (143:4) <CustomButton btntype="submit" on:click="{() => editMode = 'add'}">
-    function create_default_slot_6(ctx) {
+    function create_default_slot_5(ctx) {
     	let t;
 
     	const block = {
@@ -7398,7 +7659,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6.name,
+    		id: create_default_slot_5.name,
     		type: "slot",
     		source: "(143:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => editMode = 'add'}\\\">",
     		ctx
@@ -7408,7 +7669,7 @@ var app = (function () {
     }
 
     // (144:4) <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">
-    function create_default_slot_5(ctx) {
+    function create_default_slot_4(ctx) {
     	let t;
 
     	const block = {
@@ -7425,7 +7686,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
     		source: "(144:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}\\\">",
     		ctx
@@ -7435,7 +7696,7 @@ var app = (function () {
     }
 
     // (145:4) <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">
-    function create_default_slot_4(ctx) {
+    function create_default_slot_3(ctx) {
     	let t;
 
     	const block = {
@@ -7452,7 +7713,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
+    		id: create_default_slot_3.name,
     		type: "slot",
     		source: "(145:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}\\\">",
     		ctx
@@ -7461,8 +7722,8 @@ var app = (function () {
     	return block;
     }
 
-    // (146:4) <CustomButton btntype="submit" on:click="{() => {feedback = true; goShop = false; aboutPage = false; playQuiz = false;}}">
-    function create_default_slot_3(ctx) {
+    // (146:4) <CustomButton btntype="submit" on:click="{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}">
+    function create_default_slot_2(ctx) {
     	let t;
 
     	const block = {
@@ -7479,48 +7740,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3.name,
-    		type: "slot",
-    		source: "(146:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {feedback = true; goShop = false; aboutPage = false; playQuiz = false;}}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (147:4) <CustomButton btntype="submit">
-    function create_default_slot_2(ctx) {
-    	let a;
-
-    	const block = {
-    		c: function create() {
-    			a = element("a");
-    			a.textContent = "Toad Game";
-    			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "href", "https://duckrabbitpython.pythonanywhere.com/toad");
-    			attr_dev(a, "class", "svelte-sn93le");
-    			add_location(a, file, 146, 35, 5163);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, a, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(a);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(147:4) <CustomButton btntype=\\\"submit\\\">",
+    		source: "(146:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:4) {#if editMode === 'add'}
+    // (149:4) {#if editMode === 'add'}
     function create_if_block_7(ctx) {
     	let editadopt;
     	let current;
@@ -7555,14 +7784,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(150:4) {#if editMode === 'add'}",
+    		source: "(149:4) {#if editMode === 'add'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:4) {#if adoptMode === 'adopt'}
+    // (153:4) {#if adoptMode === 'adopt'}
     function create_if_block_6(ctx) {
     	let adopt;
     	let current;
@@ -7596,14 +7825,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(154:4) {#if adoptMode === 'adopt'}",
+    		source: "(153:4) {#if adoptMode === 'adopt'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:4) {#if playQuiz === true && goShop === false && feedback === false}
+    // (157:4) {#if playQuiz === true && goShop === false && feedback === false}
     function create_if_block_5(ctx) {
     	let h1;
     	let t1;
@@ -7618,7 +7847,7 @@ var app = (function () {
     			t1 = space();
     			create_component(quiz.$$.fragment);
     			attr_dev(h1, "class", "svelte-sn93le");
-    			add_location(h1, file, 158, 4, 5552);
+    			add_location(h1, file, 157, 4, 5431);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -7646,18 +7875,26 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(158:4) {#if playQuiz === true && goShop === false && feedback === false}",
+    		source: "(157:4) {#if playQuiz === true && goShop === false && feedback === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (163:4) {#if feedback === true && playQuiz === false  && goShop === false}
+    // (162:4) {#if feedback === true && playQuiz === false  && goShop === false}
     function create_if_block_4(ctx) {
     	let feedback_1;
     	let current;
-    	feedback_1 = new Feedback({ $$inline: true });
+
+    	feedback_1 = new Feedback({
+    			props: {
+    				feedUser: "Oli",
+    				feedComment: "Awesome",
+    				numStars: "5"
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
@@ -7685,14 +7922,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(163:4) {#if feedback === true && playQuiz === false  && goShop === false}",
+    		source: "(162:4) {#if feedback === true && playQuiz === false  && goShop === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:4) {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
+    // (167:4) {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
     function create_if_block_3(ctx) {
     	let intro;
     	let t;
@@ -7761,14 +7998,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(168:4) {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}",
+    		source: "(167:4) {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:4) <Intro>
+    // (168:4) <Intro>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -7788,14 +8025,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(169:4) <Intro>",
+    		source: "(168:4) <Intro>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (173:4) {#if aboutPage === true}
+    // (172:4) {#if aboutPage === true}
     function create_if_block_2(ctx) {
     	let about;
     	let current;
@@ -7827,14 +8064,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(173:4) {#if aboutPage === true}",
+    		source: "(172:4) {#if aboutPage === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:4) {#if goShop === true && playQuiz === false}
+    // (176:4) {#if goShop === true && playQuiz === false}
     function create_if_block(ctx) {
     	let div;
     	let custombutton;
@@ -7865,7 +8102,7 @@ var app = (function () {
     			t1 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-sn93le");
-    			add_location(div, file, 177, 4, 6109);
+    			add_location(div, file, 176, 4, 6037);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -7933,14 +8170,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(177:4) {#if goShop === true && playQuiz === false}",
+    		source: "(176:4) {#if goShop === true && playQuiz === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:4) <CustomButton stateColour="toggle" on:click={() => {showCart = !showCart;}}>
+    // (178:4) <CustomButton stateColour="toggle" on:click={() => {showCart = !showCart;}}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -7960,14 +8197,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(179:4) <CustomButton stateColour=\\\"toggle\\\" on:click={() => {showCart = !showCart;}}>",
+    		source: "(178:4) <CustomButton stateColour=\\\"toggle\\\" on:click={() => {showCart = !showCart;}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (183:4) {#if showCart}
+    // (182:4) {#if showCart}
     function create_if_block_1(ctx) {
     	let cart;
     	let current;
@@ -7999,7 +8236,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(183:4) {#if showCart}",
+    		source: "(182:4) {#if showCart}",
     		ctx
     	});
 
@@ -8023,7 +8260,6 @@ var app = (function () {
     	let t5;
     	let custombutton5;
     	let t6;
-    	let custombutton6;
     	let t7;
     	let t8;
     	let t9;
@@ -8031,7 +8267,6 @@ var app = (function () {
     	let t11;
     	let t12;
     	let t13;
-    	let t14;
     	let footer;
     	let current;
     	header = new Header({ $$inline: true });
@@ -8039,7 +8274,7 @@ var app = (function () {
     	custombutton0 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_8] },
+    				$$slots: { default: [create_default_slot_7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8050,7 +8285,7 @@ var app = (function () {
     	custombutton1 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_7] },
+    				$$slots: { default: [create_default_slot_6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8061,7 +8296,7 @@ var app = (function () {
     	custombutton2 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_6] },
+    				$$slots: { default: [create_default_slot_5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8072,7 +8307,7 @@ var app = (function () {
     	custombutton3 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_5] },
+    				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8083,7 +8318,7 @@ var app = (function () {
     	custombutton4 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_4] },
+    				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8094,23 +8329,13 @@ var app = (function () {
     	custombutton5 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				$$slots: { default: [create_default_slot_3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	custombutton5.$on("click", /*click_handler_5*/ ctx[19]);
-
-    	custombutton6 = new CustomButton({
-    			props: {
-    				btntype: "submit",
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
+    	custombutton5.$on("click", /*click_handler_5*/ ctx[19]);
     	let if_block0 = /*editMode*/ ctx[4] === "add" && create_if_block_7(ctx);
     	let if_block1 = /*adoptMode*/ ctx[5] === "adopt" && create_if_block_6(ctx);
     	let if_block2 = /*playQuiz*/ ctx[1] === true && /*goShop*/ ctx[2] === false && /*feedback*/ ctx[7] === false && create_if_block_5(ctx);
@@ -8138,22 +8363,20 @@ var app = (function () {
     			t5 = space();
     			create_component(custombutton5.$$.fragment);
     			t6 = space();
-    			create_component(custombutton6.$$.fragment);
-    			t7 = space();
     			if (if_block0) if_block0.c();
-    			t8 = space();
+    			t7 = space();
     			if (if_block1) if_block1.c();
-    			t9 = space();
+    			t8 = space();
     			if (if_block2) if_block2.c();
-    			t10 = space();
+    			t9 = space();
     			if (if_block3) if_block3.c();
-    			t11 = space();
+    			t10 = space();
     			if (if_block4) if_block4.c();
-    			t12 = space();
+    			t11 = space();
     			if (if_block5) if_block5.c();
-    			t13 = space();
+    			t12 = space();
     			if (if_block6) if_block6.c();
-    			t14 = space();
+    			t13 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(div, "class", "formControl svelte-sn93le");
     			add_location(div, file, 139, 4, 4210);
@@ -8179,23 +8402,21 @@ var app = (function () {
     			mount_component(custombutton4, div, null);
     			append_dev(div, t5);
     			mount_component(custombutton5, div, null);
-    			append_dev(div, t6);
-    			mount_component(custombutton6, div, null);
-    			append_dev(main, t7);
+    			append_dev(main, t6);
     			if (if_block0) if_block0.m(main, null);
-    			append_dev(main, t8);
+    			append_dev(main, t7);
     			if (if_block1) if_block1.m(main, null);
-    			append_dev(main, t9);
+    			append_dev(main, t8);
     			if (if_block2) if_block2.m(main, null);
-    			append_dev(main, t10);
+    			append_dev(main, t9);
     			if (if_block3) if_block3.m(main, null);
-    			append_dev(main, t11);
+    			append_dev(main, t10);
     			if (if_block4) if_block4.m(main, null);
-    			append_dev(main, t12);
+    			append_dev(main, t11);
     			if (if_block5) if_block5.m(main, null);
-    			append_dev(main, t13);
+    			append_dev(main, t12);
     			if (if_block6) if_block6.m(main, null);
-    			append_dev(main, t14);
+    			append_dev(main, t13);
     			mount_component(footer, main, null);
     			current = true;
     		},
@@ -8242,13 +8463,6 @@ var app = (function () {
     			}
 
     			custombutton5.$set(custombutton5_changes);
-    			const custombutton6_changes = {};
-
-    			if (dirty & /*$$scope*/ 2097152) {
-    				custombutton6_changes.$$scope = { dirty, ctx };
-    			}
-
-    			custombutton6.$set(custombutton6_changes);
 
     			if (/*editMode*/ ctx[4] === "add") {
     				if (if_block0) {
@@ -8261,7 +8475,7 @@ var app = (function () {
     					if_block0 = create_if_block_7(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(main, t8);
+    					if_block0.m(main, t7);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -8284,7 +8498,7 @@ var app = (function () {
     					if_block1 = create_if_block_6(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(main, t9);
+    					if_block1.m(main, t8);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -8305,7 +8519,7 @@ var app = (function () {
     					if_block2 = create_if_block_5(ctx);
     					if_block2.c();
     					transition_in(if_block2, 1);
-    					if_block2.m(main, t10);
+    					if_block2.m(main, t9);
     				}
     			} else if (if_block2) {
     				group_outros();
@@ -8326,7 +8540,7 @@ var app = (function () {
     					if_block3 = create_if_block_4(ctx);
     					if_block3.c();
     					transition_in(if_block3, 1);
-    					if_block3.m(main, t11);
+    					if_block3.m(main, t10);
     				}
     			} else if (if_block3) {
     				group_outros();
@@ -8349,7 +8563,7 @@ var app = (function () {
     					if_block4 = create_if_block_3(ctx);
     					if_block4.c();
     					transition_in(if_block4, 1);
-    					if_block4.m(main, t12);
+    					if_block4.m(main, t11);
     				}
     			} else if (if_block4) {
     				group_outros();
@@ -8370,7 +8584,7 @@ var app = (function () {
     					if_block5 = create_if_block_2(ctx);
     					if_block5.c();
     					transition_in(if_block5, 1);
-    					if_block5.m(main, t13);
+    					if_block5.m(main, t12);
     				}
     			} else if (if_block5) {
     				group_outros();
@@ -8393,7 +8607,7 @@ var app = (function () {
     					if_block6 = create_if_block(ctx);
     					if_block6.c();
     					transition_in(if_block6, 1);
-    					if_block6.m(main, t14);
+    					if_block6.m(main, t13);
     				}
     			} else if (if_block6) {
     				group_outros();
@@ -8414,7 +8628,6 @@ var app = (function () {
     			transition_in(custombutton3.$$.fragment, local);
     			transition_in(custombutton4.$$.fragment, local);
     			transition_in(custombutton5.$$.fragment, local);
-    			transition_in(custombutton6.$$.fragment, local);
     			transition_in(if_block0);
     			transition_in(if_block1);
     			transition_in(if_block2);
@@ -8433,7 +8646,6 @@ var app = (function () {
     			transition_out(custombutton3.$$.fragment, local);
     			transition_out(custombutton4.$$.fragment, local);
     			transition_out(custombutton5.$$.fragment, local);
-    			transition_out(custombutton6.$$.fragment, local);
     			transition_out(if_block0);
     			transition_out(if_block1);
     			transition_out(if_block2);
@@ -8454,7 +8666,6 @@ var app = (function () {
     			destroy_component(custombutton3);
     			destroy_component(custombutton4);
     			destroy_component(custombutton5);
-    			destroy_component(custombutton6);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			if (if_block2) if_block2.d();
@@ -8555,10 +8766,12 @@ var app = (function () {
     		const id = event.detail;
 
     		//find is a new piece of modern JS
-    		({ ...frogs.find(m => m.id === id) });
+    		const updatedFrog = { ...frogs.find(m => m.id === id) };
+
+    		updatedFrog.isFavourite = !updatedFrog.isFavourite;
     		const frogIndex = frogs.findIndex(m => m.id === id);
     		const updatedFrogs = [...frogs];
-    		updatedFrogs[frogIndex] = updatedfrog;
+    		updatedFrogs[frogIndex] = updatedFrog;
     		$$invalidate(8, frogs = updatedFrogs);
     	}
 
@@ -8614,6 +8827,7 @@ var app = (function () {
 
     	const click_handler_5 = () => {
     		$$invalidate(7, feedback = true);
+    		$$invalidate(0, mainPage = false);
     		$$invalidate(2, goShop = false);
     		$$invalidate(6, aboutPage = false);
     		$$invalidate(1, playQuiz = false);
