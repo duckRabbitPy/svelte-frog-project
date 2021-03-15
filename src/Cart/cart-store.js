@@ -4,9 +4,10 @@ const cart = writable([
   {
     id: 's8',
     title: 'Frog wallpaper download',
-    price: 'FREE'
+    price: 0.00,
   },
 ]);
+
 
 const customCart = {
   subscribe: cart.subscribe,
@@ -22,7 +23,10 @@ const customCart = {
     cart.update(items => {
       return items.filter(i => i.id !== id);
     });
-  }
+  },
 };
+
+
+export const total = writable(0);
 
 export default customCart;

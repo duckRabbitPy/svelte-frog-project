@@ -2,6 +2,8 @@
   import cartItems from "./cart-store.js";
   import CartItem from "./CartItem.svelte";
 
+  export let total;
+
 </script>
 
 <style>
@@ -27,5 +29,6 @@
     {:else}
       <p>No items in cart yet!</p>
     {/each}
+    <h3>Total: £{total}</h3>
   </ul>
 </section>

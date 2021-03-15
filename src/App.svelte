@@ -14,6 +14,8 @@ import Cart from "./Cart/Cart.svelte";
 import Products from "./Products/Products.svelte";
 import Feedback from "./UI/Feedback.svelte";
 
+import { total } from "./Cart/cart-store.js";
+
 let mainPage = true;
 let playQuiz = false;
 let goShop = false;
@@ -180,7 +182,7 @@ let feedback = false;
     </CustomButton>
     </div>
     {#if showCart}
-    <Cart />
+    <Cart total={$total}/>
     {/if}
     <Products />
     {/if}

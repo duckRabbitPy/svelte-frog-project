@@ -2,13 +2,14 @@
   import cartItems from "./cart-store.js";
   import { products } from "../Products/products-store.js";
   import CustomButton from "../UI/CustomButton.svelte";
+  import { total } from "../Cart/cart-store";
 
   export let title;
   export let price;
   export let id;
 
   let showDescription = false;
-  let description = "Awesome 4k resolution download, be the envy of your friends!";
+  let description = "Awesome FREE 4k resolution download, be the envy of your friends!";
 
 
   function displayDescription() {
@@ -22,6 +23,7 @@
 
   function removeFromCart() {
     cartItems.removeItem(id);
+    $total -= price
   }
 </script>
 
@@ -50,7 +52,7 @@
 
 <li>
   <h1>{title}</h1>
-  <h2>{price}</h2>
+  <h2>£{price}</h2>
   <CustomButton mode="outline" on:click={displayDescription}>
     {showDescription ? 'Hide Description' : 'Show Description'}
   </CustomButton>

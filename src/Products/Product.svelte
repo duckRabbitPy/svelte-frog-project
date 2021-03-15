@@ -2,14 +2,22 @@
   import cartItems from "../Cart/cart-store.js";
   import CustomButton from "../UI/CustomButton.svelte";
 
+  import { total } from "../Cart/cart-store.js";
+
   export let id;
   export let title;
   export let price;
   export let description;
   export let srcVar;
 
+  let isInCart = false;
+
+
+
   function addToCart() {
     cartItems.addItem({ id: id, title: title, price: price });
+    $total += price
+    isInCart = true
   }
 </script>
 
@@ -50,11 +58,11 @@
 <div class="product">
   <div>
     <h1>{title}</h1>
-    <h2>{price}</h2>
+    <h2>£{price}</h2>
     <img src="{srcVar}" alt="product">
     <p>{description}</p>
   </div>
   <div>
-    <CustomButton on:click={addToCart}>Add to Cart</CustomButton>
+    <CustomButton disabled={isInCart} on:click={addToCart}>Add to Cart</CustomButton>
   </div>
 </div>

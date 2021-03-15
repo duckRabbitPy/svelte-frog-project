@@ -1,13 +1,16 @@
 <script>
   import { fade } from "svelte/transition";
   import CustomButton from "../UI/CustomButton.svelte";
-  import Header from "../UI/Header.svelte"
+  import Selector from "../UI/Selector.svelte"
+
 
   export let feedUser
   export let feedComment
   export let numStars
 
+  let userRating = ''
 
+  //for the defaults
   let frogStars = createFrogStars(numStars)
 
   function createFrogStars(numStars){
@@ -16,6 +19,12 @@
       numFrogs += '🐸'
     }
     return numFrogs
+  }
+
+  //for the users
+  function setStars(event){
+    console.log("hello")
+    userRating = event.detail
   }
 
 </script>
@@ -43,7 +52,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 72%;
-  height: 480px;
+  height: 60%;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -127,7 +136,7 @@ img{
     </div>
     <div class="rating">
       <header>Frog star rating</header>
-      <h2>🐸🐸🐸🐸</h2>
+      <Selector on:pass-up-stars="{setStars}"/>
     </div>
   </div>
   <div class="comment">
