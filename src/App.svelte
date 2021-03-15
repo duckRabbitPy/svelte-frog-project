@@ -11,6 +11,7 @@ import Footer from "./UI/Footer.svelte";
 import About from "./UI/About.svelte";
 
 import Cart from "./Cart/Cart.svelte";
+import CheckOut from "./Cart/CheckOut.svelte"
 import Products from "./Products/Products.svelte";
 import Feedback from "./UI/Feedback.svelte";
 
@@ -22,6 +23,7 @@ let goShop = false;
 let showCart = true;
 let editMode = null;
 let adoptMode = null;
+let checkOutMode = null;
 let aboutPage = false;
 let feedback = false;
 
@@ -99,11 +101,19 @@ let feedback = false;
 
 
     function cancelForm(event){
-        editMode = 'null'
+        editMode = 'null';
     }
 
     function showAdopt(event){
-        adoptMode = 'adopt'
+        adoptMode = 'adopt';
+    }
+
+    function showCheckOut(){
+        checkOutMode = 'checkOut';
+    }
+
+    function hideCheckOut(event){
+        checkOutMode = null;
     }
 
     function hideAdopt(event){
@@ -156,6 +166,10 @@ let feedback = false;
     <Adopt on:cancel-adopt="{hideAdopt}"/>
     {/if}
 
+    {#if checkOutMode === 'checkOut'}
+    <CheckOut on:cancel-checkOut="{hideCheckOut}"/>
+    {/if}
+
     {#if playQuiz === true && goShop === false && feedback === false}
     <h1>Nature Quiz</h1>
     <Quiz />
@@ -177,9 +191,10 @@ let feedback = false;
 
     {#if goShop === true && playQuiz === false}
     <div class="toggle">
-    <CustomButton stateColour="toggle" on:click={() => {showCart = !showCart;}}>
+    <CustomButton stateColour="secondary" on:click={() => {showCart = !showCart;}}>
         Toggle Cart
     </CustomButton>
+    <CustomButton stateColour="secondary" on:click="{showCheckOut}">CheckOut</CustomButton>
     </div>
     {#if showCart}
     <Cart total={$total}/>

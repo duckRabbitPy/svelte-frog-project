@@ -85,7 +85,7 @@ button:disabled:active {
   color: #fffb84;
 }
 
-.toggle {
+.secondary {
   border-left-color: #324A5E;
   background-color: #324A5E;
 }

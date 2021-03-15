@@ -28,6 +28,7 @@ function closeModel(){
     top: 10vh;
     left: 10%;
     width: 80%;
+    min-width: 300px;
     max-height: 80vh;
     background: white;
     border-radius: 5px;
