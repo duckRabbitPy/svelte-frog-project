@@ -11,8 +11,8 @@ import { fade, fly } from "svelte/transition";
     @media screen and (min-width: 992px){
     .container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1);
+        grid-template-rows: repeat(1, 1);
     }
 
     .profilePic {
@@ -22,7 +22,21 @@ import { fade, fly } from "svelte/transition";
         grid-row-end: 1;
     }
 
-    img {
+    .iconContainer {
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .compIcons{
+        height: 100px;
+        padding-top: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .profileImg {
         width: 300px;
         border-radius: 20%;
         margin-right: 1rem;
@@ -42,7 +56,7 @@ import { fade, fly } from "svelte/transition";
     }
 
     @media screen and (max-width: 991px){
-        img{
+        .profileImg{
             width: 40%;
             border-radius: 20%;
             padding-left: 1rem;
@@ -50,6 +64,10 @@ import { fade, fly } from "svelte/transition";
 
         .textInfo {
         padding-left: 1rem;
+    }
+
+    .compIcons{
+        display: none;
     }
 
 
@@ -71,10 +89,20 @@ import { fade, fly } from "svelte/transition";
    <br>
    <br>
     My current frontend framework of choice is Svelte, it is an excellent tool for building performant Single Page Applications and is the framework that this portfolio was made with! Despite the relative obscurity of Svelte I believe it is a great framework for learning component based architecture as well as state management. The skills I have developed will be transferable to technologies such as React, Angular and Vue. </p>
+    <h3>My core competencies</h3>
+</div>
+
+<div in:fade class="iconContainer">
+   
+    <img class="compIcons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png" alt="svelte logo">
+    <img class="compIcons" src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" alt="javascript logo">
+    <img class="compIcons" src="https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png" alt="css and html logo">
+    <img class="compIcons" src="https://automationpanda.files.wordpress.com/2017/09/django-logo-negative.png" alt="django logo">
+    <img class="compIcons" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt="python logo">
 </div>
 
 <div class="profilePic">
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0" alt="profile">
+<img class="profileImg" src="https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0" alt="profile">
 </div>
 
 </div>

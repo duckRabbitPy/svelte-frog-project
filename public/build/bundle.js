@@ -5831,7 +5831,7 @@ var app = (function () {
     const file$8 = "src/UI/About.svelte";
 
     function create_fragment$8(ctx) {
-    	let div2;
+    	let div3;
     	let div0;
     	let h1;
     	let t1;
@@ -5854,14 +5854,33 @@ var app = (function () {
     	let br3;
     	let t14;
     	let t15;
+    	let h3;
+    	let t17;
     	let div1;
-    	let img;
-    	let img_src_value;
-    	let div2_intro;
+    	let img0;
+    	let img0_src_value;
+    	let t18;
+    	let img1;
+    	let img1_src_value;
+    	let t19;
+    	let img2;
+    	let img2_src_value;
+    	let t20;
+    	let img3;
+    	let img3_src_value;
+    	let t21;
+    	let img4;
+    	let img4_src_value;
+    	let div1_intro;
+    	let t22;
+    	let div2;
+    	let img5;
+    	let img5_src_value;
+    	let div3_intro;
 
     	const block = {
     		c: function create() {
-    			div2 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			h1 = element("h1");
     			h1.textContent = "Hi i'm Oli";
@@ -5889,40 +5908,77 @@ var app = (function () {
     			br3 = element("br");
     			t14 = text("\n    My current frontend framework of choice is Svelte, it is an excellent tool for building performant Single Page Applications and is the framework that this portfolio was made with! Despite the relative obscurity of Svelte I believe it is a great framework for learning component based architecture as well as state management. The skills I have developed will be transferable to technologies such as React, Angular and Vue.");
     			t15 = space();
+    			h3 = element("h3");
+    			h3.textContent = "My core competencies";
+    			t17 = space();
     			div1 = element("div");
-    			img = element("img");
-    			add_location(h1, file$8, 61, 0, 1109);
-    			add_location(h2, file$8, 62, 0, 1129);
-    			attr_dev(h4, "class", "svelte-12xhqu3");
-    			add_location(h4, file$8, 63, 0, 1180);
+    			img0 = element("img");
+    			t18 = space();
+    			img1 = element("img");
+    			t19 = space();
+    			img2 = element("img");
+    			t20 = space();
+    			img3 = element("img");
+    			t21 = space();
+    			img4 = element("img");
+    			t22 = space();
+    			div2 = element("div");
+    			img5 = element("img");
+    			add_location(h1, file$8, 79, 0, 1439);
+    			add_location(h2, file$8, 80, 0, 1459);
+    			attr_dev(h4, "class", "svelte-dkac3v");
+    			add_location(h4, file$8, 81, 0, 1510);
     			attr_dev(a0, "target", "blank");
     			attr_dev(a0, "href", "https://cyclone.pythonanywhere.com/");
-    			add_location(a0, file$8, 66, 317, 1610);
-    			add_location(br0, file$8, 67, 3, 1880);
-    			add_location(br1, file$8, 68, 3, 1888);
+    			add_location(a0, file$8, 84, 317, 1940);
+    			add_location(br0, file$8, 85, 3, 2210);
+    			add_location(br1, file$8, 86, 3, 2218);
     			attr_dev(a1, "target", "blank");
     			attr_dev(a1, "href", "https://duckrabbitpython.pythonanywhere.com/blackJack");
-    			add_location(a1, file$8, 69, 86, 1979);
-    			add_location(br2, file$8, 70, 3, 2249);
-    			add_location(br3, file$8, 71, 3, 2257);
-    			add_location(p, file$8, 66, 0, 1293);
-    			attr_dev(div0, "class", "textInfo svelte-12xhqu3");
-    			add_location(div0, file$8, 60, 0, 1086);
-    			if (img.src !== (img_src_value = "https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "profile");
-    			attr_dev(img, "class", "svelte-12xhqu3");
-    			add_location(img, file$8, 76, 0, 2727);
-    			attr_dev(div1, "class", "profilePic svelte-12xhqu3");
-    			add_location(div1, file$8, 75, 0, 2702);
-    			attr_dev(div2, "class", "container svelte-12xhqu3");
-    			add_location(div2, file$8, 58, 0, 1050);
+    			add_location(a1, file$8, 87, 86, 2309);
+    			add_location(br2, file$8, 88, 3, 2579);
+    			add_location(br3, file$8, 89, 3, 2587);
+    			add_location(p, file$8, 84, 0, 1623);
+    			add_location(h3, file$8, 91, 4, 3028);
+    			attr_dev(div0, "class", "textInfo svelte-dkac3v");
+    			add_location(div0, file$8, 78, 0, 1416);
+    			attr_dev(img0, "class", "compIcons svelte-dkac3v");
+    			if (img0.src !== (img0_src_value = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "svelte logo");
+    			add_location(img0, file$8, 96, 4, 3110);
+    			attr_dev(img1, "class", "compIcons svelte-dkac3v");
+    			if (img1.src !== (img1_src_value = "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "javascript logo");
+    			add_location(img1, file$8, 97, 4, 3263);
+    			attr_dev(img2, "class", "compIcons svelte-dkac3v");
+    			if (img2.src !== (img2_src_value = "https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "css and html logo");
+    			add_location(img2, file$8, 98, 4, 3394);
+    			attr_dev(img3, "class", "compIcons svelte-dkac3v");
+    			if (img3.src !== (img3_src_value = "https://automationpanda.files.wordpress.com/2017/09/django-logo-negative.png")) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "alt", "django logo");
+    			add_location(img3, file$8, 99, 4, 3513);
+    			attr_dev(img4, "class", "compIcons svelte-dkac3v");
+    			if (img4.src !== (img4_src_value = "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png")) attr_dev(img4, "src", img4_src_value);
+    			attr_dev(img4, "alt", "python logo");
+    			add_location(img4, file$8, 100, 4, 3642);
+    			attr_dev(div1, "class", "iconContainer svelte-dkac3v");
+    			add_location(div1, file$8, 94, 0, 3066);
+    			attr_dev(img5, "class", "profileImg svelte-dkac3v");
+    			if (img5.src !== (img5_src_value = "https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0")) attr_dev(img5, "src", img5_src_value);
+    			attr_dev(img5, "alt", "profile");
+    			add_location(img5, file$8, 104, 0, 3808);
+    			attr_dev(div2, "class", "profilePic svelte-dkac3v");
+    			add_location(div2, file$8, 103, 0, 3783);
+    			attr_dev(div3, "class", "container svelte-dkac3v");
+    			add_location(div3, file$8, 76, 0, 1380);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div0);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div0);
     			append_dev(div0, h1);
     			append_dev(div0, t1);
     			append_dev(div0, h2);
@@ -5943,22 +5999,42 @@ var app = (function () {
     			append_dev(p, t13);
     			append_dev(p, br3);
     			append_dev(p, t14);
-    			append_dev(div2, t15);
-    			append_dev(div2, div1);
-    			append_dev(div1, img);
+    			append_dev(div0, t15);
+    			append_dev(div0, h3);
+    			append_dev(div3, t17);
+    			append_dev(div3, div1);
+    			append_dev(div1, img0);
+    			append_dev(div1, t18);
+    			append_dev(div1, img1);
+    			append_dev(div1, t19);
+    			append_dev(div1, img2);
+    			append_dev(div1, t20);
+    			append_dev(div1, img3);
+    			append_dev(div1, t21);
+    			append_dev(div1, img4);
+    			append_dev(div3, t22);
+    			append_dev(div3, div2);
+    			append_dev(div2, img5);
     		},
     		p: noop,
     		i: function intro(local) {
-    			if (!div2_intro) {
+    			if (!div1_intro) {
     				add_render_callback(() => {
-    					div2_intro = create_in_transition(div2, fly, {});
-    					div2_intro.start();
+    					div1_intro = create_in_transition(div1, fade, {});
+    					div1_intro.start();
+    				});
+    			}
+
+    			if (!div3_intro) {
+    				add_render_callback(() => {
+    					div3_intro = create_in_transition(div3, fly, {});
+    					div3_intro.start();
     				});
     			}
     		},
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div3);
     		}
     	};
 
