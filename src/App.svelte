@@ -14,8 +14,22 @@ import Cart from "./Cart/Cart.svelte";
 import CheckOut from "./Cart/CheckOut.svelte"
 import Products from "./Products/Products.svelte";
 import Feedback from "./UI/Feedback.svelte";
+import Credit from "./Quiz/Credit.svelte";
 
 import { total } from "./Cart/cart-store.js";
+import { darkModeOn } from "./UI/DarkModeStore.js";
+import Toggle from "svelte-toggle";
+
+let toggled = false;
+
+$: if (toggled === true){
+    darkModeOn.set(toggled);
+}
+
+$: if (toggled === false){
+    darkModeOn.set(toggled);
+}
+
 
 let mainPage = true;
 let playQuiz = false;
@@ -136,17 +150,37 @@ let feedback = false;
         margin: 1rem;
     }
 
-    a {
-        color: white;
-    }
-
     .toggle {
         margin: 1rem;
     }
 
+    .darkMode{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(58, 58, 58);
+      overflow-y:scroll;
+      overflow-x:hidden;
+    }
+
+    .lightMode{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      overflow-y:scroll;
+      overflow-x:hidden;
+    }
+
+
 </style>
 
 
+<div class={$darkModeOn ? "darkMode" : "lightMode"}>
 <Header/>
 <main>
     <div class="formControl">
@@ -156,7 +190,9 @@ let feedback = false;
     <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">Nature Quiz</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">Frog Shop</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
-    </div>
+    <Toggle hideLabel label="Custom label" bind:toggled />
+    
+</div>
 
     {#if editMode === 'add'}
     <EditAdopt on:adoption-submit="{addFrog}" on:cancel="{cancelForm}"/>
@@ -171,8 +207,8 @@ let feedback = false;
     {/if}
 
     {#if playQuiz === true && goShop === false && feedback === false}
-    <h1>Nature Quiz</h1>
     <Quiz />
+    <Credit />
     {/if}
 
     {#if feedback === true && playQuiz === false  && goShop === false}
@@ -182,7 +218,7 @@ let feedback = false;
 
     {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
-    <AdoptGrid {frogs} on:toggle-favourite="{toggleFavourite}" on:adopt-event="{showAdopt}"/>
+    <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}" on:adopt-event="{showAdopt}"/>
     {/if}
 
     {#if aboutPage === true}
@@ -191,10 +227,10 @@ let feedback = false;
 
     {#if goShop === true && playQuiz === false}
     <div class="toggle">
-    <CustomButton stateColour="secondary" on:click={() => {showCart = !showCart;}}>
+    <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
         Toggle Cart
     </CustomButton>
-    <CustomButton stateColour="secondary" on:click="{showCheckOut}">CheckOut</CustomButton>
+    <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click="{showCheckOut}">CheckOut</CustomButton>
     </div>
     {#if showCart}
     <Cart total={$total}/>
@@ -203,6 +239,8 @@ let feedback = false;
     {/if}
     <Footer />
 </main>
+</div>
+
 
 
 

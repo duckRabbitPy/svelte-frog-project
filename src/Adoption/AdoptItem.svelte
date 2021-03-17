@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { darkModeOn } from "../UI/DarkModeStore.js";
     import { fade } from 'svelte/transition';
     import Social from "../UI/Social.svelte"
     export let id;
@@ -10,6 +11,7 @@
     export let address;
     export let email;
     export let isFavItem;
+  
     
     let likes = 0;
     let stateOfLikes;
@@ -87,8 +89,15 @@
     article {
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       border-radius: 5px;
-      background: white;
       margin: 1rem;
+    }
+
+    .lightMode {
+      background: white;
+    }
+
+    .darkMode {
+      background: rgb(206, 206, 206);
     }
   
     header,
@@ -144,7 +153,7 @@
   </style>
   
 
-<article in:fade>
+<article class="{$darkModeOn ? "darkMode" : "lightMode"}" in:fade>
     <header>
         <h1>{title}
         </h1>

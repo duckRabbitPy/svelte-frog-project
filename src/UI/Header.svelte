@@ -46,5 +46,5 @@
 
 <header>
     <h1 class="wiggle">Adopt a Frog</h1>
-    <img src="https://www.flaticon.com/svg/vstatic/svg/424/424870.svg?token=exp=1615249621~hmac=e98a24b849aff33ebde9abf8fec9421d" alt="frog" width="60rem">
+    <img src="/images/frog.png" alt="frog" width="60rem">
 </header>

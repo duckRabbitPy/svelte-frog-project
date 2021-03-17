@@ -1,11 +1,30 @@
 <script>
 import { fade, fly } from "svelte/transition";
+import { darkModeOn } from "./DarkModeStore.js";
 
 </script>
 <style>
 
     h4 {
         color: #2c9040;
+    }
+
+    .darkMode {
+        color: rgb(206, 206, 206);
+    }
+
+    .lightMode {
+        color: black;
+    }
+
+    .darkModeLink {
+        color: darkturquoise;
+        text-decoration: underline;
+    }
+
+    .lightModeLink {
+        color: dodgerblue;
+        text-decoration: underline;
     }
 
     @media screen and (min-width: 992px){
@@ -76,20 +95,20 @@ import { fade, fly } from "svelte/transition";
 
 <div class="container" in:fly>
     
-<div class="textInfo">
-<h1>Hi i'm Oli</h1>
-<h2>I'm an aspiring web developer from London</h2>
-<h4>
+<div class="textInfo"> 
+<h1 class={$darkModeOn ? "darkMode" : "lightMode"}>Hi i'm Oli</h1>
+<h2 class={$darkModeOn ? "darkMode" : "lightMode"}>I'm an aspiring web developer from London</h2>
+<h4 class={$darkModeOn ? "darkMode" : "lightMode"}>
     My programming ambition is to build web applications that are fast, elegant and enjoyable to use.
 </h4>
-<p>Like many others taking a step into coding, I started my programming journey with Python. The first 'proper' project I worked on was a health and lifestyle PyQT desktop application with FitBit data integration. To overcome the limitations of desktop apps, I decided to study the Django web framework and created a <a target="blank" href="https://cyclone.pythonanywhere.com/">fun platform</a> for 'glitch art' image processing. It was at that moment that I realised the power and potential of web development and I set on a path to seriously learn modern HTML, CSS and Javascript. 
+<p class={$darkModeOn ? "darkMode" : "lightMode"}>Like many others taking a step into coding, I started my programming journey with Python. The first 'proper' project I worked on was a health and lifestyle PyQT desktop application with FitBit data integration. To overcome the limitations of desktop apps, I decided to study the Django web framework and created a <a class={$darkModeOn? "darkModeLink" : "lightModeLink"} target="blank" href="https://cyclone.pythonanywhere.com/">fun platform</a> for 'glitch art' image processing. It was at that moment that I realised the power and potential of web development and I set on a path to seriously learn modern HTML, CSS and Javascript. 
    <br>
    <br>
-   After working on a number of personal Javascript projects including an (addictive) <a target="blank" href="https://duckrabbitpython.pythonanywhere.com/blackJack">Blackjack game</a> I now consider Javascript my preferred langauge, and i'm confident and comfortable solving level 5 kata in CodeWars and 'advent of code' challenges using ES6 practices.
+   After working on a number of personal Javascript projects including an (addictive) <a class={$darkModeOn ? "darkModeLink" : "lightModeLink"} target="blank" href="https://duckrabbitpython.pythonanywhere.com/blackJack">Blackjack game</a>, I now consider Javascript my preferred langauge, and i'm confident and comfortable solving level 5 kata in CodeWars and 'advent of code' challenges using ES6 practices.
    <br>
    <br>
     My current frontend framework of choice is Svelte, it is an excellent tool for building performant Single Page Applications and is the framework that this portfolio was made with! Despite the relative obscurity of Svelte I believe it is a great framework for learning component based architecture as well as state management. The skills I have developed will be transferable to technologies such as React, Angular and Vue. </p>
-    <h3>My core competencies</h3>
+    <h3 class={$darkModeOn ? "darkMode" : "lightMode"}>My core competencies:</h3>
 </div>
 
 <div in:fade class="iconContainer">

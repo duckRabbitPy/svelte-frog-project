@@ -3,6 +3,7 @@
   export let nextQuestion;
   export let addToScore;
 
+
   let isCorrect;
   let isAnswered = false;
   let answers = question.incorrect_answers.map(answer => {
@@ -52,6 +53,7 @@
     padding: 1rem;
     border-radius: 10%;
     background-color: rgb(181, 243, 118);
+    color: black;
   }
 
   .wrong {
@@ -59,7 +61,9 @@
     padding: 1rem;
     border-radius: 10%;
     background-color: rgb(243, 166, 166);
+    color: black;
   }
+
 
 
 
@@ -86,13 +90,3 @@
   </div>
 {/if}
 
-<footer>
-  <p>Questions provided by: <span>
-    <ul>
-      <em>
-        <a href="https://opentdb.com">Open Trivia API</a>
-      </em>
-    </ul>
-  </span>
-</p> 
-</footer>

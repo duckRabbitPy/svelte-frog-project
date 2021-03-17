@@ -1,17 +1,31 @@
+<script>
+
+import { darkModeOn } from "./DarkModeStore";
+
+</script>
 
 <style>
     .info{
         width: 100%;
         height: 3rem;
-        
+        margin-top: 5%;
+        margin-bottom: 2%;
     }
 
-    p {
+    .lightMode {
     color: rgb(7, 7, 7);
     font-size: larger;
     text-align: center;
     padding-top: 0.5rem;
     }
+
+    .darkMode {
+    color: rgb(206, 206, 206);
+    font-size: larger;
+    text-align: center;
+    padding-top: 0.5rem;
+    }
+
 </style>
 
 <head>
@@ -20,6 +34,6 @@
   
   <footer class="info">
     <div>
-      <p>2021 - <b>duckRabbitPy  </b><span><i class="fab fa-github"></i></span></p>
+      <p class={$darkModeOn ? "darkMode" : "lightMode"}>2021 - <b>duckRabbitPy  </b><span><i class="fab fa-github"></i></span></p>
     </div>
 </footer>

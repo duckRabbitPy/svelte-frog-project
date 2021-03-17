@@ -3,6 +3,8 @@
   import Question from "./Question.svelte";
   import Modal from "../UI/Modal.svelte";
   import CustomButton from "../UI/CustomButton.svelte";
+  import { darkModeOn } from "../UI/DarkModeStore.js";
+
   let activeQuestion = 0;
   let score = 0;
   let quiz = getQuiz();
@@ -50,16 +52,23 @@
     position: absolute;
   }
 
-  .question-wrapper {
+  .question-wrapper-light {
     margin: 1rem;
+    margin-bottom: 25rem;
+    color: black;
   }
 
-  .pad {
+  .question-wrapper-dark {
+    margin: 1rem;
     margin-bottom: 25rem;
-  }
+    color: rgb(206,206,206);
+    }
+
 </style>
 
-<div class="question-wrapper">
+
+<div class="{$darkModeOn ? "question-wrapper-dark" : "question-wrapper-light"}">
+  <h1>Nature Quiz</h1>
   {#if preventRestart === false}
   <button on:click={resetQuiz}>Start New Quiz</button>
   {:else}
@@ -93,5 +102,4 @@
   </Modal>
   {/if}
 </div>
-<div class="pad">
-</div>
+

@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 
+//default item in cart
 const cart = writable([
   {
     id: 's8',

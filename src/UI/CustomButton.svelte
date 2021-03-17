@@ -6,6 +6,11 @@
 </script>
 
 <style>
+
+  button {
+  /* work around styling to get fix darkmode change, consider using navbar instead */
+ margin-top: 1rem;
+  }
     button,
 a {
   font: inherit;
@@ -85,11 +90,16 @@ button:disabled:active {
   color: #fffb84;
 }
 
-.secondary {
-  border-left-color: #324A5E;
+.secondary-light {
+  border-color: #324A5E;
   background-color: #324A5E;
 }
-   
+
+.secondary-dark {
+  border-color: #4CDBC3;
+  background-color: #4CDBC3;
+}
+
 </style>
 
 <!-- remember to include on:click in child components to allow custom event propagation -->

@@ -6,7 +6,7 @@ export const products = writable([
     title: 'Frog T-shirt',
     price: 25,
     description: 'Available in all sizes',
-    srcVar: 'https://cdn.shopify.com/s/files/1/1649/6313/products/PPFGTS-GR-NTmain_530x@2x.jpg?v=1558683409'
+    srcVar: 'https://www.thebearhug.com/images/the-bearhug-co-ltd-laser-frog-t-shirt-p958-8377_medium.jpg'
   },
   {
     id: 'p2',
@@ -20,7 +20,7 @@ export const products = writable([
     title: 'Frog tea lights',
     price: 4.5,
     description: "Cosy and fragrant",
-    srcVar: 'https://images-na.ssl-images-amazon.com/images/I/71PtYn4E49L._AC_SX342_.jpg'
+    srcVar: 'https://i.etsystatic.com/12941269/r/il/a9c128/998648306/il_1588xN.998648306_13wj.jpg'
   },
   {
     id: 'p4',
@@ -34,7 +34,7 @@ export const products = writable([
     title: 'FrogStation 7',
     price: 248,
     description: "Modern gaming for modern times",
-    srcVar: 'https://sgwmscdnimages.azureedge.net/22/9-3-2019/20621831094smll.JPG'
+    srcVar: 'https://www.decalgirl.com/assets/items/xboc/800/xboc-frog.5.jpg'
   },
 
 ]);

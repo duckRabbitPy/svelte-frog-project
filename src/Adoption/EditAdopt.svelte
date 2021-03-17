@@ -17,7 +17,7 @@ import TextInput from "../UI/TextInput.svelte";
 import CustomButton from "../UI/CustomButton.svelte";
 import Modal from "../UI/Modal.svelte";
 import { isEmpty } from "../helpers/validation.js"
-import { validateUrl } from "../helpers/validation.js"
+import { validateUrl } from "../helpers/validation.js";
 
 
 const dispatch = createEventDispatcher();

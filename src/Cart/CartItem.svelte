@@ -3,10 +3,12 @@
   import { products } from "../Products/products-store.js";
   import CustomButton from "../UI/CustomButton.svelte";
   import { total } from "../Cart/cart-store";
+  import { darkModeOn } from "../UI/DarkModeStore.js";
 
   export let title;
   export let price;
   export let id;
+
 
   let showDescription = false;
   let description = "Awesome FREE 4k resolution download, be the envy of your friends!";
@@ -28,10 +30,18 @@
 </script>
 
 <style>
-  li {
+  .li-light {
     margin: 1rem 0;
     border-radius: 5px;
     background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
+
+  .li-dark {
+    margin: 1rem 0;
+    border-radius: 5px;
+    background: rgb(206,206,206);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
   }
@@ -42,6 +52,8 @@
     margin: 0;
   }
 
+  
+
   h2 {
     color: #494949;
     margin-bottom: 1rem;
@@ -50,7 +62,7 @@
   }
 </style>
 
-<li>
+<li class="{$darkModeOn ? "li-dark" : "li-light"}">
   <h1>{title}</h1>
   <h2>£{price}</h2>
   <CustomButton mode="outline" on:click={displayDescription}>

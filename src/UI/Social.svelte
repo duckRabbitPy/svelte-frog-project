@@ -33,6 +33,6 @@
 </style>
 
 <div>
-    <p><span><img src="https://www.flaticon.com/svg/vstatic/svg/424/424870.svg?token=exp=1615249621~hmac=e98a24b849aff33ebde9abf8fec9421d" alt="frog" width="40rem">{counterName}</span></p>
+    <p><span><img src="/images/frog.png" alt="frog" width="40rem">{counterName}</span></p>
     <button disabled="{disabled}" on:click="{numOfClicks}">{likeStatus}</button>
 </div>

@@ -2,6 +2,7 @@
   import { fade } from "svelte/transition";
   import CustomButton from "../UI/CustomButton.svelte";
   import Selector from "../UI/Selector.svelte"
+  import { darkModeOn } from "../UI/DarkModeStore.js";
 
   export let numStars
 
@@ -72,14 +73,30 @@
 </script>
 <style>
 
+  
+
 @media screen and (min-width: 1065px){
-    .commentCard {
+
+  h3, h2, p {
+    margin: 1rem;
+  }
+    .commentCard-light {
     background: white;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 70%;
+  }
+
+  .commentCard-dark {
+    background: rgb(206,206,206);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
@@ -105,7 +122,7 @@
     "User comment comment ."
     ". . . .";
 }
-.h1 { grid-area: h1; padding: 1rem; }
+.h1 { grid-area: h1; padding: 1rem;}
 .User {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -144,27 +161,53 @@ img{
   width: 10%;
 }
 
-.commentCard {
+
+
+.commentCard-light {
   padding-left: 1rem;
   background: white;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 70%;
 }
+
+.commentCard-dark {
+  padding-left: 1rem;
+  background: rgb(206,206,206);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
 .grid-container {
   padding-left: 1rem;
 }
 
+.hoppy-light {
+  color: #4CDBC3;
+}
+
+.hoppy-dark {
+  color: rgb(206,206,206);
+}
+
 
 </style>
-<div class="commentCard" in:fade>
+<div class="{$darkModeOn ? "commentCard-dark" : "commentCard-light"}" in:fade>
 <h3>User: Anon</h3>
 <p><i>"Good work, keep it up, keep learning!"</i></p>
 <h2>🐸🐸🐸🐸</h2>
@@ -172,7 +215,7 @@ img{
 
 
   {#each storedComments as storedComment }
-  <div class="commentCard">
+  <div class="{$darkModeOn ? "commentCard-dark" : "commentCard-light"}">
     <h3>User: {storedComment.User}</h3>
     <p><i>{storedComment.Comment}</i></p>
     <h2>{storedComment.Rating}</h2>
@@ -182,8 +225,8 @@ img{
 
 <div class="grid-container">
   <div class="h1">
-      <h1>Feedback makes me hoppy!</h1>
-      <img src="https://www.flaticon.com/svg/vstatic/svg/424/424870.svg?token=exp=1615249621~hmac=e98a24b849aff33ebde9abf8fec9421d" alt="frog"/>
+      <h1 class="{$darkModeOn ? "hoppy-dark" : "hoppy-light"}">Feedback makes me hoppy!</h1>
+      <img src="/images/frog.png" alt="frog"/>
   </div>
  
   <div class="User">

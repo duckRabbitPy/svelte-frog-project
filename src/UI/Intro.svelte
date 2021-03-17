@@ -1,5 +1,7 @@
 <script>
     import { onMount } from 'svelte';
+    import { darkModeOn } from './DarkModeStore';
+
     let visible = false;
     onMount(()=>{visible = true})
 
@@ -41,11 +43,19 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+h2.darkMode {
+    color: rgb(206,206, 206)
+}
+
+h2.lightMode {
+    color: rgb(134, 133, 133);
+}
 </style>
 
 <blockquote>
     {#if visible}
-    <h2 in:typewriter>
+    <h2 class={$darkModeOn ? "darkMode" : "lightMode"} in:typewriter>
 		<slot/>
     </h2>
     {/if}

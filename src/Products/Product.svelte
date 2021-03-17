@@ -1,8 +1,9 @@
 <script>
   import cartItems from "../Cart/cart-store.js";
   import CustomButton from "../UI/CustomButton.svelte";
+  import { darkModeOn } from "../UI/DarkModeStore.js";
 
-  import { total } from "../Cart/cart-store.js";
+  import cart, { total } from "../Cart/cart-store.js";
 
   export let id;
   export let title;
@@ -10,20 +11,39 @@
   export let description;
   export let srcVar;
 
-  let isInCart = false;
-
+let isInCart = "";
+  
+//get can be used if you are not subscribed to a store to get the value
+import { get } from 'svelte/store';
 
 
   function addToCart() {
+    let currItems = get(cart);
+    for(let x=0; x<currItems.length; x++){
+      if(currItems[x].id === id){
+        isInCart = "Hey! Leave some frogs for the rest of us!!!"
+      }
+    }
+
     cartItems.addItem({ id: id, title: title, price: price });
     $total += price
-    isInCart = true
   }
+
 </script>
 
 <style>
-  .product {
+  .product-light {
     background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0rem 1rem 0rem;
+  }
+
+  .product-dark {
+    background: rgb(206,206,206);
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
@@ -53,16 +73,21 @@
   img {
     max-width: 100px
   }
+
+  .isInCart {
+    color: tomato;
+  }
 </style>
 
-<div class="product">
+<div class="{$darkModeOn ? "product-dark" : "product-light"}">
   <div>
     <h1>{title}</h1>
     <h2>£{price}</h2>
     <img src="{srcVar}" alt="product">
     <p>{description}</p>
+    <p class="isInCart">{isInCart}</p>
   </div>
   <div>
-    <CustomButton disabled={isInCart} on:click={addToCart}>Add to Cart</CustomButton>
+    <CustomButton on:click={addToCart}>Add to Cart</CustomButton>
   </div>
 </div>
