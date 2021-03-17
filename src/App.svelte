@@ -146,10 +146,6 @@ let feedback = false;
         margin: 1rem;
     }
 
-    h1 {
-        margin: 1rem;
-    }
-
     .toggle {
         margin: 1rem;
     }
