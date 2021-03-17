@@ -1454,7 +1454,7 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			if (default_slot) default_slot.c();
-    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-10nc6nl"));
+    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-1rx2z7j"));
     			attr_dev(button, "type", /*btntype*/ ctx[0]);
     			button.disabled = /*disabled*/ ctx[2];
     			add_location(button, file$m, 105, 0, 1697);
@@ -1483,7 +1483,7 @@ var app = (function () {
     				}
     			}
 
-    			if (!current || dirty & /*stateColour*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-10nc6nl"))) {
+    			if (!current || dirty & /*stateColour*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-1rx2z7j"))) {
     				attr_dev(button, "class", button_class_value);
     			}
 
@@ -6759,7 +6759,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (39:4) {:else}
+    // (40:4) {:else}
     function create_else_block(ctx) {
     	let p;
 
@@ -6767,7 +6767,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "No items in cart yet!";
-    			add_location(p, file$8, 39, 6, 681);
+    			add_location(p, file$8, 40, 6, 759);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -6781,14 +6781,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(39:4) {:else}",
+    		source: "(40:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:4) {#each $cartItems as item (item.id)}
+    // (38:4) {#each $cartItems as item (item.id)}
     function create_each_block$3(key_1, ctx) {
     	let first;
     	let cartitem;
@@ -6843,7 +6843,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(37:4) {#each $cartItems as item (item.id)}",
+    		source: "(38:4) {#each $cartItems as item (item.id)}",
     		ctx
     	});
 
@@ -6864,6 +6864,7 @@ var app = (function () {
     	let t3;
     	let t4;
     	let h3_class_value;
+    	let section_intro;
     	let current;
     	let each_value = /*$cartItems*/ ctx[2];
     	validate_each_argument(each_value);
@@ -6903,13 +6904,13 @@ var app = (function () {
     			t3 = text("Total: £");
     			t4 = text(/*total*/ ctx[0]);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[1] ? "cart-dark" : "cart-light") + " svelte-2eolnu"));
-    			add_location(h1, file$8, 34, 2, 480);
+    			add_location(h1, file$8, 35, 2, 558);
     			attr_dev(h3, "class", h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[1] ? "cart-dark" : "cart-light") + " svelte-2eolnu"));
-    			add_location(h3, file$8, 41, 4, 726);
+    			add_location(h3, file$8, 42, 4, 804);
     			attr_dev(ul, "class", "svelte-2eolnu");
-    			add_location(ul, file$8, 35, 2, 547);
+    			add_location(ul, file$8, 36, 2, 625);
     			attr_dev(section, "class", "svelte-2eolnu");
-    			add_location(section, file$8, 33, 0, 468);
+    			add_location(section, file$8, 34, 0, 537);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6973,6 +6974,13 @@ var app = (function () {
     				transition_in(each_blocks[i]);
     			}
 
+    			if (!section_intro) {
+    				add_render_callback(() => {
+    					section_intro = create_in_transition(section, scale, {});
+    					section_intro.start();
+    				});
+    			}
+
     			current = true;
     		},
     		o: function outro(local) {
@@ -7028,6 +7036,11 @@ var app = (function () {
     		cartItems: customCart,
     		CartItem,
     		darkModeOn,
+    		fade,
+    		blur,
+    		fly,
+    		slide,
+    		scale,
     		total,
     		$darkModeOn,
     		$cartItems
@@ -7368,7 +7381,7 @@ var app = (function () {
 
     const file$6 = "src/Products/Product.svelte";
 
-    // (91:4) <CustomButton on:click={addToCart}>
+    // (92:4) <CustomButton on:click={addToCart}>
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -7388,7 +7401,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(91:4) <CustomButton on:click={addToCart}>",
+    		source: "(92:4) <CustomButton on:click={addToCart}>",
     		ctx
     	});
 
@@ -7417,6 +7430,7 @@ var app = (function () {
     	let div1;
     	let custombutton;
     	let div2_class_value;
+    	let div2_intro;
     	let current;
 
     	custombutton = new CustomButton({
@@ -7451,25 +7465,25 @@ var app = (function () {
     			div1 = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(h1, "class", "svelte-pmgt58");
-    			add_location(h1, file$6, 83, 4, 1677);
+    			add_location(h1, file$6, 84, 4, 1755);
     			attr_dev(h2, "class", "svelte-pmgt58");
-    			add_location(h2, file$6, 84, 4, 1698);
+    			add_location(h2, file$6, 85, 4, 1776);
     			if (img.src !== (img_src_value = /*srcVar*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "product");
     			attr_dev(img, "class", "svelte-pmgt58");
-    			add_location(img, file$6, 85, 4, 1720);
+    			add_location(img, file$6, 86, 4, 1798);
     			attr_dev(p0, "class", "svelte-pmgt58");
-    			add_location(p0, file$6, 86, 4, 1759);
+    			add_location(p0, file$6, 87, 4, 1837);
     			attr_dev(p1, "class", "isInCart svelte-pmgt58");
-    			add_location(p1, file$6, 87, 4, 1784);
-    			add_location(div0, file$6, 82, 2, 1667);
-    			add_location(div1, file$6, 89, 2, 1830);
+    			add_location(p1, file$6, 88, 4, 1862);
+    			add_location(div0, file$6, 83, 2, 1745);
+    			add_location(div1, file$6, 90, 2, 1908);
 
     			attr_dev(div2, "class", div2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5]
     			? "product-dark"
     			: "product-light") + " svelte-pmgt58"));
 
-    			add_location(div2, file$6, 81, 0, 1602);
+    			add_location(div2, file$6, 82, 0, 1671);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7523,6 +7537,14 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(custombutton.$$.fragment, local);
+
+    			if (!div2_intro) {
+    				add_render_callback(() => {
+    					div2_intro = create_in_transition(div2, scale, {});
+    					div2_intro.start();
+    				});
+    			}
+
     			current = true;
     		},
     		o: function outro(local) {
@@ -7593,6 +7615,11 @@ var app = (function () {
     		cartItems: customCart,
     		CustomButton,
     		darkModeOn,
+    		fade,
+    		blur,
+    		fly,
+    		slide,
+    		scale,
     		cart: customCart,
     		total,
     		id,

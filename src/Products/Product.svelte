@@ -2,6 +2,7 @@
   import cartItems from "../Cart/cart-store.js";
   import CustomButton from "../UI/CustomButton.svelte";
   import { darkModeOn } from "../UI/DarkModeStore.js";
+  import { fade, blur, fly, slide, scale } from "svelte/transition";
 
   import cart, { total } from "../Cart/cart-store.js";
 
@@ -79,7 +80,7 @@ import { get } from 'svelte/store';
   }
 </style>
 
-<div class="{$darkModeOn ? "product-dark" : "product-light"}">
+<div in:scale class="{$darkModeOn ? "product-dark" : "product-light"}">
   <div>
     <h1>{title}</h1>
     <h2>£{price}</h2>

@@ -96,8 +96,8 @@ button:disabled:active {
 }
 
 .secondary-dark {
-  border-color: #4CDBC3;
-  background-color: #4CDBC3;
+  border-color: #54a699;
+  background-color: #54a699;
 }
 
 </style>

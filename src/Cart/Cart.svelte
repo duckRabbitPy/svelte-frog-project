@@ -2,6 +2,7 @@
   import cartItems from "./cart-store.js";
   import CartItem from "./CartItem.svelte";
   import { darkModeOn } from "../UI/DarkModeStore.js";
+  import { fade, blur, fly, slide, scale } from "svelte/transition";
 
   export let total;
 
@@ -31,7 +32,7 @@
 
 </style>
 
-<section>
+<section in:scale>
   <h1 class="{$darkModeOn ? "cart-dark" : "cart-light"}">Cart</h1>
   <ul>
     {#each $cartItems as item (item.id)}
