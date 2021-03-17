@@ -75,20 +75,23 @@ import { darkModeOn } from "./DarkModeStore.js";
     }
 
     @media screen and (max-width: 991px){
-        .profileImg{
-            width: 40%;
-            border-radius: 20%;
-            padding-left: 1rem;
+    .profileImg{
+        width: 40%;
+        border-radius: 20%;
+        padding-left: 1rem;
         }
 
-        .textInfo {
-        padding-left: 1rem;
+    .textInfo {
+    padding-left: 1rem;
+    padding-right: 1rem;
     }
 
     .compIcons{
         display: none;
     }
 
+    h3 {
+        display: none;}
 
     }
 </style>

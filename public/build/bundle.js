@@ -6094,68 +6094,68 @@ var app = (function () {
     			t22 = space();
     			div2 = element("div");
     			img5 = element("img");
-    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"));
-    			add_location(h1, file$a, 98, 0, 1777);
-    			attr_dev(h2, "class", h2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"));
-    			add_location(h2, file$a, 99, 0, 1844);
-    			attr_dev(h4, "class", h4_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"));
-    			add_location(h4, file$a, 100, 0, 1942);
+    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"));
+    			add_location(h1, file$a, 101, 0, 1811);
+    			attr_dev(h2, "class", h2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"));
+    			add_location(h2, file$a, 102, 0, 1878);
+    			attr_dev(h4, "class", h4_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"));
+    			add_location(h4, file$a, 103, 0, 1976);
 
     			attr_dev(a0, "class", a0_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
-    			: "lightModeLink") + " svelte-1jo5hko"));
+    			: "lightModeLink") + " svelte-a8j57k"));
 
     			attr_dev(a0, "target", "blank");
     			attr_dev(a0, "href", "https://cyclone.pythonanywhere.com/");
-    			add_location(a0, file$a, 103, 364, 2466);
-    			add_location(br0, file$a, 104, 3, 2790);
-    			add_location(br1, file$a, 105, 3, 2798);
+    			add_location(a0, file$a, 106, 364, 2500);
+    			add_location(br0, file$a, 107, 3, 2824);
+    			add_location(br1, file$a, 108, 3, 2832);
 
     			attr_dev(a1, "class", a1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
-    			: "lightModeLink") + " svelte-1jo5hko"));
+    			: "lightModeLink") + " svelte-a8j57k"));
 
     			attr_dev(a1, "target", "blank");
     			attr_dev(a1, "href", "https://duckrabbitpython.pythonanywhere.com/blackJack");
-    			add_location(a1, file$a, 106, 86, 2889);
-    			add_location(br2, file$a, 107, 3, 3215);
-    			add_location(br3, file$a, 108, 3, 3223);
-    			attr_dev(p, "class", p_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"));
-    			add_location(p, file$a, 103, 0, 2102);
-    			attr_dev(h3, "class", h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"));
-    			add_location(h3, file$a, 110, 4, 3664);
-    			attr_dev(div0, "class", "textInfo svelte-1jo5hko");
-    			add_location(div0, file$a, 97, 0, 1753);
-    			attr_dev(img0, "class", "compIcons svelte-1jo5hko");
+    			add_location(a1, file$a, 109, 86, 2923);
+    			add_location(br2, file$a, 110, 3, 3249);
+    			add_location(br3, file$a, 111, 3, 3257);
+    			attr_dev(p, "class", p_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"));
+    			add_location(p, file$a, 106, 0, 2136);
+    			attr_dev(h3, "class", h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"));
+    			add_location(h3, file$a, 113, 4, 3698);
+    			attr_dev(div0, "class", "textInfo svelte-a8j57k");
+    			add_location(div0, file$a, 100, 0, 1787);
+    			attr_dev(img0, "class", "compIcons svelte-a8j57k");
     			if (img0.src !== (img0_src_value = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "svelte logo");
-    			add_location(img0, file$a, 115, 4, 3794);
-    			attr_dev(img1, "class", "compIcons svelte-1jo5hko");
+    			add_location(img0, file$a, 118, 4, 3828);
+    			attr_dev(img1, "class", "compIcons svelte-a8j57k");
     			if (img1.src !== (img1_src_value = "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "javascript logo");
-    			add_location(img1, file$a, 116, 4, 3947);
-    			attr_dev(img2, "class", "compIcons svelte-1jo5hko");
+    			add_location(img1, file$a, 119, 4, 3981);
+    			attr_dev(img2, "class", "compIcons svelte-a8j57k");
     			if (img2.src !== (img2_src_value = "https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "css and html logo");
-    			add_location(img2, file$a, 117, 4, 4078);
-    			attr_dev(img3, "class", "compIcons svelte-1jo5hko");
+    			add_location(img2, file$a, 120, 4, 4112);
+    			attr_dev(img3, "class", "compIcons svelte-a8j57k");
     			if (img3.src !== (img3_src_value = "https://automationpanda.files.wordpress.com/2017/09/django-logo-negative.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "django logo");
-    			add_location(img3, file$a, 118, 4, 4197);
-    			attr_dev(img4, "class", "compIcons svelte-1jo5hko");
+    			add_location(img3, file$a, 121, 4, 4231);
+    			attr_dev(img4, "class", "compIcons svelte-a8j57k");
     			if (img4.src !== (img4_src_value = "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "python logo");
-    			add_location(img4, file$a, 119, 4, 4326);
-    			attr_dev(div1, "class", "iconContainer svelte-1jo5hko");
-    			add_location(div1, file$a, 113, 0, 3750);
-    			attr_dev(img5, "class", "profileImg svelte-1jo5hko");
+    			add_location(img4, file$a, 122, 4, 4360);
+    			attr_dev(div1, "class", "iconContainer svelte-a8j57k");
+    			add_location(div1, file$a, 116, 0, 3784);
+    			attr_dev(img5, "class", "profileImg svelte-a8j57k");
     			if (img5.src !== (img5_src_value = "https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "profile");
-    			add_location(img5, file$a, 123, 0, 4492);
-    			attr_dev(div2, "class", "profilePic svelte-1jo5hko");
-    			add_location(div2, file$a, 122, 0, 4467);
-    			attr_dev(div3, "class", "container svelte-1jo5hko");
-    			add_location(div3, file$a, 95, 0, 1717);
+    			add_location(img5, file$a, 126, 0, 4526);
+    			attr_dev(div2, "class", "profilePic svelte-a8j57k");
+    			add_location(div2, file$a, 125, 0, 4501);
+    			attr_dev(div3, "class", "container svelte-a8j57k");
+    			add_location(div3, file$a, 98, 0, 1751);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6207,35 +6207,35 @@ var app = (function () {
     			append_dev(div2, img5);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*$darkModeOn*/ 1 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"))) {
+    			if (dirty & /*$darkModeOn*/ 1 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"))) {
     				attr_dev(h1, "class", h1_class_value);
     			}
 
-    			if (dirty & /*$darkModeOn*/ 1 && h2_class_value !== (h2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"))) {
+    			if (dirty & /*$darkModeOn*/ 1 && h2_class_value !== (h2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"))) {
     				attr_dev(h2, "class", h2_class_value);
     			}
 
-    			if (dirty & /*$darkModeOn*/ 1 && h4_class_value !== (h4_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"))) {
+    			if (dirty & /*$darkModeOn*/ 1 && h4_class_value !== (h4_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"))) {
     				attr_dev(h4, "class", h4_class_value);
     			}
 
     			if (dirty & /*$darkModeOn*/ 1 && a0_class_value !== (a0_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
-    			: "lightModeLink") + " svelte-1jo5hko"))) {
+    			: "lightModeLink") + " svelte-a8j57k"))) {
     				attr_dev(a0, "class", a0_class_value);
     			}
 
     			if (dirty & /*$darkModeOn*/ 1 && a1_class_value !== (a1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
-    			: "lightModeLink") + " svelte-1jo5hko"))) {
+    			: "lightModeLink") + " svelte-a8j57k"))) {
     				attr_dev(a1, "class", a1_class_value);
     			}
 
-    			if (dirty & /*$darkModeOn*/ 1 && p_class_value !== (p_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"))) {
+    			if (dirty & /*$darkModeOn*/ 1 && p_class_value !== (p_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"))) {
     				attr_dev(p, "class", p_class_value);
     			}
 
-    			if (dirty & /*$darkModeOn*/ 1 && h3_class_value !== (h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-1jo5hko"))) {
+    			if (dirty & /*$darkModeOn*/ 1 && h3_class_value !== (h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-a8j57k"))) {
     				attr_dev(h3, "class", h3_class_value);
     			}
     		},
