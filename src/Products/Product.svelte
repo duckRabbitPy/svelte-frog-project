@@ -13,6 +13,7 @@
   export let srcVar;
 
 let isInCart = "";
+let clicked = ""
   
 //get can be used if you are not subscribed to a store to get the value
 import { get } from 'svelte/store';
@@ -28,7 +29,16 @@ import { get } from 'svelte/store';
 
     cartItems.addItem({ id: id, title: title, price: price });
     $total += price
+    //reset is called before set timeOut completion due to event loop
+    setTimeout(()=>{clicked = ""},1000)
+    added()
+    
+
   }
+
+
+  function added(){
+    clicked = 'added!'}
 
 </script>
 
@@ -78,7 +88,13 @@ import { get } from 'svelte/store';
   .isInCart {
     color: tomato;
   }
+
+  .clicked {
+    color: green
+  }
+
 </style>
+
 
 <div in:scale class="{$darkModeOn ? "product-dark" : "product-light"}">
   <div>
@@ -87,6 +103,7 @@ import { get } from 'svelte/store';
     <img src="{srcVar}" alt="product">
     <p>{description}</p>
     <p class="isInCart">{isInCart}</p>
+    <p class="clicked">{clicked}</p>
   </div>
   <div>
     <CustomButton on:click={addToCart}>Add to Cart</CustomButton>

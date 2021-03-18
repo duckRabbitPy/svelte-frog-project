@@ -16,6 +16,10 @@
     color: rgb(206,206,206);
   }
 
+  section:hover {
+    box-shadow: 10 10 15 rgba(8, 238, 96, 0.2)
+  }
+
   .products-light {
     color: black;
   }

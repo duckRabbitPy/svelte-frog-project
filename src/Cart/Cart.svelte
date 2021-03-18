@@ -26,6 +26,10 @@
     color: rgb(206,206,206);
   }
 
+  .cart-dark:hover {
+    box-shadow: 0 0 11px rgba(8, 238, 96, 0.2)
+  }
+
   .cart-light {
     color: black;
   }

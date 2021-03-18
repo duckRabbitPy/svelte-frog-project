@@ -9,6 +9,7 @@ import Quiz from "./Quiz/Quiz.svelte";
 import Footer from "./UI/Footer.svelte";
 import About from "./UI/About.svelte";
 import Modal from "./UI/Modal.svelte";
+import Dashboard from "./Dashboard/Dashboard.svelte";
 
 import Cart from "./Cart/Cart.svelte";
 import CheckOut from "./Cart/CheckOut.svelte"
@@ -26,6 +27,7 @@ import Toggle from "svelte-toggle";
 import { firebaseConfig } from "./helpers/firebaseConfig.js"
 import firebase from 'firebase/app';
 import Auth from './Auth.svelte';
+
 firebase.initializeApp(firebaseConfig);
 
 //
@@ -52,6 +54,7 @@ let loginModal = null;
 let checkOutMode = null;
 let aboutPage = false;
 let feedback = false;
+let goDashBoard = false
 
 
     let frogs = [ 
@@ -134,7 +137,7 @@ let feedback = false;
         loginModal = 'log';
     }
 
-    function showCheckOut(){
+    function showCheckOut(event){
         checkOutMode = 'checkOut';
     }
 
@@ -144,6 +147,16 @@ let feedback = false;
 
     function hideLogin(event){
         loginModal = null
+    }
+
+    function showDashBoard(event){
+        loginModal = null;
+        mainPage = false;
+        goDashBoard = true;
+        feedback = false;
+        goShop = false; 
+        aboutPage = false; 
+        playQuiz = false;
     }
 
     
@@ -195,13 +208,13 @@ let feedback = false;
 <Header/>
 <main>
     <div class="formControl">
-    <CustomButton btntype="submit" on:click="{() => {mainPage = true; aboutPage = false; playQuiz = false; goShop = false; feedback = false;}}">Main</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {aboutPage = true; mainPage = false; playQuiz = false; goShop = false; feedback = false;}}">About</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false;}}">Main</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true;}}">About</CustomButton>
     <CustomButton btntype="submit" on:click="{() => editMode = 'add'}">Re-home your frog</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">Nature Quiz</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">Frog Shop</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
-    <CustomButton btntype="submit" on:click="{showLogin}">Dashboard</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false;}}">Nature Quiz</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false;}}">Frog Shop</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false;}}">Give Feedback</CustomButton>
+    <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />
     
@@ -231,7 +244,7 @@ let feedback = false;
                       <div>
                         <h2>Logged in as {user.email}</h2>
                         <!-- button and function that is only clickable if logged-in is true -->
-                        <CustomButton btntype="submit">Next steps!</CustomButton>
+                        <CustomButton btntype="submit" on:click={showDashBoard}>Go to dashboard!</CustomButton>
                         <button type="button" class="mt-3" on:click={logout}>Logout</button>
                       </div>
                     </div>
@@ -256,30 +269,37 @@ let feedback = false;
         
     {/if}
 
+    {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
+    <Dashboard />
+    {/if}
+
+
+
+
     {#if checkOutMode === 'checkOut'}
     <CheckOut on:cancel-checkOut="{hideCheckOut}"/>
     {/if}
 
-    {#if playQuiz === true && goShop === false && feedback === false}
+    {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false}
     <Quiz />
     <Credit />
     {/if}
 
-    {#if feedback === true && playQuiz === false  && goShop === false}
+    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false}
     <Feedback feedUser="Oli" feedComment="Awesome" numStars=5 />
     {/if}
 
 
-    {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
+    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false}
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
     <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}"/>
     {/if}
 
-    {#if aboutPage === true}
+    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}
     <About/>
     {/if}
 
-    {#if goShop === true && playQuiz === false}
+    {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}
     <div class="toggle">
     <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
         Toggle Cart

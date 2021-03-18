@@ -59,6 +59,7 @@ import { darkModeOn } from "./DarkModeStore.js";
         width: 300px;
         border-radius: 20%;
         margin-right: 1rem;
+
     }
 
     .textInfo {
@@ -79,6 +80,7 @@ import { darkModeOn } from "./DarkModeStore.js";
         width: 40%;
         border-radius: 20%;
         padding-left: 1rem;
+        padding-top: 1rem;
         }
 
     .textInfo {
@@ -111,6 +113,7 @@ import { darkModeOn } from "./DarkModeStore.js";
    <br>
    <br>
     My current frontend framework of choice is Svelte, it is an excellent tool for building performant Single Page Applications and is the framework that this portfolio was made with! Despite the relative obscurity of Svelte I believe it is a great framework for learning component based architecture as well as state management. The skills I have developed will be transferable to technologies such as React, Angular and Vue. </p>
+    Contact me at: <a class={$darkModeOn ? "darkModeLink" : "lightModeLink"} target="blank" href="duck.rabbit.python@gmail.com">duck.rabbit.python@gmail.com</a>
     <h3 class={$darkModeOn ? "darkMode" : "lightMode"}>My core competencies:</h3>
 </div>
 
