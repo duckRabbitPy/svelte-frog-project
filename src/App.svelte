@@ -4,11 +4,11 @@ import Header from "./UI/Header.svelte";
 import AdoptGrid from "./Adoption/AdoptGrid.svelte";
 import CustomButton from "./UI/CustomButton.svelte";
 import EditAdopt from "./Adoption/EditAdopt.svelte";
-import Adopt from "./Adoption/Adopt.svelte";
 import Intro from "./UI/Intro.svelte";
 import Quiz from "./Quiz/Quiz.svelte";
 import Footer from "./UI/Footer.svelte";
 import About from "./UI/About.svelte";
+import Modal from "./UI/Modal.svelte";
 
 import Cart from "./Cart/Cart.svelte";
 import CheckOut from "./Cart/CheckOut.svelte"
@@ -19,6 +19,18 @@ import Credit from "./Quiz/Credit.svelte";
 import { total } from "./Cart/cart-store.js";
 import { darkModeOn } from "./UI/DarkModeStore.js";
 import Toggle from "svelte-toggle";
+
+
+//fireBase Auth added to App.svelte so only initalised once
+//added to .gitIgnore
+import { firebaseConfig } from "./helpers/firebaseConfig.js"
+import firebase from 'firebase/app';
+import Auth from './Auth.svelte';
+firebase.initializeApp(firebaseConfig);
+
+//
+
+
 
 let toggled = false;
 
@@ -36,7 +48,7 @@ let playQuiz = false;
 let goShop = false;
 let showCart = true;
 let editMode = null;
-let adoptMode = null;
+let loginModal = null;
 let checkOutMode = null;
 let aboutPage = false;
 let feedback = false;
@@ -118,8 +130,8 @@ let feedback = false;
         editMode = 'null';
     }
 
-    function showAdopt(event){
-        adoptMode = 'adopt';
+    function showLogin(event){
+        loginModal = 'log';
     }
 
     function showCheckOut(){
@@ -130,9 +142,12 @@ let feedback = false;
         checkOutMode = null;
     }
 
-    function hideAdopt(event){
-        adoptMode = null
+    function hideLogin(event){
+        loginModal = null
     }
+
+    
+
 
 
 </script>
@@ -186,6 +201,8 @@ let feedback = false;
     <CustomButton btntype="submit" on:click="{() => {playQuiz = true; aboutPage = false; goShop = false; feedback = false;}}">Nature Quiz</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goShop = true; aboutPage = false; playQuiz = false; feedback = false;}}">Frog Shop</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {feedback = true; mainPage = false; goShop = false; aboutPage = false; playQuiz = false;}}">Give Feedback</CustomButton>
+    <CustomButton btntype="submit" on:click="{showLogin}">Dashboard</CustomButton>
+
     <Toggle hideLabel label="Custom label" bind:toggled />
     
 </div>
@@ -194,8 +211,49 @@ let feedback = false;
     <EditAdopt on:adoption-submit="{addFrog}" on:cancel="{cancelForm}"/>
     {/if}
 
-    {#if adoptMode === 'adopt'}
-    <Adopt on:cancel-adopt="{hideAdopt}"/>
+    {#if loginModal === 'log'}
+    <Modal title="Proceed to Dashboard">
+        <div>
+            <div class="wrapper">
+              <!-- slot input -->
+                <Auth
+                  useRedirect={true}
+                  let:user
+                  let:loggedIn
+                  let:loginWithGoogle
+                  let:logout>
+                  
+                {#if !loggedIn}
+                <p>You must sign in/register to view Dashboard</p>
+                 {/if}
+                  {#if loggedIn}
+                    <div>
+                      <div>
+                        <h2>Logged in as {user.email}</h2>
+                        <!-- button and function that is only clickable if logged-in is true -->
+                        <CustomButton btntype="submit">Next steps!</CustomButton>
+                        <button type="button" class="mt-3" on:click={logout}>Logout</button>
+                      </div>
+                    </div>
+                  {:else}
+                    <div class="w-full max-w-xs">
+                      <form on:submit|preventDefault>
+                        <div class="mt-3">
+                          <button type="button" on:click|preventDefault={loginWithGoogle}>
+                            Sign In with Google
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  {/if}
+                </Auth>
+              </div>
+        </div>
+        <div slot="footer">
+            <CustomButton btntype="button" on:click="{() => {loginModal = false}}">Cancel</CustomButton>
+        </div> 
+        </Modal>
+        
     {/if}
 
     {#if checkOutMode === 'checkOut'}
@@ -214,7 +272,7 @@ let feedback = false;
 
     {#if mainPage === true && playQuiz === false && goShop === false && feedback === false}
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
-    <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}" on:adopt-event="{showAdopt}"/>
+    <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}"/>
     {/if}
 
     {#if aboutPage === true}

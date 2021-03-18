@@ -2,6 +2,7 @@
     import firebase from 'firebase/app';
     import 'firebase/auth';
   
+  
     const auth = firebase.auth();
   
     // Firebase user

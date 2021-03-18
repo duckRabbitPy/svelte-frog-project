@@ -173,7 +173,7 @@
     </div>
     <footer>
         <a href="mailto:{email}">Contact</a>
-        <CustomButton on:click={() => dispatch('adopt-event')} btntype="submit">Adopt!</CustomButton>
+        <CustomButton btntype="submit">Adopt!</CustomButton>
         <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">{isFavItem ? 'Remove from favourites' : 'Add to favourites'}</CustomButton>
         <Social on:pass-up-data="{saveLikesFb}" disabled="{disabled}" counterName="Likes {likes}" 
         on:pass-up-data="{captureCustomEventData}"/>

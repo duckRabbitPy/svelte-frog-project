@@ -30,7 +30,7 @@ section {
     email={frog.contact}
     isFavItem={frog.isFavourite}
     id={frog.id}
-    on:toggle-favourite on:adopt-event/>
+    on:toggle-favourite/>
     {/each}
 </section>
     
