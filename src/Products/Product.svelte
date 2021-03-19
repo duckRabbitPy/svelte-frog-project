@@ -12,25 +12,29 @@
   export let description;
   export let srcVar;
 
-let isInCart = "";
-let clicked = ""
+  let isInCart = "";
+  let clicked = "";
+  let doubleBuy = "";
   
-//get can be used if you are not subscribed to a store to get the value
-import { get } from 'svelte/store';
+  //get can be used if you are not subscribed to a store to get the value
+  import { get } from 'svelte/store';
 
 
   function addToCart() {
     let currItems = get(cart);
     for(let x=0; x<currItems.length; x++){
       if(currItems[x].id === id){
-        isInCart = "Hey! Leave some frogs for the rest of us!!!"
+        setTimeout(()=>{doubleBuy = ""},2000)
+        double()
+        return
       }
+      
     }
 
     cartItems.addItem({ id: id, title: title, price: price });
     $total += price
     //reset is called before set timeOut completion due to event loop
-    setTimeout(()=>{clicked = ""},1000)
+    setTimeout(()=>{clicked = ""},2000)
     added()
     
 
@@ -39,6 +43,9 @@ import { get } from 'svelte/store';
 
   function added(){
     clicked = 'added!'}
+
+  function double(){
+    doubleBuy = "Item in cart, leave some frogs for the rest of us!!!"}
 
 </script>
 
@@ -98,12 +105,12 @@ import { get } from 'svelte/store';
 
 <div in:scale class="{$darkModeOn ? "product-dark" : "product-light"}">
   <div>
+    <p class="clicked">{clicked}</p>
     <h1>{title}</h1>
     <h2>£{price}</h2>
     <img src="{srcVar}" alt="product">
     <p>{description}</p>
-    <p class="isInCart">{isInCart}</p>
-    <p class="clicked">{clicked}</p>
+    <p class="isInCart">{doubleBuy}</p>
   </div>
   <div>
     <CustomButton on:click={addToCart}>Add to Cart</CustomButton>
