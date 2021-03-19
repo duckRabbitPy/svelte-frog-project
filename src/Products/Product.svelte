@@ -11,6 +11,7 @@
   export let price;
   export let description;
   export let srcVar;
+  export let discount
 
   let isInCart = "";
   let clicked = "";
@@ -100,6 +101,10 @@
     color: green
   }
 
+  h4 {
+    color: red;
+  }
+
 </style>
 
 
@@ -108,6 +113,7 @@
     <p class="clicked">{clicked}</p>
     <h1>{title}</h1>
     <h2>£{price}</h2>
+    <h4>{discount}</h4>
     <img src="{srcVar}" alt="product">
     <p>{description}</p>
     <p class="isInCart">{doubleBuy}</p>

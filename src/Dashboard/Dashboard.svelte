@@ -2,6 +2,8 @@
 
 import About from "../UI/About.svelte";
 
+function test(){console.log("clicked")}
+
 </script>
 <style>
 
@@ -90,7 +92,7 @@ import About from "../UI/About.svelte";
    
    
    <div class="row">
-       <div class="img img-1"><img src="/images/frog.png" alt="galleryImg"><h1>Memory Game</h1></div>
+       <div on:click="{test}" class="img img-1"><img src="/images/frog.png" alt="galleryImg"><h1>Memory Game</h1></div>
        <div class="img img-2"><img src="/images/frog.png" alt="galleryImg"><h1>LilyPad textEditor</h1></div>
        <div class="img img-3"><img src="/images/frog.png" alt="galleryImg"><h1>Dwarf Frog Gallery</h1></div>
        <div class="img img-4"><img src="/images/frog.png" alt="galleryImg"><h1>More coming soon...</h1></div>

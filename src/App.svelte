@@ -27,6 +27,7 @@ import Toggle from "svelte-toggle";
 import { firebaseConfig } from "./helpers/firebaseConfig.js"
 import firebase from 'firebase/app';
 import Auth from './Auth.svelte';
+import Orphan from "./Adoption/Orphan.svelte";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -54,7 +55,10 @@ let loginModal = null;
 let checkOutMode = null;
 let aboutPage = false;
 let feedback = false;
-let goDashBoard = false
+let goDashBoard = false;
+
+let orphans = [{}]
+let orphaned = false;
 
 
     let frogs = [ 
@@ -99,7 +103,6 @@ let goDashBoard = false
 
     function addFrog(event){
         const newFrog = {
-            id: Math.random().toString() + 'ua',
             title: event.detail.title,
             subtitle: event.detail.subtitle,
             description: event.detail.description,
@@ -109,12 +112,11 @@ let goDashBoard = false
         }
 
         if(title != '' && subtitle != ''){
-        // nice modern JS syntax for adding items to list
-        frogs = [newFrog, ...frogs]}
-
+        orphans = newFrog
         editMode = null;
+        orphaned = true;
 
-    }
+    }}
 
 
     function toggleFavourite(event){
@@ -169,6 +171,8 @@ let goDashBoard = false
     main {
         margin-top: 5rem;
     }
+
+    h1 { padding: 1rem;}
 
     .formControl {
         margin: 1rem;
@@ -292,6 +296,12 @@ let goDashBoard = false
 
     {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false}
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
+    
+    {#if orphaned === true}
+    <h1>Your Re-homing Advert</h1>
+    <Orphan {orphans}/>
+    {/if}
+    <h1>Current fogs in need of a home</h1>
     <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}"/>
     {/if}
 

@@ -34,6 +34,7 @@
       title={product.title}
       price={product.price}
       description={product.description}
-      srcVar={product.srcVar} />
+      srcVar={product.srcVar}
+      discount={product.discount ? product.discount : ""} />
   {/each}
 </section>

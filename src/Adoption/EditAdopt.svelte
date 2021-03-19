@@ -78,6 +78,7 @@ function cancel() {
         value={description} 
         on:input={event => (description = event.target.value)}/>
 
+
         <TextInput 
         Id="imageUrL" 
         label="ImageUrl"
@@ -87,6 +88,8 @@ function cancel() {
         validityMessage="Must enter valid URL"
         value={imageUrl} 
         on:input={event => (imageUrl = event.target.value)}/>
+
+        
 
         <TextInput 
         Id="address" 
@@ -104,9 +107,10 @@ function cancel() {
         value={contact} 
         on:input={event => (contact = event.target.value)}/>
 
+        <a target="blank" href="https://unsplash.com/s/photos/frogs">Browse images</a>
     </form>
     <div slot="footer">
-        <CustomButton btntype="submit" disabled={!overallValid} on:click="{submitForm}" on:click={console.log(overallValid)}>Post Advert</CustomButton>
+        <CustomButton btntype="submit" disabled={!overallValid} on:click="{submitForm}">Post Advert</CustomButton>
         <CustomButton btntype="button" on:click="{cancel}">Cancel</CustomButton>
     </div>
     </Modal>
