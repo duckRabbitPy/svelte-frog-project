@@ -10,6 +10,7 @@ import Footer from "./UI/Footer.svelte";
 import About from "./UI/About.svelte";
 import Modal from "./UI/Modal.svelte";
 import Dashboard from "./Dashboard/Dashboard.svelte";
+import Game from "./Game/Game.svelte";
 
 import Cart from "./Cart/Cart.svelte";
 import CheckOut from "./Cart/CheckOut.svelte"
@@ -56,6 +57,8 @@ let checkOutMode = null;
 let aboutPage = false;
 let feedback = false;
 let goDashBoard = false;
+let gameInPlay = false;
+let loggedInAsGuest = false;
 
 let orphans = [{}]
 let orphaned = false;
@@ -139,6 +142,10 @@ let orphaned = false;
         loginModal = 'log';
     }
 
+    function logOutGuest(event){
+      loggedInAsGuest = false
+    }
+
     function showCheckOut(event){
         checkOutMode = 'checkOut';
     }
@@ -161,7 +168,10 @@ let orphaned = false;
         playQuiz = false;
     }
 
-    
+    function playGame(){
+      alert("ready to play")
+      gameInPlay = true
+    }
 
 
 
@@ -172,10 +182,17 @@ let orphaned = false;
         margin-top: 5rem;
     }
 
-    h1 { padding: 1rem;}
+    .h1-light { padding: 1rem; color: black;}
+    
+    .h1-dark {padding: 1rem; color: rgb(206, 206, 206);}
 
     .formControl {
         margin: 1rem;
+    }
+
+    .login:hover {
+      background-color: lightgray;
+      border-color: lightslategrey;
     }
 
     .toggle {
@@ -205,6 +222,41 @@ let orphaned = false;
     }
 
 
+    button:hover {
+      background: #9a476b;
+      border-color: #9a476b;
+
+    }
+
+    .rehome-light{
+    font: inherit;
+    border-color: #646668;
+    background-color: #646668;
+    padding: 0.5rem 1rem;
+    color: white;
+    margin-left: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+    .rehome-dark{
+      font: inherit;
+      border-color: #324A5E;
+      background-color: #324A5E;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      color: white;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+
+
+
 </style>
 
 
@@ -214,7 +266,6 @@ let orphaned = false;
     <div class="formControl">
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false;}}">Main</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true;}}">About</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => editMode = 'add'}">Re-home your frog</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false;}}">Nature Quiz</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false;}}">Frog Shop</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false;}}">Give Feedback</CustomButton>
@@ -240,24 +291,29 @@ let orphaned = false;
                   let:loginWithGoogle
                   let:logout>
                   
-                {#if !loggedIn}
+                {#if !loggedIn || !loggedInAsGuest}
                 <p>You must sign in/register to view Dashboard</p>
                  {/if}
-                  {#if loggedIn}
+                  {#if loggedIn || loggedInAsGuest}
                     <div>
                       <div>
-                        <h2>Logged in as {user.email}</h2>
+                        <h2>Logged in as {loggedIn ? user.email : "Guest"}</h2>
                         <!-- button and function that is only clickable if logged-in is true -->
                         <CustomButton btntype="submit" on:click={showDashBoard}>Go to dashboard!</CustomButton>
-                        <button type="button" class="mt-3" on:click={logout}>Logout</button>
+                        <button type="button" on:click={logOutGuest} on:click={logout}>Logout</button>
                       </div>
                     </div>
                   {:else}
-                    <div class="w-full max-w-xs">
+                    <div>
                       <form on:submit|preventDefault>
-                        <div class="mt-3">
-                          <button type="button" on:click|preventDefault={loginWithGoogle}>
+                        <div>
+                          <button class="login" type="button" on:click|preventDefault={loginWithGoogle}>
                             Sign In with Google
+                          </button>
+                        </div>
+                        <div>
+                          <button class="login" type="button" on:click|preventDefault={()=>{loggedInAsGuest = true}}>
+                            Sign In as Guest
                           </button>
                         </div>
                       </form>
@@ -274,7 +330,10 @@ let orphaned = false;
     {/if}
 
     {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
-    <Dashboard />
+    {#if gameInPlay === true}
+    <Game/>
+    {/if}
+    <Dashboard on:memory-game="{playGame}"/>
     {/if}
 
 
@@ -295,13 +354,14 @@ let orphaned = false;
 
 
     {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false}
+    <button class={$darkModeOn ? "rehome-dark" : "rehome-light"} on:click="{() => editMode = 'add'}">Re-home your frog</button>
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
     
     {#if orphaned === true}
-    <h1>Your Re-homing Advert</h1>
+    <h1 class={$darkModeOn ? "h1-dark" : "h1-light"}>Your Re-homing Advert</h1>
     <Orphan {orphans}/>
     {/if}
-    <h1>Current fogs in need of a home</h1>
+    <h1 class={$darkModeOn ? "h1-dark" : "h1-light"}>Current fogs in need of a home</h1>
     <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}"/>
     {/if}
 

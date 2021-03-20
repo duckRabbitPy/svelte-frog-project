@@ -1,8 +1,9 @@
 <script>
+import { createEventDispatcher } from "svelte";
 
-import About from "../UI/About.svelte";
+const dispatch = createEventDispatcher();
 
-function test(){console.log("clicked")}
+function test(){dispatch("memory-game")}
 
 </script>
 <style>
