@@ -3,53 +3,85 @@ import CustomButton from "../UI/CustomButton.svelte";
 import { onMount } from 'svelte';
 
   let tl;
+  let tl_src;
+  let tl_correct = false;
+
   let tm;
+  let tm_src;
+  let tm_correct = false;
+
   let tr;
+  let tr_src;
+  let tr_correct = false;
+
   let ml;
+  let ml_src;
+  let ml_correct = false;
+
   let mm; 
+  let mm_src;
+  let mm_correct = false;
+
   let mr;
+  let mr_src;
+  let mr_correct = false;
+
   let bl; 
-  let bm; 
+  let bl_src;
+  let bl_correct = false;
+
+  let bm;
+  let bm_src;
+  let bm_correct = false;
+
   let br;
+  let br_src;
+  let br_correct = false;
+
   let gl;
+  let gl_src;
+  let gl_correct = false;
+
   let gm;
+  let gm_src;
+  let gm_correct = false;
+
   let gr;
+  let gr_src;
+  let gr_correct = false;
 
   let mission = "";
 
-  let positionArray = [tl,tm,tr,ml,mm,mr,bl,bm,br]
-
-  let DuckImg = "/images/lillyDuck.png";
-  let FrogImg = "/images/lillyFrog.png";
-  let PythonImg = "/images/lillyPython.png";
-  let RabbitImg = "/images/lillyRabbit.png";
   let lillyImg = "/images/lilly.png";
 
-  let pondArray = [DuckImg,FrogImg,PythonImg,RabbitImg,lillyImg]
-  let strPondArray = ["Duck", "Rabbit", "Python", "Frog"]
+  let pondArray = [
+    {Creature:"Duck", Src:"/images/lillyDuck.png"},
+    {Creature:"Frog", Src:"/images/lillyFrog.png"},
+    {Creature:"Python", Src:"/images/lillyPython.png"},
+    {Creature:"Rabbit", Src:"/images/lillyRabbit.png"}]
+ 
 
   onMount(()=>{hideCreatures()});
 
 
   function hideCreatures(){
-    tl = lillyImg;
-    tm = lillyImg;
-    tr = lillyImg;
-    ml = lillyImg;
-    mm = lillyImg;
-    mr = lillyImg;
-    bl = lillyImg;
-    bm = lillyImg;
-    br = lillyImg;
-    gl = lillyImg;
-    gm = lillyImg;
-    gr = lillyImg
+    tl_src = lillyImg;
+    tm_src = lillyImg;
+    tr_src = lillyImg;
+    ml_src = lillyImg;
+    mm_src = lillyImg;
+    mr_src = lillyImg;
+    bl_src = lillyImg;
+    bm_src = lillyImg;
+    br_src = lillyImg;
+    gl_src = lillyImg;
+    gm_src = lillyImg;
+    gr_src = lillyImg
   }
 
   function startGame(){
-    console.log("start")
     choosePondElements()
-    let findCreature = strPondArray[getRandomInt(4)]
+    let findCreature = pondArray[getRandomInt(4)].Creature
     assignMission(findCreature)
     
     
@@ -62,30 +94,69 @@ import { onMount } from 'svelte';
     mission = creature
   }
 
+  //consider refactoring to follow DRY principle
   function choosePondElements(){
-    tl = pondArray[getRandomInt(5)];
-    tm = pondArray[getRandomInt(5)];
-    tr = pondArray[getRandomInt(5)];
-    ml = pondArray[getRandomInt(5)];
-    mm = pondArray[getRandomInt(5)];
-    mr = pondArray[getRandomInt(5)];
-    bl = pondArray[getRandomInt(5)];
-    bm = pondArray[getRandomInt(5)];
-    br = pondArray[getRandomInt(5)];
-    gl = pondArray[getRandomInt(5)];
-    gm = pondArray[getRandomInt(5)];
-    gr = pondArray[getRandomInt(5)];
+    let tl_Obj = pondArray[getRandomInt(4)]
+    tl_src = tl_Obj.Src
+    tl_correct = tl_Obj.Creature
+    
+    let tm_Obj = pondArray[getRandomInt(4)]
+    tm_src = tm_Obj.Src
+    tm_correct = tm_Obj.Creature
+
+    let tr_Obj = pondArray[getRandomInt(4)]
+    tr_src = tr_Obj.Src
+    tr_correct = tr_Obj.Creature
+
+    let ml_Obj = pondArray[getRandomInt(4)]
+    ml_src = tr_Obj.Src
+    ml_correct = ml_Obj.Creature
+
+    let mm_Obj = pondArray[getRandomInt(4)]
+    mm_src = mm_Obj.Src
+    mm_correct = mm_Obj.Creature
+    let mr_Obj = pondArray[getRandomInt(4)]
+    mr_src = mr_Obj.Src
+    mr_correct = mr_Obj.Creature
+
+    let bl_Obj = pondArray[getRandomInt(4)]
+    bl_src = bl_Obj.Src
+    bl_correct = bl_Obj.Creature
+
+    let bm_Obj = pondArray[getRandomInt(4)]
+    bm_src = bm_Obj.Src
+    bm_correct = bm_Obj.Creature
+
+    let br_Obj = pondArray[getRandomInt(4)]
+    br_src = br_Obj.Src
+    br_correct = br_Obj.Creature
+
+    let gl_Obj = pondArray[getRandomInt(4)]
+    gl_src = gl_Obj.Src
+    gl_correct = gl_Obj.Creature
+
+    let gm_Obj = pondArray[getRandomInt(4)]
+    gm_src = gm_Obj.Src
+    gm_correct = gm_Obj.Creature
+
+    let gr_Obj = pondArray[getRandomInt(4)]
+    gr_src = gr_Obj.Src
+    gr_correct = gr_Obj.Creature
 
   }
 
+
   function letPlayerMemorise(){
-    setTimeout(()=>{hideCreatures()},4000)
+    setTimeout(()=>{hideCreatures()},3000)
   }
 
   function getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));}
 
 
+  function checkIfCorrect(){
+
+  }
 
 </script>
 
@@ -120,22 +191,21 @@ img:hover {
 </style>
 
 <h1>Find {mission} </h1>
-<div class="grid-container">
-<img src="{tl}" alt="lilly">
-<img src="{tm}" alt="lilly">
-<img src="{tr}" alt="lilly">
-<img src="{ml}" alt="lilly">
-<img src="{mm}" alt="lilly">
-<img src="{mr}" alt="lilly">
-<img src="{bl}" alt="lilly">
-<img src="{bm}" alt="lilly">
-<img src="{br}" alt="lilly">
-<img src="{gl}" alt="lilly">
-<img src="{gm}" alt="lilly">
-<img src="{gr}" alt="lilly">
-</div>
-
 <div>
-<CustomButton on:click={startGame}>Start Game</CustomButton>
+  <CustomButton on:click={startGame}>Start Game</CustomButton>
+</div>
+<div class="grid-container">
+<img src="{tl_src}" alt="lilly" on:click="{event =>{if(tl_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{tm_src}" alt="lilly" on:click="{event =>{if(tm_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{tr_src}" alt="lilly" on:click="{event =>{if(tr_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{ml_src}" alt="lilly" on:click="{event =>{if(ml_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{mm_src}" alt="lilly" on:click="{event =>{if(mm_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{mr_src}" alt="lilly" on:click="{event =>{if(mr_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{bl_src}" alt="lilly" on:click="{event =>{if(bl_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{bm_src}" alt="lilly" on:click="{event =>{if(bm_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{br_src}" alt="lilly" on:click="{event =>{if(br_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{gl_src}" alt="lilly" on:click="{event =>{if(gl_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{gm_src}" alt="lilly" on:click="{event =>{if(gm_correct === mission){event.target.src="/images/correct.png"}}}">
+<img src="{gr_src}" alt="lilly" on:click="{event =>{if(gr_correct === mission){event.target.src="/images/correct.png"}}}">
 </div>
 
