@@ -170,6 +170,7 @@ let orphaned = false;
 
     function playGame(){
       gameInPlay = true
+      goDashBoard = false
     }
 
 
@@ -329,11 +330,13 @@ let orphaned = false;
     {/if}
 
     {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
-    {#if gameInPlay === true}
-    <Game/>
-    {/if}
     <Dashboard on:memory-game="{playGame}"/>
     {/if}
+
+    {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
+    <Game/>
+    {/if}
+    
 
 
 
