@@ -69,7 +69,7 @@ let orphaned = false;
         title: 'Gerald',
         subtitle: "White's Tree frog",
         description: 'Gerald is a very polite frog and needs a home and someone to love him',
-        imageUrl: 'https://www.reptilecentre.com/sites/Reptile/img/category-header/white-tree-frog-care.jpg',
+        imageUrl: '/images/treeFrog.png',
         address: '34 Blackstock road, Stockwell, SW9 S3T, London',
         contact: 'svelteLondonSoc@gmail.com',
         isFavourite: false,
@@ -79,7 +79,7 @@ let orphaned = false;
         title: 'Maurice and Natalie',
         subtitle: 'Green Tree frogs',
         description: 'Two lovely frogs that are looking for new owners, well behaved and easy to clean up after',
-        imageUrl: 'https://images.creativemarket.com/0.1.0/ps/4367698/1820/1208/m1/fpnw/wm1/rr5eyoggepciup7ilsiqxibka6y9tb02uccxj2ll7df6bmzr81mftor1bogxhnyr-.jpg?1524810279&s=47f7a973b02514e15513039a4f16eb31',
+        imageUrl: '/images/twoFrogs.jpeg',
         address: '321 Seven sisters road, Finsbury Park, N17 4FA, London',
         contact: 'svelteLondonSoc@gmail.com',
         isFavourite: false,
@@ -88,7 +88,7 @@ let orphaned = false;
         title: 'Arnold',
         subtitle: 'African clawed frog',
         description: "Somewhat strange but fiercely loyal, Arnold hasn't had the easiest life, it's time to give him a chance",
-        imageUrl: 'https://www.aqualog.de/wp-content/uploads/2017/08/xenopus-albino2.jpg',
+        imageUrl: '/images/xenopus.jpeg',
         address: '11 Regents Street, C12 WEB, London',
         contact: 'svelteLondonSoc@gmail.com',
         isFavourite: false,
@@ -100,7 +100,7 @@ let orphaned = false;
         description: 'Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet. ',
         imageUrl: 'https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F28638272-6943-11ea-b96a-000a4e1a8b0c.jpg?crop=3959%2C2639%2C0%2C0',
         address: '321 Seven sisters road, Finsbury Park, N17 4FA, London',
-        contact: 'svelteLondonSoc@gmail.com',
+        contact: '/images/dartFrog.jpeg',
         isFavourite: false,
     },]
 
@@ -169,7 +169,6 @@ let orphaned = false;
     }
 
     function playGame(){
-      alert("ready to play")
       gameInPlay = true
     }
 
