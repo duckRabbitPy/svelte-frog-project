@@ -38,11 +38,6 @@ import LillyPadEditor from "./Dashboard/LillyPadEditor.svelte";
 
 firebase.initializeApp(firebaseConfig);
 
-// Enable navigation prompt
-window.onbeforeunload = function() {
-    return true;
-};
-
 let toggled = false;
 
 $: if (toggled === true){
