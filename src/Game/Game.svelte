@@ -102,7 +102,7 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
     toSelectFrom = [];
 
     choosePondElements()
-    if(timeToMemorize > 700){timeToMemorize -= 500;}
+    if(timeToMemorize > 700){timeToMemorize -= 300;}
 
     let findCreature = toSelectFrom[getRandomInt(toSelectFrom.length)]
 

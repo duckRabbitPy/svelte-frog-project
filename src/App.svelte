@@ -353,7 +353,7 @@ let score = 0;
     {/if}
 
     {#if showLeaderboard === true && gameInPlay === true}
-    <Leaderboard score={score}/>
+    <Leaderboard score={score} on:close-board="{()=>{showLeaderboard = false}}"/>
     {/if}
 
     {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
