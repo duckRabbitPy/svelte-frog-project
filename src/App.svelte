@@ -31,6 +31,7 @@ import { firebaseConfig } from "./helpers/firebaseConfig.js"
 import firebase from 'firebase/app';
 import Auth from './Auth.svelte';
 import Orphan from "./Adoption/Orphan.svelte";
+import Carousel from "./UI/Carousel.svelte";
 
 
 firebase.initializeApp(firebaseConfig);
@@ -64,10 +65,24 @@ let gameInPlay = false;
 let loggedInAsGuest = false;
 let hideButtonsforGame = false;
 let showLeaderboard = false;
+let openGallery = false;
 
 let orphans = [{}]
 let orphaned = false;
 let score = 0;
+
+
+
+  const images = [
+        {path: 'images/frog1.jpg', id: 'image1'},
+        {path: 'images/frog2.jpg', id: 'image2'},
+        {path: 'images/frog3.jpg', id: 'image3'},
+        {path: 'images/frog4.jpg', id: 'image4'},
+        {path: 'images/frog5.jpg', id: 'image5'},
+        {path: 'images/frog6.jpg', id: 'image6'},
+        {path: 'images/frog7.jpg', id: 'image7'},
+        {path: 'images/frog8.jpg', id: 'image8'},
+    ]
 
 
     let frogs = [ 
@@ -192,6 +207,10 @@ let score = 0;
       console.log(score)
     }
 
+    function viewGallery(event){
+      openGallery = true
+    }
+
 </script>
 
 <style>
@@ -282,11 +301,11 @@ let score = 0;
 <main>
   {#if hideButtonsforGame === false}
     <div class="formControl">
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false;}}">Main</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true;}}">About</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false;}}">Nature Quiz</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false;}}">Frog Shop</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false;}}">Give Feedback</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false;}}">Main</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false;}}">About</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false;}}">Nature Quiz</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false;}}">Frog Shop</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false }}">Give Feedback</CustomButton>
     <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />
@@ -348,16 +367,20 @@ let score = 0;
         
     {/if}
 
-    {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
-    <Dashboard on:memory-game="{playGame}"/>
+    {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
+    <Dashboard on:memory-game="{playGame}" on:view-gallery="{viewGallery}"/>
     {/if}
 
     {#if showLeaderboard === true && gameInPlay === true}
     <Leaderboard score={score} on:close-board="{()=>{showLeaderboard = false}}"/>
     {/if}
 
-    {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
+    {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
     <Game on:game-over="{endGame}"/>
+    {/if}
+
+    {#if openGallery === true}
+    <Carousel images={images} imageWidth={200} imageSpacing={'30px'} />
     {/if}
     
 
@@ -365,17 +388,17 @@ let score = 0;
     <CheckOut on:cancel-checkOut="{hideCheckOut}"/>
     {/if}
 
-    {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false}
+    {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
     <Quiz />
     <Credit />
     {/if}
 
-    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false}
+    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false} 
     <Feedback feedUser="Oli" feedComment="Awesome" numStars=5 />
     {/if}
 
 
-    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false}
+    {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}
     <button class={$darkModeOn ? "rehome-dark" : "rehome-light"} on:click="{() => editMode = 'add'}">Re-home your frog</button>
     <Intro>"Don't be a fish; be a frog. Swim in the water and jump when you hit ground" - Kim Young-ha</Intro>
     

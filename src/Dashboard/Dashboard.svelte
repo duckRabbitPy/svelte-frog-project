@@ -3,7 +3,9 @@ import { createEventDispatcher } from "svelte";
 
 const dispatch = createEventDispatcher();
 
-function test(){dispatch("memory-game")}
+function game(){dispatch("memory-game")}
+
+function gallery(){dispatch("view-gallery")}
 
 </script>
 <style>
@@ -93,8 +95,8 @@ function test(){dispatch("memory-game")}
    
    
    <div class="row">
-       <div on:click="{test}" class="img img-1"><img src="/images/frog.png" alt="galleryImg"><h1>Memory Game</h1></div>
+       <div on:click="{game}" class="img img-1"><img src="/images/frog.png" alt="memoryGame"><h1>Memory Game</h1></div>
        <div class="img img-2"><img src="/images/frog.png" alt="galleryImg"><h1>LilyPad textEditor</h1></div>
-       <div class="img img-3"><img src="/images/frog.png" alt="galleryImg"><h1>Dwarf Frog Gallery</h1></div>
+       <div on:click="{gallery}" class="img img-3"><img src="/images/frog.png" alt="galleryImg"><h1>Dwarf Frog Gallery</h1></div>
        <div class="img img-4"><img src="/images/frog.png" alt="galleryImg"><h1>More coming soon...</h1></div>
    </div>
