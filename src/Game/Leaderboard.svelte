@@ -1,9 +1,9 @@
 
 
 <script>
-    import About from "../UI/About.svelte";
     import CustomButton from "../UI/CustomButton.svelte";
     import { darkModeOn } from '../UI/DarkModeStore.js';
+    export let score;
     
 	let name = '';
 
@@ -23,10 +23,10 @@
 
 
     function saveScore(){
+    console.log(score)
+    let newObj = { username: name, score: score }
 
-    let newObj = { username: name, score: "1780"}
-
-    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard.json`, {
+    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard/UserObject.json`, {
         method: "PUT",
         body: JSON.stringify(newObj),
         headers: { 'Content-Type': 'application/json'}
@@ -49,13 +49,18 @@
 
 .dark { margin-left: 1rem; color: rgb(206,205,206)}
 
+input {
+    margin-left: 1rem;
+}
+
 </style>
 
-<input bind:value={name}>
+
 
 <h1 class="{$darkModeOn ? "dark" : "light"}" >Leaderboard</h1>
 
 <h3 class="{$darkModeOn ? "dark" : "light"}" >Username {name}!</h3>
+<input bind:value={name}>
 
 <CustomButton on:click="{saveScore}">Submit score</CustomButton>
 

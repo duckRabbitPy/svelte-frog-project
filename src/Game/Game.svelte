@@ -92,8 +92,8 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
     startNextRound()
   }
 
-    function gameOver(){
-      dispatch('game-over')
+    function gameOver(event){
+      dispatch('game-over', {score: score})
       console.log("dispatching")
     }
 

@@ -67,6 +67,7 @@ let showLeaderboard = false;
 
 let orphans = [{}]
 let orphaned = false;
+let score = 0;
 
 
     let frogs = [ 
@@ -184,6 +185,12 @@ let orphaned = false;
         }}
 
 
+    function endGame(event){
+      hideButtonsforGame = false;
+      showLeaderboard = true
+      score = event.detail.score
+      console.log(score)
+    }
 
 </script>
 
@@ -318,9 +325,10 @@ let orphaned = false;
                     <div>
                       <form on:submit|preventDefault>
                         <div>
-                          <button class="login" type="button" on:click|preventDefault={loginWithGoogle}>
+                          <!-- Keeping login and auth local for security purposes -->
+                          <!-- <button class="login" type="button" on:click|preventDefault={loginWithGoogle}>
                             Sign In with Google
-                          </button>
+                          </button> -->
                         </div>
                         <div>
                           <button class="login" type="button" on:click|preventDefault={()=>{loggedInAsGuest = true}}>
@@ -345,11 +353,11 @@ let orphaned = false;
     {/if}
 
     {#if showLeaderboard === true && gameInPlay === true}
-    <Leaderboard/>
+    <Leaderboard score={score}/>
     {/if}
 
     {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
-    <Game on:game-over="{()=>{hideButtonsforGame = false; showLeaderboard = true}}"/>
+    <Game on:game-over="{endGame}"/>
     {/if}
     
 
