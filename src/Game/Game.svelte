@@ -83,7 +83,7 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
     music.play()
     score = 0;
     memorising = false;
-    timeToMemorize = 4000;
+    timeToMemorize = 3500;
     remaining;
     inplay = true;
     nextRound = false;
@@ -102,7 +102,7 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
     toSelectFrom = [];
 
     choosePondElements()
-    if(timeToMemorize > 700){timeToMemorize -= 200;}
+    if(timeToMemorize > 700){timeToMemorize -= 500;}
 
     let findCreature = toSelectFrom[getRandomInt(toSelectFrom.length)]
 
