@@ -12,6 +12,7 @@ import Modal from "./UI/Modal.svelte";
 import Dashboard from "./Dashboard/Dashboard.svelte";
 import Game from "./Game/Game.svelte";
 import Leaderboard from "./Game/Leaderboard.svelte";
+import lillyPadEditor from "./Dashboard/LillyPadEditor.svelte";
 
 
 import Cart from "./Cart/Cart.svelte";
@@ -32,6 +33,7 @@ import firebase from 'firebase/app';
 import Auth from './Auth.svelte';
 import Orphan from "./Adoption/Orphan.svelte";
 import Carousel from "./UI/Carousel.svelte";
+import LillyPadEditor from "./Dashboard/LillyPadEditor.svelte";
 
 
 firebase.initializeApp(firebaseConfig);
@@ -66,6 +68,7 @@ let loggedInAsGuest = false;
 let hideButtonsforGame = false;
 let showLeaderboard = false;
 let openGallery = false;
+let lillyPadEdit = false;
 
 let orphans = [{}]
 let orphaned = false;
@@ -211,6 +214,10 @@ let score = 0;
       openGallery = true
     }
 
+    function editText(event){
+      lillyPadEdit = true
+    }
+
 </script>
 
 <style>
@@ -301,11 +308,11 @@ let score = 0;
 <main>
   {#if hideButtonsforGame === false}
     <div class="formControl">
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false;}}">Main</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false;}}">About</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false;}}">Nature Quiz</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false;}}">Frog Shop</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false }}">Give Feedback</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Main</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">About</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Nature Quiz</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Frog Shop</CustomButton>
+    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Give Feedback</CustomButton>
     <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />
@@ -367,20 +374,24 @@ let score = 0;
         
     {/if}
 
-    {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
-    <Dashboard on:memory-game="{playGame}" on:view-gallery="{viewGallery}"/>
+    {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
+    <Dashboard on:memory-game="{playGame}" on:view-gallery="{viewGallery}" on:text-edit="{editText}"/>
     {/if}
 
     {#if showLeaderboard === true && gameInPlay === true}
     <Leaderboard score={score} on:close-board="{()=>{showLeaderboard = false}}"/>
     {/if}
 
-    {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
+    {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
     <Game on:game-over="{endGame}"/>
     {/if}
 
     {#if openGallery === true}
     <Carousel images={images} imageWidth={200} imageSpacing={'30px'} />
+    {/if}
+
+    {#if lillyPadEdit === true}
+    <LillyPadEditor />
     {/if}
     
 

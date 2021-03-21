@@ -85,13 +85,6 @@
 
     .h1-dark { margin-left: 1rem; color: rgb(206,205,206); padding-top: 0.5rem;}
 
-    .svg-light{
-        color: black;
-    }
-
-    .svg-dark{
-        color: rgb(206,205,206)
-    }
   
   </style>
 
