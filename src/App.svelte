@@ -38,9 +38,10 @@ import LillyPadEditor from "./Dashboard/LillyPadEditor.svelte";
 
 firebase.initializeApp(firebaseConfig);
 
-//
-
-
+// Enable navigation prompt
+window.onbeforeunload = function() {
+    return true;
+};
 
 let toggled = false;
 
@@ -190,6 +191,9 @@ let score = 0;
         goShop = false; 
         aboutPage = false; 
         playQuiz = false;
+        lillyPadEdit = false;
+        openGallery = false;
+        
     }
 
     function playGame(){
@@ -387,7 +391,7 @@ let score = 0;
     {/if}
 
     {#if openGallery === true}
-    <Carousel images={images} imageWidth={200} imageSpacing={'30px'} />
+    <Carousel images={images} imageWidth={window.innerWidth < 900 ? "200" : "300"} imageSpacing={'30px'} />
     {/if}
 
     {#if lillyPadEdit === true}

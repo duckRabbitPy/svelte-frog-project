@@ -16,10 +16,12 @@
     let likes = 0;
     let stateOfLikes;
     let disabled = false;
+    let adoptionProcess = false;
+    let beingAdopted = false;
 
   
 
-
+    import Modal from "../UI/Modal.svelte";
     import CustomButton from "../UI/CustomButton.svelte";
     import Badge from "../UI/Badge.svelte";
 
@@ -33,6 +35,10 @@
 
     function shareLikeState(){
         dispatch('share-like',stateOfLikes)
+    }
+
+    function adopting(){
+      adoptionProcess = true
     }
 
   //GET is default if not specified
@@ -91,6 +97,11 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       border-radius: 5px;
       margin: 1rem;
+    }
+
+    .adopted{
+      border-color: chartreuse;
+      opacity: 50%;
     }
 
     .lightMode {
@@ -153,7 +164,20 @@
     
   </style>
   
-
+{#if adoptionProcess === true}
+<Modal title="Yay this frog is goin' HOME!">
+<div>
+  <h1>Thank you so much!! Please leave your preferred contact details and we will be in touch ASAP🐸</h1>
+  <textarea label="Mobile number"></textarea>
+</div>
+<div slot="footer">
+    <CustomButton btntype="button" on:click="{() => {adoptionProcess = false; beingAdopted = true;}}">Share details</CustomButton>
+    <CustomButton btntype="button" on:click="{() => {adoptionProcess = false}}">Cancel</CustomButton>
+</div> 
+</Modal>
+{/if}
+  
+<div class={beingAdopted ? "adopted" : ''}>
 <article class="{$darkModeOn ? "darkMode" : "lightMode"}" in:fade>
     <header>
         <h1>{title}
@@ -174,9 +198,10 @@
     </div>
     <footer>
         <a href="mailto:{email}">Contact</a>
-        <CustomButton btntype="submit">Adopt!</CustomButton>
+        <CustomButton btntype="submit" on:click={adopting}>Adopt!</CustomButton>
         <CustomButton on:click={() => dispatch('toggle-favourite', id)} btntype="submit" stateColour="{isFavItem ? null : "success"}">{isFavItem ? 'Remove from favourites' : 'Add to favourites'}</CustomButton>
         <Social on:pass-up-data="{saveLikesFb}" disabled="{disabled}" counterName="Likes {likes}" 
         on:pass-up-data="{captureCustomEventData}"/>
     </footer>
 </article>
+</div>
