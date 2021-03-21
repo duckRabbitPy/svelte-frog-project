@@ -22,12 +22,16 @@
       return Math.floor(Math.random() * Math.floor(max));
 }
 
-  
+
 
     import CustomButton from "../UI/CustomButton.svelte";
 
     const dispatch = createEventDispatcher();
 
+    function remove(){
+    dispatch('remove');
+}
+    
 </script>
 
 
@@ -117,6 +121,6 @@
     </div>
     <footer>
         <a href="mailto:{email}">Contact</a>
-        <CustomButton btntype="submit">Remove Advert </CustomButton>
+        <CustomButton btntype="submit" on:click={remove}>Remove Advert </CustomButton>
     </footer>
 </article>

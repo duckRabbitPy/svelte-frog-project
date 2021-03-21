@@ -414,7 +414,7 @@ let score = 0;
     
     {#if orphaned === true}
     <h1 class={$darkModeOn ? "h1-dark" : "h1-light"}>Your Re-homing Advert</h1>
-    <Orphan {orphans}/>
+    <Orphan {orphans} on:remove={()=>{orphaned=false; orphans=[{}]}}/>
     {/if}
     <h1 class={$darkModeOn ? "h1-dark" : "h1-light"}>Current fogs in need of a home</h1>
     <AdoptGrid {frogs}  on:toggle-favourite="{toggleFavourite}"/>

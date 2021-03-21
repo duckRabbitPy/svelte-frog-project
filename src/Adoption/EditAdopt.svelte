@@ -40,7 +40,7 @@ function submitForm(){
 function cancel() {
       dispatch('cancel');
   }
-    
+
 </script>
 
 <style>
@@ -49,7 +49,7 @@ function cancel() {
     }
 </style>
 
-    <Modal title="Re-home Form" on:cancel>
+    <Modal title="Re-home Form (1 frog max)" on:cancel>
     <form on:submit|preventDefault="{submitForm}" in:fade>
         <TextInput 
         Id="title" 
