@@ -1,6 +1,6 @@
 <script>
 
-import { darkModeOn } from "./DarkModeStore";
+import { darkModeOn } from "./DarkModeStore.js";
 
 </script>
 

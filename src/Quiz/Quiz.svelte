@@ -64,8 +64,8 @@
     color: rgb(206,206,206);
     }
 
-</style>
 
+</style>
 
 <div class="{$darkModeOn ? "question-wrapper-dark" : "question-wrapper-light"}">
   <h1>Nature Quiz</h1>

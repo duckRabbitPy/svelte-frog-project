@@ -11,6 +11,8 @@ import About from "./UI/About.svelte";
 import Modal from "./UI/Modal.svelte";
 import Dashboard from "./Dashboard/Dashboard.svelte";
 import Game from "./Game/Game.svelte";
+import Leaderboard from "./Game/Leaderboard.svelte";
+
 
 import Cart from "./Cart/Cart.svelte";
 import CheckOut from "./Cart/CheckOut.svelte"
@@ -29,6 +31,7 @@ import { firebaseConfig } from "./helpers/firebaseConfig.js"
 import firebase from 'firebase/app';
 import Auth from './Auth.svelte';
 import Orphan from "./Adoption/Orphan.svelte";
+
 
 firebase.initializeApp(firebaseConfig);
 
@@ -59,6 +62,8 @@ let feedback = false;
 let goDashBoard = false;
 let gameInPlay = false;
 let loggedInAsGuest = false;
+let hideButtonsforGame = false;
+let showLeaderboard = false;
 
 let orphans = [{}]
 let orphaned = false;
@@ -173,6 +178,11 @@ let orphaned = false;
       goDashBoard = false
     }
 
+    $:if (gameInPlay === true) {
+      if(window.innerWidth < 900) {
+          hideButtonsforGame = true
+        }}
+
 
 
 </script>
@@ -263,6 +273,7 @@ let orphaned = false;
 <div class={$darkModeOn ? "darkMode" : "lightMode"}>
 <Header/>
 <main>
+  {#if hideButtonsforGame === false}
     <div class="formControl">
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false;}}">Main</CustomButton>
     <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true;}}">About</CustomButton>
@@ -272,8 +283,8 @@ let orphaned = false;
     <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />
-    
-</div>
+    </div>
+    {/if}
 
     {#if editMode === 'add'}
     <EditAdopt on:adoption-submit="{addFrog}" on:cancel="{cancelForm}"/>
@@ -333,13 +344,14 @@ let orphaned = false;
     <Dashboard on:memory-game="{playGame}"/>
     {/if}
 
+    {#if showLeaderboard === true && gameInPlay === true}
+    <Leaderboard/>
+    {/if}
+
     {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false}
-    <Game/>
+    <Game on:game-over="{()=>{hideButtonsforGame = false; showLeaderboard = true}}"/>
     {/if}
     
-
-
-
 
     {#if checkOutMode === 'checkOut'}
     <CheckOut on:cancel-checkOut="{hideCheckOut}"/>

@@ -16,6 +16,7 @@
     let likes = 0;
     let stateOfLikes;
     let disabled = false;
+
   
 
 
@@ -35,7 +36,7 @@
     }
 
   //GET is default if not specified
-  fetch('https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json')
+  fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json?`)
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()

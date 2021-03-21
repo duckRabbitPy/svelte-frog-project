@@ -20,9 +20,6 @@
       picture: claims.picture
     });
   
-    export const loginWithEmailPassword = (email, password) =>
-      auth.signInWithEmailAndPassword(email, password);
-  
     export const loginWithGoogle = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
   
@@ -57,5 +54,5 @@
   
   <!-- we will expose all required methods and properties on our slot -->
   <div>
-    <slot {user} {loggedIn} {loginWithGoogle} {loginWithEmailPassword} {logout} />
+    <slot {user} {loggedIn} {loginWithGoogle} {logout} />
   </div>

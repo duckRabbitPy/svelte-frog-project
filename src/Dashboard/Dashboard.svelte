@@ -40,25 +40,25 @@ function test(){dispatch("memory-game")}
    }
    
    .img-1{
-     background: url('https://images.unsplash.com/photo-1512587823848-3813fd3c7f8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80') no-repeat center center;
+     background: url('/images/pond-image1.jpeg') no-repeat center center;
      background-size: cover;
      width: 100%;
     
      
    }
    .img-2{
-     background: url('https://images.unsplash.com/photo-1541354254661-adb801adb23e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80') no-repeat center center;
+     background: url('/images/pond-image2.jpeg') no-repeat center center;
      background-size: cover;
      width: 100%;
    }
    .img-3{
-     background: url('https://images.unsplash.com/photo-1596852423936-251a961e9ac8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+     background: url('/images/pond-image3.jpeg') no-repeat center center;
      background-size: cover;
      width: 100%;
      
    }
    .img-4 {
-     background: url('https://images.unsplash.com/32/RgJQ82pETlKd0B7QzcJO_5912578701_92397ba76c_b.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80') no-repeat center center;
+     background: url('/images/pond-image4.jpeg') no-repeat center center;
      background-size: cover;
      width: 100%;
    

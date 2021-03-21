@@ -6,7 +6,6 @@
     import { get } from 'svelte/store';
     import cart, { total } from "../Cart/cart-store.js";
     import { beforeUpdate, afterUpdate } from 'svelte';
-import TextInput from '../UI/TextInput.svelte';
    
 
     let checkItems;

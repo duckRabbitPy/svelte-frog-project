@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { darkModeOn } from './DarkModeStore';
+    import { darkModeOn } from './DarkModeStore.js';
 
     let visible = false;
     onMount(()=>{visible = true})

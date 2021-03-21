@@ -1,6 +1,6 @@
 <script>
 import CustomButton from "../UI/CustomButton.svelte";
-import { onMount } from 'svelte';
+import { onMount, createEventDispatcher} from 'svelte';
 import { darkModeOn } from "../UI/DarkModeStore.js";
 
   
@@ -60,6 +60,8 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
   let nextRound = false;
   let recentlyClicked = [];
 
+  const dispatch = createEventDispatcher()
+
   $: if (remaining === 0){
     nextRound = true
     inplay = false
@@ -77,12 +79,11 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
 
 
   function startNewGame(){
-    console.log(darkModeOn)
     let music = document.querySelector(".music")
     music.play()
     score = 0;
     memorising = false;
-    timeToMemorize = 6000;
+    timeToMemorize = 4000;
     remaining;
     inplay = true;
     nextRound = false;
@@ -90,6 +91,11 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
     
     startNextRound()
   }
+
+    function gameOver(){
+      dispatch('game-over')
+      console.log("dispatching")
+    }
 
 
   function startNextRound(){
@@ -167,6 +173,7 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
   }
 
   function incorrect(event){
+    gameOver();
     event.target.src="/images/incorrect.png";
     let allOver = document.querySelector(".allOver");
     score = `final score is ${score} `
@@ -265,6 +272,41 @@ img:hover {
 
 .btnDiv {
   margin-left: 1rem;
+}
+
+/* If on mobile */
+.grid-container {
+  /* background-color: rgba(152, 188, 255, 0.89); */
+  background: url("/images/pond-monet.jpeg");
+  border-radius: 5%;
+  min-width: 200px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "tl tm tr"
+    "ml mm mr"
+    "bl bm br"
+    "gl lm gr";
+}
+
+img {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 60px;
+}
+
+img:hover {
+  box-shadow: 10px 10 10px 0 rgba(14, 255, 14, 0.452);
+}
+
+.h1-light { margin-left: 0.5rem; padding-top: 0.5rem; font-size: medium;}
+
+.h1-dark { margin-left: 0.5rem; color: rgb(206,205,206); padding-top: 0.5rem; font-size: medium;}
+
+.btnDiv {
+  margin-left: 0.5rem;
 }
 
 
