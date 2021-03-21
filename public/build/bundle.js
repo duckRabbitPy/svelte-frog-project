@@ -7791,11 +7791,13 @@ var app = (function () {
     	let h3;
     	let t0_value = /*orderedScore*/ ctx[12].username + "";
     	let t0;
-    	let span;
-    	let t1_value = /*orderedScore*/ ctx[12].score + "";
+    	let t1_value = " " + "";
     	let t1;
-    	let span_class_value;
+    	let span;
+    	let t2_value = /*orderedScore*/ ctx[12].score + "";
     	let t2;
+    	let span_class_value;
+    	let t3;
     	let div_class_value;
 
     	const block = {
@@ -7803,15 +7805,16 @@ var app = (function () {
     			div = element("div");
     			h3 = element("h3");
     			t0 = text(t0_value);
-    			span = element("span");
     			t1 = text(t1_value);
-    			t2 = space();
+    			span = element("span");
+    			t2 = text(t2_value);
+    			t3 = space();
 
     			attr_dev(span, "class", span_class_value = "" + (null_to_empty(/*name*/ ctx[3] === /*orderedScore*/ ctx[12].username
     			? "highLightscore"
     			: "public") + " svelte-nxwlr9"));
 
-    			add_location(span, file$e, 92, 30, 2220);
+    			add_location(span, file$e, 92, 35, 2225);
     			add_location(h3, file$e, 92, 2, 2192);
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[4] ? "dark" : "light") + " svelte-nxwlr9"));
     			add_location(div, file$e, 91, 0, 2143);
@@ -7820,13 +7823,14 @@ var app = (function () {
     			insert_dev(target, div, anchor);
     			append_dev(div, h3);
     			append_dev(h3, t0);
+    			append_dev(h3, t1);
     			append_dev(h3, span);
-    			append_dev(span, t1);
-    			append_dev(div, t2);
+    			append_dev(span, t2);
+    			append_dev(div, t3);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*orderedScores*/ 1 && t0_value !== (t0_value = /*orderedScore*/ ctx[12].username + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*orderedScores*/ 1 && t1_value !== (t1_value = /*orderedScore*/ ctx[12].score + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*orderedScores*/ 1 && t2_value !== (t2_value = /*orderedScore*/ ctx[12].score + "")) set_data_dev(t2, t2_value);
 
     			if (dirty & /*name, orderedScores*/ 9 && span_class_value !== (span_class_value = "" + (null_to_empty(/*name*/ ctx[3] === /*orderedScore*/ ctx[12].username
     			? "highLightscore"

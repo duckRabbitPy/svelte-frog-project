@@ -90,7 +90,7 @@ input {
 <CustomButton on:click="{collapse}">Close Leaderboard</CustomButton>
 {#each orderedScores as orderedScore}
 <div class="{$darkModeOn ? "dark" : "light"}">
-  <h3>{orderedScore.username }<span class={name === orderedScore.username ? "highLightscore" : 'public'}>{ orderedScore.score}</span></h3>
+  <h3>{orderedScore.username }{' '}<span class={name === orderedScore.username ? "highLightscore" : 'public'}>{ orderedScore.score}</span></h3>
 </div>
 {/each}
 {/if}
