@@ -165,7 +165,7 @@
   </style>
   
 {#if adoptionProcess === true}
-<Modal title="Yay this frog is goin' HOME!">
+<Modal title="Yay this frog is goin' HOME!" on:cancel={()=>{adoptionProcess = false}}>
 <div>
   <h1>Thank you so much!! Please leave your preferred contact details and we will be in touch ASAP🐸</h1>
   <textarea label="Mobile number"></textarea>

@@ -2121,6 +2121,8 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	modal.$on("cancel", /*cancel_handler*/ ctx[19]);
+
     	const block = {
     		c: function create() {
     			create_component(modal.$$.fragment);
@@ -2132,7 +2134,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modal_changes = {};
 
-    			if (dirty & /*$$scope, adoptionProcess, beingAdopted*/ 4197376) {
+    			if (dirty & /*$$scope, adoptionProcess, beingAdopted*/ 8391680) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2163,7 +2165,7 @@ var app = (function () {
     	return block;
     }
 
-    // (168:0) <Modal title="Yay this frog is goin' HOME!">
+    // (168:0) <Modal title="Yay this frog is goin' HOME!" on:cancel={()=>{adoptionProcess = false}}>
     function create_default_slot_5$1(ctx) {
     	let div;
     	let h1;
@@ -2178,11 +2180,11 @@ var app = (function () {
     			t1 = space();
     			textarea = element("textarea");
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 169, 2, 3269);
+    			add_location(h1, file$p, 169, 2, 3311);
     			attr_dev(textarea, "label", "Mobile number");
-    			add_location(textarea, file$p, 170, 2, 3375);
+    			add_location(textarea, file$p, 170, 2, 3417);
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 168, 0, 3261);
+    			add_location(div, file$p, 168, 0, 3303);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2199,7 +2201,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(168:0) <Modal title=\\\"Yay this frog is goin' HOME!\\\">",
+    		source: "(168:0) <Modal title=\\\"Yay this frog is goin' HOME!\\\" on:cancel={()=>{adoptionProcess = false}}>",
     		ctx
     	});
 
@@ -2298,7 +2300,7 @@ var app = (function () {
     			create_component(custombutton1.$$.fragment);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 172, 0, 3426);
+    			add_location(div, file$p, 172, 0, 3468);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2310,14 +2312,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 8388608) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 8388608) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2551,7 +2553,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton1.$on("click", /*click_handler_2*/ ctx[19]);
+    	custombutton1.$on("click", /*click_handler_2*/ ctx[20]);
 
     	social = new Social({
     			props: {
@@ -2601,33 +2603,33 @@ var app = (function () {
     			t15 = space();
     			create_component(social.$$.fragment);
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 182, 8, 3837);
+    			add_location(h1, file$p, 182, 8, 3879);
     			attr_dev(h2, "class", "svelte-1wlkj28");
-    			add_location(h2, file$p, 184, 8, 3871);
+    			add_location(h2, file$p, 184, 8, 3913);
     			attr_dev(p0, "class", "svelte-1wlkj28");
-    			add_location(p0, file$p, 185, 8, 3899);
+    			add_location(p0, file$p, 185, 8, 3941);
     			attr_dev(header, "class", "svelte-1wlkj28");
-    			add_location(header, file$p, 181, 4, 3820);
+    			add_location(header, file$p, 181, 4, 3862);
     			if (img.src !== (img_src_value = /*imageUrl*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1wlkj28");
-    			add_location(img, file$p, 188, 8, 3972);
+    			add_location(img, file$p, 188, 8, 4014);
     			attr_dev(div0, "class", "image svelte-1wlkj28");
-    			add_location(div0, file$p, 187, 4, 3944);
+    			add_location(div0, file$p, 187, 4, 3986);
     			attr_dev(div1, "class", "badge svelte-1wlkj28");
-    			add_location(div1, file$p, 190, 4, 4018);
+    			add_location(div1, file$p, 190, 4, 4060);
     			attr_dev(p1, "class", "svelte-1wlkj28");
-    			add_location(p1, file$p, 196, 8, 4161);
+    			add_location(p1, file$p, 196, 8, 4203);
     			attr_dev(div2, "class", "content svelte-1wlkj28");
-    			add_location(div2, file$p, 195, 4, 4131);
+    			add_location(div2, file$p, 195, 4, 4173);
     			attr_dev(a, "href", a_href_value = "mailto:" + /*email*/ ctx[6]);
-    			add_location(a, file$p, 199, 8, 4214);
+    			add_location(a, file$p, 199, 8, 4256);
     			attr_dev(footer, "class", "svelte-1wlkj28");
-    			add_location(footer, file$p, 198, 4, 4197);
+    			add_location(footer, file$p, 198, 4, 4239);
     			attr_dev(article, "class", article_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[12] ? "darkMode" : "lightMode") + " svelte-1wlkj28"));
-    			add_location(article, file$p, 180, 0, 3749);
+    			add_location(article, file$p, 180, 0, 3791);
     			attr_dev(div3, "class", div3_class_value = "" + (null_to_empty(/*beingAdopted*/ ctx[11] ? "adopted" : "") + " svelte-1wlkj28"));
-    			add_location(div3, file$p, 179, 0, 3705);
+    			add_location(div3, file$p, 179, 0, 3747);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$3("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2730,7 +2732,7 @@ var app = (function () {
 
     			const custombutton0_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 8388608) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2738,7 +2740,7 @@ var app = (function () {
     			const custombutton1_changes = {};
     			if (dirty & /*isFavItem*/ 128) custombutton1_changes.stateColour = /*isFavItem*/ ctx[7] ? null : "success";
 
-    			if (dirty & /*$$scope, isFavItem*/ 4194432) {
+    			if (dirty & /*$$scope, isFavItem*/ 8388736) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2906,6 +2908,10 @@ var app = (function () {
     		$$invalidate(10, adoptionProcess = false);
     	};
 
+    	const cancel_handler = () => {
+    		$$invalidate(10, adoptionProcess = false);
+    	};
+
     	const click_handler_2 = () => dispatch("toggle-favourite", id);
 
     	$$self.$$set = $$props => {
@@ -2988,6 +2994,7 @@ var app = (function () {
     		saveLikesFb,
     		click_handler,
     		click_handler_1,
+    		cancel_handler,
     		click_handler_2
     	];
     }
@@ -11961,7 +11968,7 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
@@ -12036,21 +12043,21 @@ var app = (function () {
     // (60:8) {#each checkItems as checkItem}
     function create_each_block$4(ctx) {
     	let li;
-    	let t_value = /*checkItem*/ ctx[10] + "";
+    	let t_value = /*checkItem*/ ctx[9] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 60, 8, 1277);
+    			add_location(li, file$a, 60, 8, 1286);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*checkItems*/ 1 && t_value !== (t_value = /*checkItem*/ ctx[10] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*checkItems*/ 1 && t_value !== (t_value = /*checkItem*/ ctx[9] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -12068,7 +12075,7 @@ var app = (function () {
     	return block;
     }
 
-    // (55:8) <Modal title="CheckOut" on:cancel>
+    // (55:8) <Modal title="CheckOut" on:cancel={cancel}>
     function create_default_slot_2$1(ctx) {
     	let form;
     	let form_intro;
@@ -12114,18 +12121,18 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "Demo site: no payment or financial details will be taken";
     			attr_dev(form, "class", "svelte-wwxgf7");
-    			add_location(form, file$a, 55, 8, 1164);
-    			add_location(h3, file$a, 63, 8, 1336);
+    			add_location(form, file$a, 55, 8, 1173);
+    			add_location(h3, file$a, 63, 8, 1345);
     			if (img.src !== (img_src_value = "https://support.pixelunion.net/hc/article_attachments/360060934313/Additional_checkout_buttons_on_the_cart_page.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "dummyPayment");
     			attr_dev(img, "class", "svelte-wwxgf7");
-    			add_location(img, file$a, 64, 123, 1565);
+    			add_location(img, file$a, 64, 123, 1574);
     			attr_dev(a, "href", "https://media1.tenor.com/images/c303c5f5a6a80558f71af8b35cf1c6c5/tenor.gif?itemid=8664380");
     			attr_dev(a, "target", "blank");
-    			add_location(a, file$a, 64, 8, 1450);
-    			add_location(input, file$a, 65, 8, 1724);
+    			add_location(a, file$a, 64, 8, 1459);
+    			add_location(input, file$a, 65, 8, 1733);
     			attr_dev(p, "class", "svelte-wwxgf7");
-    			add_location(p, file$a, 66, 8, 1787);
+    			add_location(p, file$a, 66, 8, 1796);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, form, anchor);
@@ -12206,7 +12213,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(55:8) <Modal title=\\\"CheckOut\\\" on:cancel>",
+    		source: "(55:8) <Modal title=\\\"CheckOut\\\" on:cancel={cancel}>",
     		ctx
     	});
 
@@ -12303,7 +12310,7 @@ var app = (function () {
     			t = space();
     			create_component(custombutton1.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file$a, 67, 8, 1859);
+    			add_location(div, file$a, 67, 8, 1868);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -12315,14 +12322,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 4096) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 4096) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12373,7 +12380,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	modal.$on("cancel", /*cancel_handler*/ ctx[8]);
+    	modal.$on("cancel", /*cancel*/ ctx[5]);
 
     	const block = {
     		c: function create() {
@@ -12389,7 +12396,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const modal_changes = {};
 
-    			if (dirty & /*$$scope, code, applyDiscount, $total, checkItems*/ 8207) {
+    			if (dirty & /*$$scope, code, applyDiscount, $total, checkItems*/ 4111) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12470,10 +12477,6 @@ var app = (function () {
     		$$invalidate(1, code);
     	}
 
-    	function cancel_handler(event) {
-    		bubble($$self, event);
-    	}
-
     	$$self.$capture_state = () => ({
     		fade,
     		createEventDispatcher,
@@ -12511,8 +12514,7 @@ var app = (function () {
     		checkCode,
     		cancel,
     		focus_handler,
-    		input_input_handler,
-    		cancel_handler
+    		input_input_handler
     	];
     }
 
@@ -18259,7 +18261,7 @@ var app = (function () {
     			t5 = space();
     			create_component(toggle.$$.fragment);
     			attr_dev(div, "class", "formControl svelte-8b9x78");
-    			add_location(div, file, 327, 4, 8510);
+    			add_location(div, file, 327, 4, 8509);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18281,35 +18283,35 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton1.$set(custombutton1_changes);
     			const custombutton2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton2_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton2.$set(custombutton2_changes);
     			const custombutton3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton3_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton3.$set(custombutton3_changes);
     			const custombutton4_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton4_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18320,7 +18322,7 @@ var app = (function () {
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton5_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18600,6 +18602,8 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	modal.$on("cancel", /*cancel_handler*/ ctx[45]);
+
     	const block = {
     		c: function create() {
     			create_component(modal.$$.fragment);
@@ -18611,7 +18615,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modal_changes = {};
 
-    			if (dirty[0] & /*loginModal, loggedInAsGuest*/ 4224 | dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[0] & /*loginModal, loggedInAsGuest*/ 4224 | dirty[1] & /*$$scope*/ 16777216) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18650,7 +18654,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "You must sign in/register to view Dashboard";
-    			add_location(p, file, 356, 16, 10476);
+    			add_location(p, file, 356, 16, 10512);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18691,13 +18695,13 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Sign In as Guest";
-    			add_location(div0, file, 370, 24, 11234);
+    			add_location(div0, file, 370, 24, 11270);
     			attr_dev(button, "class", "login svelte-8b9x78");
     			attr_dev(button, "type", "button");
-    			add_location(button, file, 377, 26, 11611);
-    			add_location(div1, file, 376, 24, 11579);
-    			add_location(form, file, 369, 22, 11178);
-    			add_location(div2, file, 368, 20, 11150);
+    			add_location(button, file, 377, 26, 11647);
+    			add_location(div1, file, 376, 24, 11615);
+    			add_location(form, file, 369, 22, 11214);
+    			add_location(div2, file, 368, 20, 11186);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18743,7 +18747,7 @@ var app = (function () {
     	let div0;
     	let h2;
     	let t0;
-    	let t1_value = (/*loggedIn*/ ctx[51] ? /*user*/ ctx[50].email : "Guest") + "";
+    	let t1_value = (/*loggedIn*/ ctx[52] ? /*user*/ ctx[51].email : "Guest") + "";
     	let t1;
     	let t2;
     	let custombutton;
@@ -18776,12 +18780,12 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Logout";
-    			add_location(h2, file, 361, 24, 10680);
+    			add_location(h2, file, 361, 24, 10716);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-8b9x78");
-    			add_location(button, file, 364, 24, 10969);
-    			add_location(div0, file, 360, 22, 10650);
-    			add_location(div1, file, 359, 20, 10622);
+    			add_location(button, file, 364, 24, 11005);
+    			add_location(div0, file, 360, 22, 10686);
+    			add_location(div1, file, 359, 20, 10658);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -18802,7 +18806,7 @@ var app = (function () {
     						button,
     						"click",
     						function () {
-    							if (is_function(/*logout*/ ctx[53])) /*logout*/ ctx[53].apply(this, arguments);
+    							if (is_function(/*logout*/ ctx[54])) /*logout*/ ctx[54].apply(this, arguments);
     						},
     						false,
     						false,
@@ -18815,10 +18819,10 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty[1] & /*loggedIn, user*/ 1572864) && t1_value !== (t1_value = (/*loggedIn*/ ctx[51] ? /*user*/ ctx[50].email : "Guest") + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty[1] & /*loggedIn, user*/ 3145728) && t1_value !== (t1_value = (/*loggedIn*/ ctx[52] ? /*user*/ ctx[51].email : "Guest") + "")) set_data_dev(t1, t1_value);
     			const custombutton_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18886,12 +18890,12 @@ var app = (function () {
     	let if_block1;
     	let if_block1_anchor;
     	let current;
-    	let if_block0 = (!/*loggedIn*/ ctx[51] || !/*loggedInAsGuest*/ ctx[12]) && create_if_block_15(ctx);
+    	let if_block0 = (!/*loggedIn*/ ctx[52] || !/*loggedInAsGuest*/ ctx[12]) && create_if_block_15(ctx);
     	const if_block_creators = [create_if_block_14, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*loggedIn*/ ctx[51] || /*loggedInAsGuest*/ ctx[12]) return 0;
+    		if (/*loggedIn*/ ctx[52] || /*loggedInAsGuest*/ ctx[12]) return 0;
     		return 1;
     	}
 
@@ -18913,7 +18917,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!/*loggedIn*/ ctx[51] || !/*loggedInAsGuest*/ ctx[12]) {
+    			if (!/*loggedIn*/ ctx[52] || !/*loggedInAsGuest*/ ctx[12]) {
     				if (if_block0) ; else {
     					if_block0 = create_if_block_15(ctx);
     					if_block0.c();
@@ -18978,7 +18982,7 @@ var app = (function () {
     	return block;
     }
 
-    // (345:4) <Modal title="Proceed to Dashboard">
+    // (345:4) <Modal title="Proceed to Dashboard" on:cancel={()=>{loginModal = false}}>
     function create_default_slot_4(ctx) {
     	let div1;
     	let div0;
@@ -18992,14 +18996,14 @@ var app = (function () {
     					default: [
     						create_default_slot_5,
     						({ user, loggedIn, loginWithGoogle, logout }) => ({
-    							50: user,
-    							51: loggedIn,
-    							52: loginWithGoogle,
-    							53: logout
+    							51: user,
+    							52: loggedIn,
+    							53: loginWithGoogle,
+    							54: logout
     						}),
     						({ user, loggedIn, loginWithGoogle, logout }) => [
     							0,
-    							(user ? 524288 : 0) | (loggedIn ? 1048576 : 0) | (loginWithGoogle ? 2097152 : 0) | (logout ? 4194304 : 0)
+    							(user ? 1048576 : 0) | (loggedIn ? 2097152 : 0) | (loginWithGoogle ? 4194304 : 0) | (logout ? 8388608 : 0)
     						]
     					]
     				},
@@ -19014,8 +19018,8 @@ var app = (function () {
     			div0 = element("div");
     			create_component(auth.$$.fragment);
     			attr_dev(div0, "class", "wrapper");
-    			add_location(div0, file, 346, 12, 10148);
-    			add_location(div1, file, 345, 8, 10130);
+    			add_location(div0, file, 346, 12, 10184);
+    			add_location(div1, file, 345, 8, 10166);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -19026,7 +19030,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const auth_changes = {};
 
-    			if (dirty[0] & /*loggedInAsGuest*/ 4096 | dirty[1] & /*$$scope, logout, loggedIn, user*/ 14155776) {
+    			if (dirty[0] & /*loggedInAsGuest*/ 4096 | dirty[1] & /*$$scope, logout, loggedIn, user*/ 28311552) {
     				auth_changes.$$scope = { dirty, ctx };
     			}
 
@@ -19051,7 +19055,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(345:4) <Modal title=\\\"Proceed to Dashboard\\\">",
+    		source: "(345:4) <Modal title=\\\"Proceed to Dashboard\\\" on:cancel={()=>{loginModal = false}}>",
     		ctx
     	});
 
@@ -19107,7 +19111,7 @@ var app = (function () {
     			div = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file, 387, 8, 11964);
+    			add_location(div, file, 387, 8, 12000);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19117,7 +19121,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton_changes.$$scope = { dirty, ctx };
     			}
 
@@ -19202,7 +19206,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	leaderboard.$on("close-board", /*close_board_handler*/ ctx[45]);
+    	leaderboard.$on("close-board", /*close_board_handler*/ ctx[46]);
 
     	const block = {
     		c: function create() {
@@ -19557,9 +19561,9 @@ var app = (function () {
     			t5 = space();
     			create_component(adoptgrid.$$.fragment);
     			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
-    			add_location(button, file, 430, 4, 13799);
+    			add_location(button, file, 430, 4, 13835);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 437, 4, 14232);
+    			add_location(h1, file, 437, 4, 14268);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -19576,7 +19580,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler_7*/ ctx[46], false, false, false);
+    				dispose = listen_dev(button, "click", /*click_handler_7*/ ctx[47], false, false, false);
     				mounted = true;
     			}
     		},
@@ -19587,7 +19591,7 @@ var app = (function () {
 
     			const intro_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				intro_changes.$$scope = { dirty, ctx };
     			}
 
@@ -19704,7 +19708,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	orphan.$on("remove", /*remove_handler*/ ctx[47]);
+    	orphan.$on("remove", /*remove_handler*/ ctx[48]);
 
     	const block = {
     		c: function create() {
@@ -19713,7 +19717,7 @@ var app = (function () {
     			t1 = space();
     			create_component(orphan.$$.fragment);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 434, 4, 14071);
+    			add_location(h1, file, 434, 4, 14107);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -19819,7 +19823,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton0.$on("click", /*click_handler_8*/ ctx[48]);
+    	custombutton0.$on("click", /*click_handler_8*/ ctx[49]);
 
     	custombutton1 = new CustomButton({
     			props: {
@@ -19847,7 +19851,7 @@ var app = (function () {
     			t2 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-8b9x78");
-    			add_location(div, file, 446, 4, 14702);
+    			add_location(div, file, 446, 4, 14738);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19867,7 +19871,7 @@ var app = (function () {
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -19878,7 +19882,7 @@ var app = (function () {
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 8388608) {
+    			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -20121,9 +20125,9 @@ var app = (function () {
     			t14 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-8b9x78");
-    			add_location(main, file, 325, 0, 8462);
+    			add_location(main, file, 325, 0, 8461);
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "darkMode" : "lightMode") + " svelte-8b9x78"));
-    			add_location(div, file, 323, 0, 8399);
+    			add_location(div, file, 323, 0, 8398);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20631,7 +20635,7 @@ var app = (function () {
     			id: "1an",
     			title: "Rosie",
     			subtitle: "Dart frog",
-    			description: "Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet. ",
+    			description: "Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet ",
     			imageUrl: "/images/dartFrog.jpeg",
     			address: "321 Seven sisters road, Finsbury Park, N17 4FA, London",
     			contact: "adoptPhrogesLondon@gmail.com",
@@ -20823,6 +20827,10 @@ var app = (function () {
     		$$invalidate(12, loggedInAsGuest = true);
     	};
 
+    	const cancel_handler = () => {
+    		$$invalidate(7, loginModal = false);
+    	};
+
     	const close_board_handler = () => {
     		$$invalidate(14, showLeaderboard = false);
     	};
@@ -21001,6 +21009,7 @@ var app = (function () {
     		toggle_toggled_binding,
     		click_handler_5,
     		click_handler_6,
+    		cancel_handler,
     		close_board_handler,
     		click_handler_7,
     		remove_handler,

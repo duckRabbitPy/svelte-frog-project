@@ -52,7 +52,7 @@
 
     </style>
     
-        <Modal title="CheckOut" on:cancel>
+        <Modal title="CheckOut" on:cancel={cancel}>
         <form in:fade>
         
         </form>

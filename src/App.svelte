@@ -342,7 +342,7 @@ let score = 0;
     {/if}
 
     {#if loginModal === 'log'}
-    <Modal title="Proceed to Dashboard">
+    <Modal title="Proceed to Dashboard" on:cancel={()=>{loginModal = false}}>
         <div>
             <div class="wrapper">
               <!-- slot input -->
