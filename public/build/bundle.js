@@ -18141,7 +18141,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (308:2) {#if hideButtonsforGame === false}
+    // (327:2) {#if hideButtonsforGame === false}
     function create_if_block_17(ctx) {
     	let div;
     	let custombutton0;
@@ -18259,7 +18259,7 @@ var app = (function () {
     			t5 = space();
     			create_component(toggle.$$.fragment);
     			attr_dev(div, "class", "formControl svelte-8b9x78");
-    			add_location(div, file, 308, 4, 7811);
+    			add_location(div, file, 327, 4, 8510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18372,14 +18372,14 @@ var app = (function () {
     		block,
     		id: create_if_block_17.name,
     		type: "if",
-    		source: "(308:2) {#if hideButtonsforGame === false}",
+    		source: "(327:2) {#if hideButtonsforGame === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (329:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -18399,14 +18399,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(310:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(329:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">
+    // (330:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -18426,14 +18426,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(311:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(330:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (312:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (331:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -18453,14 +18453,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(312:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(331:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (313:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (332:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -18480,14 +18480,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(313:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(332:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (333:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -18507,14 +18507,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(314:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(333:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:4) <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">
+    // (334:4) <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -18534,14 +18534,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(315:4) <CustomButton btntype=\\\"submit\\\" stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"}  on:click=\\\"{showLogin}\\\">",
+    		source: "(334:4) <CustomButton btntype=\\\"submit\\\" stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"}  on:click=\\\"{showLogin}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:4) {#if editMode === 'add'}
+    // (340:4) {#if editMode === 'add'}
     function create_if_block_16(ctx) {
     	let editadopt;
     	let current;
@@ -18576,14 +18576,14 @@ var app = (function () {
     		block,
     		id: create_if_block_16.name,
     		type: "if",
-    		source: "(321:4) {#if editMode === 'add'}",
+    		source: "(340:4) {#if editMode === 'add'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:4) {#if loginModal === 'log'}
+    // (344:4) {#if loginModal === 'log'}
     function create_if_block_13(ctx) {
     	let modal;
     	let current;
@@ -18635,14 +18635,14 @@ var app = (function () {
     		block,
     		id: create_if_block_13.name,
     		type: "if",
-    		source: "(325:4) {#if loginModal === 'log'}",
+    		source: "(344:4) {#if loginModal === 'log'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (337:16) {#if !loggedIn || !loggedInAsGuest}
+    // (356:16) {#if !loggedIn || !loggedInAsGuest}
     function create_if_block_15(ctx) {
     	let p;
 
@@ -18650,7 +18650,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "You must sign in/register to view Dashboard";
-    			add_location(p, file, 337, 16, 9777);
+    			add_location(p, file, 356, 16, 10476);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18664,14 +18664,14 @@ var app = (function () {
     		block,
     		id: create_if_block_15.name,
     		type: "if",
-    		source: "(337:16) {#if !loggedIn || !loggedInAsGuest}",
+    		source: "(356:16) {#if !loggedIn || !loggedInAsGuest}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:18) {:else}
+    // (368:18) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let form;
@@ -18691,13 +18691,13 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Sign In as Guest";
-    			add_location(div0, file, 351, 24, 10535);
+    			add_location(div0, file, 370, 24, 11234);
     			attr_dev(button, "class", "login svelte-8b9x78");
     			attr_dev(button, "type", "button");
-    			add_location(button, file, 358, 26, 10912);
-    			add_location(div1, file, 357, 24, 10880);
-    			add_location(form, file, 350, 22, 10479);
-    			add_location(div2, file, 349, 20, 10451);
+    			add_location(button, file, 377, 26, 11611);
+    			add_location(div1, file, 376, 24, 11579);
+    			add_location(form, file, 369, 22, 11178);
+    			add_location(div2, file, 368, 20, 11150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18730,14 +18730,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(349:18) {:else}",
+    		source: "(368:18) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:18) {#if loggedIn || loggedInAsGuest}
+    // (359:18) {#if loggedIn || loggedInAsGuest}
     function create_if_block_14(ctx) {
     	let div1;
     	let div0;
@@ -18776,12 +18776,12 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Logout";
-    			add_location(h2, file, 342, 24, 9981);
+    			add_location(h2, file, 361, 24, 10680);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-8b9x78");
-    			add_location(button, file, 345, 24, 10270);
-    			add_location(div0, file, 341, 22, 9951);
-    			add_location(div1, file, 340, 20, 9923);
+    			add_location(button, file, 364, 24, 10969);
+    			add_location(div0, file, 360, 22, 10650);
+    			add_location(div1, file, 359, 20, 10622);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -18845,14 +18845,14 @@ var app = (function () {
     		block,
     		id: create_if_block_14.name,
     		type: "if",
-    		source: "(340:18) {#if loggedIn || loggedInAsGuest}",
+    		source: "(359:18) {#if loggedIn || loggedInAsGuest}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (345:24) <CustomButton btntype="submit" on:click={showDashBoard}>
+    // (364:24) <CustomButton btntype="submit" on:click={showDashBoard}>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -18872,14 +18872,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(345:24) <CustomButton btntype=\\\"submit\\\" on:click={showDashBoard}>",
+    		source: "(364:24) <CustomButton btntype=\\\"submit\\\" on:click={showDashBoard}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (330:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>
+    // (349:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>
     function create_default_slot_5(ctx) {
     	let t;
     	let current_block_type_index;
@@ -18971,14 +18971,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(330:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>",
+    		source: "(349:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (326:4) <Modal title="Proceed to Dashboard">
+    // (345:4) <Modal title="Proceed to Dashboard">
     function create_default_slot_4(ctx) {
     	let div1;
     	let div0;
@@ -19014,8 +19014,8 @@ var app = (function () {
     			div0 = element("div");
     			create_component(auth.$$.fragment);
     			attr_dev(div0, "class", "wrapper");
-    			add_location(div0, file, 327, 12, 9449);
-    			add_location(div1, file, 326, 8, 9431);
+    			add_location(div0, file, 346, 12, 10148);
+    			add_location(div1, file, 345, 8, 10130);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -19051,14 +19051,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(326:4) <Modal title=\\\"Proceed to Dashboard\\\">",
+    		source: "(345:4) <Modal title=\\\"Proceed to Dashboard\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (370:12) <CustomButton btntype="button" on:click="{() => {loginModal = false}}">
+    // (389:12) <CustomButton btntype="button" on:click="{() => {loginModal = false}}">
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -19078,14 +19078,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(370:12) <CustomButton btntype=\\\"button\\\" on:click=\\\"{() => {loginModal = false}}\\\">",
+    		source: "(389:12) <CustomButton btntype=\\\"button\\\" on:click=\\\"{() => {loginModal = false}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (369:8) 
+    // (388:8) 
     function create_footer_slot(ctx) {
     	let div;
     	let custombutton;
@@ -19107,7 +19107,7 @@ var app = (function () {
     			div = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file, 368, 8, 11265);
+    			add_location(div, file, 387, 8, 11964);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19142,14 +19142,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot.name,
     		type: "slot",
-    		source: "(369:8) ",
+    		source: "(388:8) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (376:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
+    // (395:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
     function create_if_block_12(ctx) {
     	let dashboard;
     	let current;
@@ -19185,14 +19185,14 @@ var app = (function () {
     		block,
     		id: create_if_block_12.name,
     		type: "if",
-    		source: "(376:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
+    		source: "(395:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (380:4) {#if showLeaderboard === true && gameInPlay === true}
+    // (399:4) {#if showLeaderboard === true && gameInPlay === true}
     function create_if_block_11(ctx) {
     	let leaderboard;
     	let current;
@@ -19235,14 +19235,14 @@ var app = (function () {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(380:4) {#if showLeaderboard === true && gameInPlay === true}",
+    		source: "(399:4) {#if showLeaderboard === true && gameInPlay === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
+    // (403:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
     function create_if_block_10(ctx) {
     	let game;
     	let current;
@@ -19276,14 +19276,14 @@ var app = (function () {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(384:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
+    		source: "(403:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:4) {#if openGallery === true}
+    // (407:4) {#if openGallery === true}
     function create_if_block_9(ctx) {
     	let carousel;
     	let current;
@@ -19324,14 +19324,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(388:4) {#if openGallery === true}",
+    		source: "(407:4) {#if openGallery === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (392:4) {#if lillyPadEdit === true}
+    // (411:4) {#if lillyPadEdit === true}
     function create_if_block_8(ctx) {
     	let lillypadeditor;
     	let current;
@@ -19363,14 +19363,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(392:4) {#if lillyPadEdit === true}",
+    		source: "(411:4) {#if lillyPadEdit === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (397:4) {#if checkOutMode === 'checkOut'}
+    // (416:4) {#if checkOutMode === 'checkOut'}
     function create_if_block_7(ctx) {
     	let checkout;
     	let current;
@@ -19404,14 +19404,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(397:4) {#if checkOutMode === 'checkOut'}",
+    		source: "(416:4) {#if checkOutMode === 'checkOut'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (401:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
+    // (420:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
     function create_if_block_6(ctx) {
     	let quiz;
     	let t;
@@ -19454,14 +19454,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(401:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}",
+    		source: "(420:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}
+    // (425:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}
     function create_if_block_5(ctx) {
     	let feedback_1;
     	let current;
@@ -19501,14 +19501,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(406:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}",
+    		source: "(425:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (411:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}
+    // (430:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}
     function create_if_block_3(ctx) {
     	let button;
     	let t0;
@@ -19557,9 +19557,9 @@ var app = (function () {
     			t5 = space();
     			create_component(adoptgrid.$$.fragment);
     			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
-    			add_location(button, file, 411, 4, 13100);
+    			add_location(button, file, 430, 4, 13799);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 418, 4, 13533);
+    			add_location(h1, file, 437, 4, 14232);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -19656,14 +19656,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(411:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}",
+    		source: "(430:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (413:4) <Intro>
+    // (432:4) <Intro>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -19683,14 +19683,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(413:4) <Intro>",
+    		source: "(432:4) <Intro>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (415:4) {#if orphaned === true}
+    // (434:4) {#if orphaned === true}
     function create_if_block_4(ctx) {
     	let h1;
     	let t0;
@@ -19713,7 +19713,7 @@ var app = (function () {
     			t1 = space();
     			create_component(orphan.$$.fragment);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 415, 4, 13372);
+    			add_location(h1, file, 434, 4, 14071);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -19751,14 +19751,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(415:4) {#if orphaned === true}",
+    		source: "(434:4) {#if orphaned === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (423:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}
+    // (442:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}
     function create_if_block_2(ctx) {
     	let about;
     	let current;
@@ -19790,14 +19790,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(423:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}",
+    		source: "(442:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (427:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}
+    // (446:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}
     function create_if_block(ctx) {
     	let div;
     	let custombutton0;
@@ -19847,7 +19847,7 @@ var app = (function () {
     			t2 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-8b9x78");
-    			add_location(div, file, 427, 4, 14003);
+    			add_location(div, file, 446, 4, 14702);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19937,14 +19937,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(427:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}",
+    		source: "(446:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (429:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
+    // (448:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -19964,14 +19964,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(429:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click={() => {showCart = !showCart;}}>",
+    		source: "(448:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click={() => {showCart = !showCart;}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (432:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click="{showCheckOut}">
+    // (451:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click="{showCheckOut}">
     function create_default_slot(ctx) {
     	let t;
 
@@ -19991,14 +19991,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(432:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click=\\\"{showCheckOut}\\\">",
+    		source: "(451:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click=\\\"{showCheckOut}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (434:4) {#if showCart}
+    // (453:4) {#if showCart}
     function create_if_block_1(ctx) {
     	let cart;
     	let current;
@@ -20039,7 +20039,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(434:4) {#if showCart}",
+    		source: "(453:4) {#if showCart}",
     		ctx
     	});
 
@@ -20121,9 +20121,9 @@ var app = (function () {
     			t14 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-8b9x78");
-    			add_location(main, file, 306, 0, 7763);
+    			add_location(main, file, 325, 0, 8462);
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "darkMode" : "lightMode") + " svelte-8b9x78"));
-    			add_location(div, file, 304, 0, 7700);
+    			add_location(div, file, 323, 0, 8399);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20604,7 +20604,7 @@ var app = (function () {
     			description: "Gerald is a very polite frog and needs a home and someone to love him",
     			imageUrl: "/images/treeFrog.png",
     			address: "34 Blackstock road, Stockwell, SW9 S3T, London",
-    			contact: "svelteLondonSoc@gmail.com",
+    			contact: "adoptPhrogesLondon@gmail.com",
     			isFavourite: false
     		},
     		{
@@ -20614,7 +20614,7 @@ var app = (function () {
     			description: "Two lovely frogs that are looking for new owners, well behaved and easy to clean up after",
     			imageUrl: "/images/twoFrogs.jpeg",
     			address: "321 Seven sisters road, Finsbury Park, N17 4FA, London",
-    			contact: "svelteLondonSoc@gmail.com",
+    			contact: "adoptPhrogesLondon@gmail.com",
     			isFavourite: false
     		},
     		{
@@ -20624,7 +20624,7 @@ var app = (function () {
     			description: "Somewhat strange but fiercely loyal, Arnold hasn't had the easiest life, it's time to give him a chance",
     			imageUrl: "/images/xenopus.jpeg",
     			address: "11 Regents Street, C12 WEB, London",
-    			contact: "svelteLondonSoc@gmail.com",
+    			contact: "adoptPhrogesLondon@gmail.com",
     			isFavourite: false
     		},
     		{
@@ -20632,9 +20632,29 @@ var app = (function () {
     			title: "Rosie",
     			subtitle: "Dart frog",
     			description: "Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet. ",
-    			imageUrl: "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F28638272-6943-11ea-b96a-000a4e1a8b0c.jpg?crop=3959%2C2639%2C0%2C0",
+    			imageUrl: "/images/dartFrog.jpeg",
     			address: "321 Seven sisters road, Finsbury Park, N17 4FA, London",
-    			contact: "/images/dartFrog.jpeg",
+    			contact: "adoptPhrogesLondon@gmail.com",
+    			isFavourite: false
+    		},
+    		{
+    			id: "1sc",
+    			title: "Begby",
+    			subtitle: "sprinkled long reed frog",
+    			description: "Don't mess with Begby. Not once, not ever.",
+    			imageUrl: "/images/toad.jpg",
+    			address: "flat 5, South Bridge, Edinburgh EH8 9YL",
+    			contact: "adoptPhrogesLondon@gmail.com",
+    			isFavourite: false
+    		},
+    		{
+    			id: "1hp",
+    			title: "Misty",
+    			subtitle: "no idea...I mean what!!??!",
+    			description: "Very laid back frog rescued from a hippy commune in Thailand, her song is very pleasant to listen to at night, easy to look after so long as you don't play loud psytrance music",
+    			imageUrl: "/images/rainbow.jpg",
+    			address: "flat 5, South Bridge, Edinburgh EH8 9YL",
+    			contact: "adoptPhrogesLondon@gmail.com",
     			isFavourite: false
     		}
     	];
