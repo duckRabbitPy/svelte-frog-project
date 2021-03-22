@@ -30,10 +30,11 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #9a476b;
-  border-color: #9a476b;
+  background: rgb(79, 151, 118);
+  border-color: rgb(79, 151, 118);
   box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
 }
+/* #9a476b; */
 
 button:disabled,
 button:disabled:hover,
@@ -55,41 +56,6 @@ button:disabled:active {
   background: #1ac745;
   border-color: #1ac745;
 }
-
-.outline {
-  background: transparent;
-  color: #cf0056;
-  box-shadow: none;
-}
-
-.outline:hover,
-.outline:active {
-  background: #ffc7de;
-  box-shadow: none;
-}
-
-.outline:disabled,
-.outline:disabled:hover,
-.outline:disabled:active {
-  background: transparent;
-  color: #ccc;
-}
-
-.outline.success {
-  border-color: #01a129;
-  color: #01a129;
-}
-
-.outline.success:hover,
-.outline.success:active {
-  background: #c2ffd1;
-}
-
-.return {
-  border-color: #fffb84;
-  color: #fffb84;
-}
-
 .secondary-light {
   border-color: #324A5E;
   background-color: #324A5E;
@@ -98,6 +64,12 @@ button:disabled:active {
 .secondary-dark {
   border-color: #54a699;
   background-color: #54a699;
+}
+
+.selectedPage {
+  background: #6eac52;
+  border-color: #6eac52;
+  box-shadow: 1px 1px 8px rgba(77, 51, 51, 0.26);
 }
 
 </style>

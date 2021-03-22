@@ -326,11 +326,11 @@ let score = 0;
 <main>
   {#if hideButtonsforGame === false}
     <div class="formControl">
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Main</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">About</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Nature Quiz</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Frog Shop</CustomButton>
-    <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Give Feedback</CustomButton>
+    <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Main</CustomButton>
+    <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">About</CustomButton>
+    <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Nature Quiz</CustomButton>
+    <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Frog Shop</CustomButton>
+    <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Give Feedback</CustomButton>
     <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />

@@ -1544,10 +1544,10 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			if (default_slot) default_slot.c();
-    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-1rx2z7j"));
+    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-18490t9"));
     			attr_dev(button, "type", /*btntype*/ ctx[0]);
     			button.disabled = /*disabled*/ ctx[2];
-    			add_location(button, file$s, 105, 0, 1697);
+    			add_location(button, file$s, 77, 0, 1376);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1573,7 +1573,7 @@ var app = (function () {
     				}
     			}
 
-    			if (!current || dirty & /*stateColour*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-1rx2z7j"))) {
+    			if (!current || dirty & /*stateColour*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*stateColour*/ ctx[1]) + " svelte-18490t9"))) {
     				attr_dev(button, "class", button_class_value);
     			}
 
@@ -18164,6 +18164,7 @@ var app = (function () {
 
     	custombutton0 = new CustomButton({
     			props: {
+    				stateColour: /*mainPage*/ ctx[2] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
@@ -18175,6 +18176,7 @@ var app = (function () {
 
     	custombutton1 = new CustomButton({
     			props: {
+    				stateColour: /*aboutPage*/ ctx[9] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
@@ -18186,6 +18188,7 @@ var app = (function () {
 
     	custombutton2 = new CustomButton({
     			props: {
+    				stateColour: /*playQuiz*/ ctx[3] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
@@ -18197,6 +18200,7 @@ var app = (function () {
 
     	custombutton3 = new CustomButton({
     			props: {
+    				stateColour: /*goShop*/ ctx[4] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
@@ -18208,6 +18212,7 @@ var app = (function () {
 
     	custombutton4 = new CustomButton({
     			props: {
+    				stateColour: /*feedback*/ ctx[10] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
@@ -18282,6 +18287,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
+    			if (dirty[0] & /*mainPage*/ 4) custombutton0_changes.stateColour = /*mainPage*/ ctx[2] ? "selectedPage" : "";
 
     			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton0_changes.$$scope = { dirty, ctx };
@@ -18289,6 +18295,7 @@ var app = (function () {
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
+    			if (dirty[0] & /*aboutPage*/ 512) custombutton1_changes.stateColour = /*aboutPage*/ ctx[9] ? "selectedPage" : "";
 
     			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton1_changes.$$scope = { dirty, ctx };
@@ -18296,6 +18303,7 @@ var app = (function () {
 
     			custombutton1.$set(custombutton1_changes);
     			const custombutton2_changes = {};
+    			if (dirty[0] & /*playQuiz*/ 8) custombutton2_changes.stateColour = /*playQuiz*/ ctx[3] ? "selectedPage" : "";
 
     			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton2_changes.$$scope = { dirty, ctx };
@@ -18303,6 +18311,7 @@ var app = (function () {
 
     			custombutton2.$set(custombutton2_changes);
     			const custombutton3_changes = {};
+    			if (dirty[0] & /*goShop*/ 16) custombutton3_changes.stateColour = /*goShop*/ ctx[4] ? "selectedPage" : "";
 
     			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton3_changes.$$scope = { dirty, ctx };
@@ -18310,6 +18319,7 @@ var app = (function () {
 
     			custombutton3.$set(custombutton3_changes);
     			const custombutton4_changes = {};
+    			if (dirty[0] & /*feedback*/ 1024) custombutton4_changes.stateColour = /*feedback*/ ctx[10] ? "selectedPage" : "";
 
     			if (dirty[1] & /*$$scope*/ 16777216) {
     				custombutton4_changes.$$scope = { dirty, ctx };
@@ -18381,7 +18391,7 @@ var app = (function () {
     	return block;
     }
 
-    // (329:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (329:4) <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -18401,14 +18411,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(329:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(329:4) <CustomButton stateColour=\\\"{mainPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (330:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">
+    // (330:4) <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -18428,14 +18438,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(330:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(330:4) <CustomButton stateColour=\\\"{aboutPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (331:4) <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -18455,14 +18465,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(331:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(331:4) <CustomButton stateColour=\\\"{playQuiz ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (332:4) <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -18482,14 +18492,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(332:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(332:4) <CustomButton stateColour=\\\"{goShop ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:4) <CustomButton btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (333:4) <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -18509,7 +18519,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(333:4) <CustomButton btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(333:4) <CustomButton stateColour=\\\"{feedback ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
     		ctx
     	});
 
@@ -18654,7 +18664,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "You must sign in/register to view Dashboard";
-    			add_location(p, file, 356, 16, 10512);
+    			add_location(p, file, 356, 16, 10746);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18695,13 +18705,13 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Sign In as Guest";
-    			add_location(div0, file, 370, 24, 11270);
+    			add_location(div0, file, 370, 24, 11504);
     			attr_dev(button, "class", "login svelte-8b9x78");
     			attr_dev(button, "type", "button");
-    			add_location(button, file, 377, 26, 11647);
-    			add_location(div1, file, 376, 24, 11615);
-    			add_location(form, file, 369, 22, 11214);
-    			add_location(div2, file, 368, 20, 11186);
+    			add_location(button, file, 377, 26, 11881);
+    			add_location(div1, file, 376, 24, 11849);
+    			add_location(form, file, 369, 22, 11448);
+    			add_location(div2, file, 368, 20, 11420);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18780,12 +18790,12 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Logout";
-    			add_location(h2, file, 361, 24, 10716);
+    			add_location(h2, file, 361, 24, 10950);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-8b9x78");
-    			add_location(button, file, 364, 24, 11005);
-    			add_location(div0, file, 360, 22, 10686);
-    			add_location(div1, file, 359, 20, 10658);
+    			add_location(button, file, 364, 24, 11239);
+    			add_location(div0, file, 360, 22, 10920);
+    			add_location(div1, file, 359, 20, 10892);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -19018,8 +19028,8 @@ var app = (function () {
     			div0 = element("div");
     			create_component(auth.$$.fragment);
     			attr_dev(div0, "class", "wrapper");
-    			add_location(div0, file, 346, 12, 10184);
-    			add_location(div1, file, 345, 8, 10166);
+    			add_location(div0, file, 346, 12, 10418);
+    			add_location(div1, file, 345, 8, 10400);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -19111,7 +19121,7 @@ var app = (function () {
     			div = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file, 387, 8, 12000);
+    			add_location(div, file, 387, 8, 12234);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19561,9 +19571,9 @@ var app = (function () {
     			t5 = space();
     			create_component(adoptgrid.$$.fragment);
     			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
-    			add_location(button, file, 430, 4, 13835);
+    			add_location(button, file, 430, 4, 14069);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 437, 4, 14268);
+    			add_location(h1, file, 437, 4, 14502);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -19717,7 +19727,7 @@ var app = (function () {
     			t1 = space();
     			create_component(orphan.$$.fragment);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 434, 4, 14107);
+    			add_location(h1, file, 434, 4, 14341);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -19851,7 +19861,7 @@ var app = (function () {
     			t2 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-8b9x78");
-    			add_location(div, file, 446, 4, 14738);
+    			add_location(div, file, 446, 4, 14972);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
