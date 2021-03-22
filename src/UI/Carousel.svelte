@@ -40,20 +40,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: nowrap;
-      -webkit-mask: linear-gradient(
-        to right,
-        transparent,
-        black 40%,
-        black 60%,
-        transparent
-      );
-      mask: linear-gradient(
-        to right,
-        transparent,
-        black 40%,
-        black 60%,
-        transparent
-      );
+
     }
   
     button {
@@ -107,7 +94,7 @@
         <svg width="39px" height="110px" id="svg8" transform={`scale(${controlScale})`}>
           <g id="layer1" transform="translate(-65.605611,-95.36949)">
             <path
-            style={`fill:none;stroke:${$darkModeOn ? '#cecdce' : controlColor};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
+            style={`fill:none;stroke:${'#cecdce'};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
             d="m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647"
             id="path1412" />
           </g>
@@ -119,7 +106,7 @@
         <svg width="39px" height="110px" id="svg8" transform={`rotate(180) scale(${controlScale})`}>
           <g id="layer1" transform="translate(-65.605611,-95.36949)">
             <path
-            style={`fill:none;stroke:${$darkModeOn ? '#cecdce' : controlColor};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
+            style={`fill:none;stroke:${'#cecdce'};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`}
             d="m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647"
             id="path1412" />
           </g>

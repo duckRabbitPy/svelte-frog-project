@@ -17593,7 +17593,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (96:6) {#each images as image (image.id)}
+    // (83:6) {#each images as image (image.id)}
     function create_each_block(key_1, ctx) {
     	let img;
     	let img_src_value;
@@ -17612,8 +17612,8 @@ var app = (function () {
     			attr_dev(img, "alt", img_alt_value = /*image*/ ctx[11].id);
     			attr_dev(img, "id", img_id_value = /*image*/ ctx[11].id);
     			attr_dev(img, "style", img_style_value = `width:${/*imageWidth*/ ctx[1]}px; margin: 0 ${/*imageSpacing*/ ctx[2]}px;`);
-    			attr_dev(img, "class", "svelte-lb8pew");
-    			add_location(img, file$1, 96, 8, 2413);
+    			attr_dev(img, "class", "svelte-ezl2ia");
+    			add_location(img, file$1, 83, 8, 2136);
     			this.first = img;
     		},
     		m: function mount(target, anchor) {
@@ -17658,19 +17658,18 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(96:6) {#each images as image (image.id)}",
+    		source: "(83:6) {#each images as image (image.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:32)          
+    // (93:32)          
     function fallback_block_1(ctx) {
     	let svg;
     	let g;
     	let path;
-    	let path_style_value;
     	let svg_transform_value;
 
     	const block = {
@@ -17678,22 +17677,18 @@ var app = (function () {
     			svg = svg_element("svg");
     			g = svg_element("g");
     			path = svg_element("path");
-
-    			attr_dev(path, "style", path_style_value = `fill:none;stroke:${/*$darkModeOn*/ ctx[6]
-			? "#cecdce"
-			: /*controlColor*/ ctx[4]};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`);
-
+    			attr_dev(path, "style", `fill:none;stroke:${"#cecdce"};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`);
     			attr_dev(path, "d", "m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647");
     			attr_dev(path, "id", "path1412");
-    			add_location(path, file$1, 108, 12, 2885);
+    			add_location(path, file$1, 95, 12, 2608);
     			attr_dev(g, "id", "layer1");
     			attr_dev(g, "transform", "translate(-65.605611,-95.36949)");
-    			add_location(g, file$1, 107, 10, 2813);
+    			add_location(g, file$1, 94, 10, 2536);
     			attr_dev(svg, "width", "39px");
     			attr_dev(svg, "height", "110px");
     			attr_dev(svg, "id", "svg8");
-    			attr_dev(svg, "transform", svg_transform_value = `scale(${/*controlScale*/ ctx[5]})`);
-    			add_location(svg, file$1, 106, 8, 2722);
+    			attr_dev(svg, "transform", svg_transform_value = `scale(${/*controlScale*/ ctx[4]})`);
+    			add_location(svg, file$1, 93, 8, 2445);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -17701,13 +17696,7 @@ var app = (function () {
     			append_dev(g, path);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$darkModeOn, controlColor*/ 80 && path_style_value !== (path_style_value = `fill:none;stroke:${/*$darkModeOn*/ ctx[6]
-			? "#cecdce"
-			: /*controlColor*/ ctx[4]};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`)) {
-    				attr_dev(path, "style", path_style_value);
-    			}
-
-    			if (dirty & /*controlScale*/ 32 && svg_transform_value !== (svg_transform_value = `scale(${/*controlScale*/ ctx[5]})`)) {
+    			if (dirty & /*controlScale*/ 16 && svg_transform_value !== (svg_transform_value = `scale(${/*controlScale*/ ctx[4]})`)) {
     				attr_dev(svg, "transform", svg_transform_value);
     			}
     		},
@@ -17720,19 +17709,18 @@ var app = (function () {
     		block,
     		id: fallback_block_1.name,
     		type: "fallback",
-    		source: "(106:32)          ",
+    		source: "(93:32)          ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:33)          
+    // (105:33)          
     function fallback_block(ctx) {
     	let svg;
     	let g;
     	let path;
-    	let path_style_value;
     	let svg_transform_value;
 
     	const block = {
@@ -17740,22 +17728,18 @@ var app = (function () {
     			svg = svg_element("svg");
     			g = svg_element("g");
     			path = svg_element("path");
-
-    			attr_dev(path, "style", path_style_value = `fill:none;stroke:${/*$darkModeOn*/ ctx[6]
-			? "#cecdce"
-			: /*controlColor*/ ctx[4]};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`);
-
+    			attr_dev(path, "style", `fill:none;stroke:${"#cecdce"};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`);
     			attr_dev(path, "d", "m 99.785711,100.30199 -23.346628,37.07648 c -7.853858,12.81098 -7.88205,12.81098 0,24.78902 l 23.346628,37.94647");
     			attr_dev(path, "id", "path1412");
-    			add_location(path, file$1, 120, 12, 3573);
+    			add_location(path, file$1, 107, 12, 3267);
     			attr_dev(g, "id", "layer1");
     			attr_dev(g, "transform", "translate(-65.605611,-95.36949)");
-    			add_location(g, file$1, 119, 10, 3501);
+    			add_location(g, file$1, 106, 10, 3195);
     			attr_dev(svg, "width", "39px");
     			attr_dev(svg, "height", "110px");
     			attr_dev(svg, "id", "svg8");
-    			attr_dev(svg, "transform", svg_transform_value = `rotate(180) scale(${/*controlScale*/ ctx[5]})`);
-    			add_location(svg, file$1, 118, 8, 3398);
+    			attr_dev(svg, "transform", svg_transform_value = `rotate(180) scale(${/*controlScale*/ ctx[4]})`);
+    			add_location(svg, file$1, 105, 8, 3092);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -17763,13 +17747,7 @@ var app = (function () {
     			append_dev(g, path);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$darkModeOn, controlColor*/ 80 && path_style_value !== (path_style_value = `fill:none;stroke:${/*$darkModeOn*/ ctx[6]
-			? "#cecdce"
-			: /*controlColor*/ ctx[4]};stroke-width:9.865;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1`)) {
-    				attr_dev(path, "style", path_style_value);
-    			}
-
-    			if (dirty & /*controlScale*/ 32 && svg_transform_value !== (svg_transform_value = `rotate(180) scale(${/*controlScale*/ ctx[5]})`)) {
+    			if (dirty & /*controlScale*/ 16 && svg_transform_value !== (svg_transform_value = `rotate(180) scale(${/*controlScale*/ ctx[4]})`)) {
     				attr_dev(svg, "transform", svg_transform_value);
     			}
     		},
@@ -17782,7 +17760,7 @@ var app = (function () {
     		block,
     		id: fallback_block.name,
     		type: "fallback",
-    		source: "(118:33)          ",
+    		source: "(105:33)          ",
     		ctx
     	});
 
@@ -17841,20 +17819,20 @@ var app = (function () {
     			t3 = space();
     			button1 = element("button");
     			if (right_control_slot_or_fallback) right_control_slot_or_fallback.c();
-    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[6] ? "h1-dark" : "h1-light") + " svelte-lb8pew"));
-    			add_location(h1, file$1, 92, 2, 2223);
+    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5] ? "h1-dark" : "h1-light") + " svelte-ezl2ia"));
+    			add_location(h1, file$1, 79, 2, 1946);
     			attr_dev(div0, "id", "carousel-images");
-    			attr_dev(div0, "class", "svelte-lb8pew");
-    			add_location(div0, file$1, 94, 4, 2337);
+    			attr_dev(div0, "class", "svelte-ezl2ia");
+    			add_location(div0, file$1, 81, 4, 2060);
     			attr_dev(button0, "id", "left");
-    			attr_dev(button0, "class", "svelte-lb8pew");
-    			add_location(button0, file$1, 104, 4, 2640);
+    			attr_dev(button0, "class", "svelte-ezl2ia");
+    			add_location(button0, file$1, 91, 4, 2363);
     			attr_dev(button1, "id", "right");
-    			attr_dev(button1, "class", "svelte-lb8pew");
-    			add_location(button1, file$1, 116, 4, 3313);
+    			attr_dev(button1, "class", "svelte-ezl2ia");
+    			add_location(button1, file$1, 103, 4, 3007);
     			attr_dev(div1, "id", "carousel-container");
-    			attr_dev(div1, "class", "svelte-lb8pew");
-    			add_location(div1, file$1, 93, 2, 2303);
+    			attr_dev(div1, "class", "svelte-ezl2ia");
+    			add_location(div1, file$1, 80, 2, 2026);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17888,15 +17866,15 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*rotateLeft*/ ctx[7], false, false, false),
-    					listen_dev(button1, "click", /*rotateRight*/ ctx[8], false, false, false)
+    					listen_dev(button0, "click", /*rotateLeft*/ ctx[6], false, false, false),
+    					listen_dev(button1, "click", /*rotateRight*/ ctx[7], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*$darkModeOn*/ 64 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[6] ? "h1-dark" : "h1-light") + " svelte-lb8pew"))) {
+    			if (!current || dirty & /*$darkModeOn*/ 32 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5] ? "h1-dark" : "h1-light") + " svelte-ezl2ia"))) {
     				attr_dev(h1, "class", h1_class_value);
     			}
 
@@ -17914,7 +17892,7 @@ var app = (function () {
     					update_slot(left_control_slot, left_control_slot_template, ctx, /*$$scope*/ ctx[9], dirty, get_left_control_slot_changes, get_left_control_slot_context);
     				}
     			} else {
-    				if (left_control_slot_or_fallback && left_control_slot_or_fallback.p && dirty & /*controlScale, $darkModeOn, controlColor*/ 112) {
+    				if (left_control_slot_or_fallback && left_control_slot_or_fallback.p && dirty & /*controlScale*/ 16) {
     					left_control_slot_or_fallback.p(ctx, dirty);
     				}
     			}
@@ -17924,7 +17902,7 @@ var app = (function () {
     					update_slot(right_control_slot, right_control_slot_template, ctx, /*$$scope*/ ctx[9], dirty, get_right_control_slot_changes, get_right_control_slot_context);
     				}
     			} else {
-    				if (right_control_slot_or_fallback && right_control_slot_or_fallback.p && dirty & /*controlScale, $darkModeOn, controlColor*/ 112) {
+    				if (right_control_slot_or_fallback && right_control_slot_or_fallback.p && dirty & /*controlScale*/ 16) {
     					right_control_slot_or_fallback.p(ctx, dirty);
     				}
     			}
@@ -17970,7 +17948,7 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let $darkModeOn;
     	validate_store(darkModeOn, "darkModeOn");
-    	component_subscribe($$self, darkModeOn, $$value => $$invalidate(6, $darkModeOn = $$value));
+    	component_subscribe($$self, darkModeOn, $$value => $$invalidate(5, $darkModeOn = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Carousel", slots, ['left-control','right-control']);
     	let { images } = $$props;
@@ -18014,8 +17992,8 @@ var app = (function () {
     		if ("imageWidth" in $$props) $$invalidate(1, imageWidth = $$props.imageWidth);
     		if ("imageSpacing" in $$props) $$invalidate(2, imageSpacing = $$props.imageSpacing);
     		if ("speed" in $$props) $$invalidate(3, speed = $$props.speed);
-    		if ("controlColor" in $$props) $$invalidate(4, controlColor = $$props.controlColor);
-    		if ("controlScale" in $$props) $$invalidate(5, controlScale = $$props.controlScale);
+    		if ("controlColor" in $$props) $$invalidate(8, controlColor = $$props.controlColor);
+    		if ("controlScale" in $$props) $$invalidate(4, controlScale = $$props.controlScale);
     		if ("$$scope" in $$props) $$invalidate(9, $$scope = $$props.$$scope);
     	};
 
@@ -18038,8 +18016,8 @@ var app = (function () {
     		if ("imageWidth" in $$props) $$invalidate(1, imageWidth = $$props.imageWidth);
     		if ("imageSpacing" in $$props) $$invalidate(2, imageSpacing = $$props.imageSpacing);
     		if ("speed" in $$props) $$invalidate(3, speed = $$props.speed);
-    		if ("controlColor" in $$props) $$invalidate(4, controlColor = $$props.controlColor);
-    		if ("controlScale" in $$props) $$invalidate(5, controlScale = $$props.controlScale);
+    		if ("controlColor" in $$props) $$invalidate(8, controlColor = $$props.controlColor);
+    		if ("controlScale" in $$props) $$invalidate(4, controlScale = $$props.controlScale);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -18051,11 +18029,11 @@ var app = (function () {
     		imageWidth,
     		imageSpacing,
     		speed,
-    		controlColor,
     		controlScale,
     		$darkModeOn,
     		rotateLeft,
     		rotateRight,
+    		controlColor,
     		$$scope,
     		slots
     	];
@@ -18070,8 +18048,8 @@ var app = (function () {
     			imageWidth: 1,
     			imageSpacing: 2,
     			speed: 3,
-    			controlColor: 4,
-    			controlScale: 5
+    			controlColor: 8,
+    			controlScale: 4
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
