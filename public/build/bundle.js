@@ -2180,11 +2180,11 @@ var app = (function () {
     			t1 = space();
     			textarea = element("textarea");
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 169, 2, 3311);
+    			add_location(h1, file$p, 169, 2, 3310);
     			attr_dev(textarea, "label", "Mobile number");
-    			add_location(textarea, file$p, 170, 2, 3417);
+    			add_location(textarea, file$p, 170, 2, 3416);
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 168, 0, 3303);
+    			add_location(div, file$p, 168, 0, 3302);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2300,7 +2300,7 @@ var app = (function () {
     			create_component(custombutton1.$$.fragment);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 172, 0, 3468);
+    			add_location(div, file$p, 172, 0, 3467);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2603,33 +2603,33 @@ var app = (function () {
     			t15 = space();
     			create_component(social.$$.fragment);
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 182, 8, 3879);
+    			add_location(h1, file$p, 182, 8, 3878);
     			attr_dev(h2, "class", "svelte-1wlkj28");
-    			add_location(h2, file$p, 184, 8, 3913);
+    			add_location(h2, file$p, 184, 8, 3912);
     			attr_dev(p0, "class", "svelte-1wlkj28");
-    			add_location(p0, file$p, 185, 8, 3941);
+    			add_location(p0, file$p, 185, 8, 3940);
     			attr_dev(header, "class", "svelte-1wlkj28");
-    			add_location(header, file$p, 181, 4, 3862);
+    			add_location(header, file$p, 181, 4, 3861);
     			if (img.src !== (img_src_value = /*imageUrl*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1wlkj28");
-    			add_location(img, file$p, 188, 8, 4014);
+    			add_location(img, file$p, 188, 8, 4013);
     			attr_dev(div0, "class", "image svelte-1wlkj28");
-    			add_location(div0, file$p, 187, 4, 3986);
+    			add_location(div0, file$p, 187, 4, 3985);
     			attr_dev(div1, "class", "badge svelte-1wlkj28");
-    			add_location(div1, file$p, 190, 4, 4060);
+    			add_location(div1, file$p, 190, 4, 4059);
     			attr_dev(p1, "class", "svelte-1wlkj28");
-    			add_location(p1, file$p, 196, 8, 4203);
+    			add_location(p1, file$p, 196, 8, 4202);
     			attr_dev(div2, "class", "content svelte-1wlkj28");
-    			add_location(div2, file$p, 195, 4, 4173);
+    			add_location(div2, file$p, 195, 4, 4172);
     			attr_dev(a, "href", a_href_value = "mailto:" + /*email*/ ctx[6]);
-    			add_location(a, file$p, 199, 8, 4256);
+    			add_location(a, file$p, 199, 8, 4255);
     			attr_dev(footer, "class", "svelte-1wlkj28");
-    			add_location(footer, file$p, 198, 4, 4239);
+    			add_location(footer, file$p, 198, 4, 4238);
     			attr_dev(article, "class", article_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[12] ? "darkMode" : "lightMode") + " svelte-1wlkj28"));
-    			add_location(article, file$p, 180, 0, 3791);
+    			add_location(article, file$p, 180, 0, 3790);
     			attr_dev(div3, "class", div3_class_value = "" + (null_to_empty(/*beingAdopted*/ ctx[11] ? "adopted" : "") + " svelte-1wlkj28"));
-    			add_location(div3, file$p, 179, 0, 3747);
+    			add_location(div3, file$p, 179, 0, 3746);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$3("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2840,7 +2840,7 @@ var app = (function () {
     	}
 
     	//GET is default if not specified
-    	fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json?`).then(res => {
+    	fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`).then(res => {
     		if (!res.ok) {
     			throw new Error("Get request failed");
     		}

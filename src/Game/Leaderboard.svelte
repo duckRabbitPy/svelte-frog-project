@@ -19,7 +19,7 @@
     console.log(score)
     let newObj = { username: name, score: score }
 
-    fetch(`USERNAME_AND_SCORE_API_KEY`, {
+    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard.json`, {
         method: "POST",
         body: JSON.stringify(newObj),
         headers: { 'Content-Type': 'application/json'}
@@ -36,7 +36,7 @@
 
 function collectPublicScores(){
 //GET is default if not specified
-  fetch(`USERNAME_AND_SCORE_API_KEY`)
+  fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard.json`)
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()
