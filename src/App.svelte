@@ -65,6 +65,7 @@ let hideButtonsforGame = false;
 let showLeaderboard = false;
 let openGallery = false;
 let lillyPadEdit = false;
+let newGame = false;
 
 let orphans = [{}]
 let orphaned = false;
@@ -215,7 +216,7 @@ let score = 0;
       goDashBoard = false
     }
 
-    $:if (gameInPlay === true) {
+    $:if (gameInPlay === true && newGame) {
       if(window.innerWidth < 900) {
           hideButtonsforGame = true
         }}
@@ -326,11 +327,11 @@ let score = 0;
 <main>
   {#if hideButtonsforGame === false}
     <div class="formControl">
-    <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Main</CustomButton>
-    <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">About</CustomButton>
-    <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Nature Quiz</CustomButton>
-    <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Frog Shop</CustomButton>
-    <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">Give Feedback</CustomButton>
+    <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">Main</CustomButton>
+    <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">About</CustomButton>
+    <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">Nature Quiz</CustomButton>
+    <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}">Frog Shop</CustomButton>
+    <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}">Give Feedback</CustomButton>
     <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">Premium dashboard</CustomButton>
 
     <Toggle hideLabel label="Custom label" bind:toggled />
@@ -401,7 +402,7 @@ let score = 0;
     {/if}
 
     {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
-    <Game on:game-over="{endGame}"/>
+    <Game on:game-over="{endGame}" on:game-started="{()=>{newGame = true}}"/>
     {/if}
 
     {#if openGallery === true}

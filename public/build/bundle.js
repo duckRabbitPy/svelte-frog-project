@@ -2180,11 +2180,11 @@ var app = (function () {
     			t1 = space();
     			textarea = element("textarea");
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 169, 2, 3180);
+    			add_location(h1, file$p, 169, 2, 3310);
     			attr_dev(textarea, "label", "Mobile number");
-    			add_location(textarea, file$p, 170, 2, 3286);
+    			add_location(textarea, file$p, 170, 2, 3416);
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 168, 0, 3172);
+    			add_location(div, file$p, 168, 0, 3302);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2300,7 +2300,7 @@ var app = (function () {
     			create_component(custombutton1.$$.fragment);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "svelte-1wlkj28");
-    			add_location(div, file$p, 172, 0, 3337);
+    			add_location(div, file$p, 172, 0, 3467);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2603,33 +2603,33 @@ var app = (function () {
     			t15 = space();
     			create_component(social.$$.fragment);
     			attr_dev(h1, "class", "svelte-1wlkj28");
-    			add_location(h1, file$p, 182, 8, 3748);
+    			add_location(h1, file$p, 182, 8, 3878);
     			attr_dev(h2, "class", "svelte-1wlkj28");
-    			add_location(h2, file$p, 184, 8, 3782);
+    			add_location(h2, file$p, 184, 8, 3912);
     			attr_dev(p0, "class", "svelte-1wlkj28");
-    			add_location(p0, file$p, 185, 8, 3810);
+    			add_location(p0, file$p, 185, 8, 3940);
     			attr_dev(header, "class", "svelte-1wlkj28");
-    			add_location(header, file$p, 181, 4, 3731);
+    			add_location(header, file$p, 181, 4, 3861);
     			if (img.src !== (img_src_value = /*imageUrl*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1wlkj28");
-    			add_location(img, file$p, 188, 8, 3883);
+    			add_location(img, file$p, 188, 8, 4013);
     			attr_dev(div0, "class", "image svelte-1wlkj28");
-    			add_location(div0, file$p, 187, 4, 3855);
+    			add_location(div0, file$p, 187, 4, 3985);
     			attr_dev(div1, "class", "badge svelte-1wlkj28");
-    			add_location(div1, file$p, 190, 4, 3929);
+    			add_location(div1, file$p, 190, 4, 4059);
     			attr_dev(p1, "class", "svelte-1wlkj28");
-    			add_location(p1, file$p, 196, 8, 4072);
+    			add_location(p1, file$p, 196, 8, 4202);
     			attr_dev(div2, "class", "content svelte-1wlkj28");
-    			add_location(div2, file$p, 195, 4, 4042);
+    			add_location(div2, file$p, 195, 4, 4172);
     			attr_dev(a, "href", a_href_value = "mailto:" + /*email*/ ctx[6]);
-    			add_location(a, file$p, 199, 8, 4125);
+    			add_location(a, file$p, 199, 8, 4255);
     			attr_dev(footer, "class", "svelte-1wlkj28");
-    			add_location(footer, file$p, 198, 4, 4108);
+    			add_location(footer, file$p, 198, 4, 4238);
     			attr_dev(article, "class", article_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[12] ? "darkMode" : "lightMode") + " svelte-1wlkj28"));
-    			add_location(article, file$p, 180, 0, 3660);
+    			add_location(article, file$p, 180, 0, 3790);
     			attr_dev(div3, "class", div3_class_value = "" + (null_to_empty(/*beingAdopted*/ ctx[11] ? "adopted" : "") + " svelte-1wlkj28"));
-    			add_location(div3, file$p, 179, 0, 3616);
+    			add_location(div3, file$p, 179, 0, 3746);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$3("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2840,7 +2840,7 @@ var app = (function () {
     	}
 
     	//GET is default if not specified
-    	fetch(`${NUMBER_OF_LIKES}`).then(res => {
+    	fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`).then(res => {
     		if (!res.ok) {
     			throw new Error("Get request failed");
     		}
@@ -2871,7 +2871,7 @@ var app = (function () {
 
     		$$invalidate(9, disabled = true);
 
-    		fetch(`${NUMBER_OF_LIKES}`, {
+    		fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`, {
     			method: "PUT",
     			body: JSON.stringify(newObj),
     			headers: { "Content-Type": "application/json" }
@@ -6791,7 +6791,7 @@ var app = (function () {
     const { console: console_1$4 } = globals;
     const file$f = "src/Game/Game.svelte";
 
-    // (315:0) {#if inplay}
+    // (316:0) {#if inplay}
     function create_if_block_1$1(ctx) {
     	let h10;
     	let t0;
@@ -6895,61 +6895,61 @@ var app = (function () {
     			t17 = space();
     			img11 = element("img");
     			attr_dev(h10, "class", h10_class_value = "" + ((/*$darkModeOn*/ ctx[29] ? "h1-dark" : "h1-light") + " " + " svelte-1rx59m0"));
-    			add_location(h10, file$f, 315, 0, 6408);
+    			add_location(h10, file$f, 316, 0, 6437);
     			attr_dev(h11, "class", h11_class_value = "" + ((/*$darkModeOn*/ ctx[29] ? "h1-dark" : "h1-light") + " " + " svelte-1rx59m0"));
-    			add_location(h11, file$f, 316, 0, 6501);
+    			add_location(h11, file$f, 317, 0, 6530);
     			attr_dev(div0, "class", "btnDiv svelte-1rx59m0");
-    			add_location(div0, file$f, 317, 0, 6573);
+    			add_location(div0, file$f, 318, 0, 6602);
     			if (img0.src !== (img0_src_value = /*tl_src*/ ctx[0])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "lilly");
     			attr_dev(img0, "class", "tl svelte-1rx59m0");
-    			add_location(img0, file$f, 321, 0, 6700);
+    			add_location(img0, file$f, 322, 0, 6729);
     			if (img1.src !== (img1_src_value = /*tm_src*/ ctx[2])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "lilly");
     			attr_dev(img1, "class", "tm svelte-1rx59m0");
-    			add_location(img1, file$f, 322, 0, 6846);
+    			add_location(img1, file$f, 323, 0, 6875);
     			if (img2.src !== (img2_src_value = /*tr_src*/ ctx[4])) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "lilly");
     			attr_dev(img2, "class", "tr svelte-1rx59m0");
-    			add_location(img2, file$f, 323, 0, 6992);
+    			add_location(img2, file$f, 324, 0, 7021);
     			if (img3.src !== (img3_src_value = /*ml_src*/ ctx[6])) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "lilly");
     			attr_dev(img3, "class", "ml svelte-1rx59m0");
-    			add_location(img3, file$f, 324, 0, 7138);
+    			add_location(img3, file$f, 325, 0, 7167);
     			if (img4.src !== (img4_src_value = /*mm_src*/ ctx[8])) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "lilly");
     			attr_dev(img4, "class", "mm svelte-1rx59m0");
-    			add_location(img4, file$f, 325, 0, 7284);
+    			add_location(img4, file$f, 326, 0, 7313);
     			if (img5.src !== (img5_src_value = /*mr_src*/ ctx[10])) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "lilly");
     			attr_dev(img5, "class", "mr svelte-1rx59m0");
-    			add_location(img5, file$f, 326, 0, 7430);
+    			add_location(img5, file$f, 327, 0, 7459);
     			if (img6.src !== (img6_src_value = /*bl_src*/ ctx[12])) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "lilly");
     			attr_dev(img6, "class", "bl svelte-1rx59m0");
-    			add_location(img6, file$f, 327, 0, 7576);
+    			add_location(img6, file$f, 328, 0, 7605);
     			if (img7.src !== (img7_src_value = /*bm_src*/ ctx[14])) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "alt", "lilly");
     			attr_dev(img7, "class", "bm svelte-1rx59m0");
-    			add_location(img7, file$f, 328, 0, 7722);
+    			add_location(img7, file$f, 329, 0, 7751);
     			if (img8.src !== (img8_src_value = /*br_src*/ ctx[16])) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "lilly");
     			attr_dev(img8, "class", "br svelte-1rx59m0");
-    			add_location(img8, file$f, 329, 0, 7868);
+    			add_location(img8, file$f, 330, 0, 7897);
     			if (img9.src !== (img9_src_value = /*gl_src*/ ctx[18])) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "lilly");
     			attr_dev(img9, "class", "gl svelte-1rx59m0");
-    			add_location(img9, file$f, 330, 0, 8014);
+    			add_location(img9, file$f, 331, 0, 8043);
     			if (img10.src !== (img10_src_value = /*gm_src*/ ctx[20])) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "alt", "lilly");
     			attr_dev(img10, "class", "gm svelte-1rx59m0");
-    			add_location(img10, file$f, 331, 0, 8160);
+    			add_location(img10, file$f, 332, 0, 8189);
     			if (img11.src !== (img11_src_value = /*gr_src*/ ctx[22])) attr_dev(img11, "src", img11_src_value);
     			attr_dev(img11, "alt", "lilly");
     			attr_dev(img11, "class", "gr svelte-1rx59m0");
-    			add_location(img11, file$f, 332, 0, 8306);
+    			add_location(img11, file$f, 333, 0, 8335);
     			attr_dev(div1, "class", "grid-container svelte-1rx59m0");
-    			add_location(div1, file$f, 320, 0, 6671);
+    			add_location(div1, file$f, 321, 0, 6700);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h10, anchor);
@@ -7104,14 +7104,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(315:0) {#if inplay}",
+    		source: "(316:0) {#if inplay}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:2) <CustomButton on:click={startNewGame}>
+    // (320:2) <CustomButton on:click={startNewGame}>
     function create_default_slot$9(ctx) {
     	let t;
 
@@ -7131,14 +7131,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$9.name,
     		type: "slot",
-    		source: "(319:2) <CustomButton on:click={startNewGame}>",
+    		source: "(320:2) <CustomButton on:click={startNewGame}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:0) {#if nextRound}
+    // (337:0) {#if nextRound}
     function create_if_block$5(ctx) {
     	let h1;
     	let t;
@@ -7149,7 +7149,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text("Next Round!!!");
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[29] ? "h1-dark" : "h1-light") + " svelte-1rx59m0"));
-    			add_location(h1, file$f, 336, 0, 8481);
+    			add_location(h1, file$f, 337, 0, 8510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -7169,7 +7169,7 @@ var app = (function () {
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(336:0) {#if nextRound}",
+    		source: "(337:0) {#if nextRound}",
     		ctx
     	});
 
@@ -7204,13 +7204,13 @@ var app = (function () {
     			audio2 = element("audio");
     			attr_dev(audio0, "class", "music");
     			if (audio0.src !== (audio0_src_value = "/audio/start.mp3")) attr_dev(audio0, "src", audio0_src_value);
-    			add_location(audio0, file$f, 339, 0, 8559);
+    			add_location(audio0, file$f, 340, 0, 8588);
     			attr_dev(audio1, "class", "goodBlip");
     			if (audio1.src !== (audio1_src_value = "/audio/correctSound.mp3")) attr_dev(audio1, "src", audio1_src_value);
-    			add_location(audio1, file$f, 340, 0, 8612);
+    			add_location(audio1, file$f, 341, 0, 8641);
     			attr_dev(audio2, "class", "allOver");
     			if (audio2.src !== (audio2_src_value = "/audio/gameOver.mp3")) attr_dev(audio2, "src", audio2_src_value);
-    			add_location(audio2, file$f, 341, 0, 8675);
+    			add_location(audio2, file$f, 342, 0, 8704);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7368,6 +7368,7 @@ var app = (function () {
     	});
 
     	function startNewGame() {
+    		dispatch("game-started");
     		let music = document.querySelector(".music");
     		music.play();
     		$$invalidate(26, score = 0);
@@ -7985,10 +7986,10 @@ var app = (function () {
     			? "highLightscore"
     			: "public") + " svelte-nxwlr9"));
 
-    			add_location(span, file$e, 92, 35, 2087);
-    			add_location(h3, file$e, 92, 2, 2054);
+    			add_location(span, file$e, 92, 35, 2225);
+    			add_location(h3, file$e, 92, 2, 2192);
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[4] ? "dark" : "light") + " svelte-nxwlr9"));
-    			add_location(div, file$e, 91, 0, 2005);
+    			add_location(div, file$e, 91, 0, 2143);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -8075,11 +8076,11 @@ var app = (function () {
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[4] ? "dark" : "light") + " svelte-nxwlr9"));
-    			add_location(h1, file$e, 81, 0, 1631);
+    			add_location(h1, file$e, 81, 0, 1769);
     			attr_dev(h3, "class", h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[4] ? "dark" : "light") + " svelte-nxwlr9"));
-    			add_location(h3, file$e, 83, 0, 1695);
+    			add_location(h3, file$e, 83, 0, 1833);
     			attr_dev(input, "class", "svelte-nxwlr9");
-    			add_location(input, file$e, 84, 0, 1763);
+    			add_location(input, file$e, 84, 0, 1901);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8208,7 +8209,7 @@ var app = (function () {
     		console.log(score);
     		let newObj = { username: name, score };
 
-    		fetch(`${LEADERBOARD_USERNAME}`, {
+    		fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard.json`, {
     			method: "POST",
     			body: JSON.stringify(newObj),
     			headers: { "Content-Type": "application/json" }
@@ -8227,7 +8228,7 @@ var app = (function () {
 
     	function collectPublicScores() {
     		//GET is default if not specified
-    		fetch(`${LEADERBOARD_USERNAME}`).then(res => {
+    		fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/Leaderboard.json`).then(res => {
     			if (!res.ok) {
     				throw new Error("Get request failed");
     			}
@@ -10927,18 +10928,18 @@ var app = (function () {
     			h2 = element("h2");
     			t5 = text(t5_value);
     			attr_dev(h3, "class", "svelte-g7nkyv");
-    			add_location(h3, file$6, 218, 4, 4307);
-    			add_location(i, file$6, 219, 7, 4350);
+    			add_location(h3, file$6, 218, 4, 4453);
+    			add_location(i, file$6, 219, 7, 4496);
     			attr_dev(p, "class", "svelte-g7nkyv");
-    			add_location(p, file$6, 219, 4, 4347);
+    			add_location(p, file$6, 219, 4, 4493);
     			attr_dev(h2, "class", "svelte-g7nkyv");
-    			add_location(h2, file$6, 220, 4, 4389);
+    			add_location(h2, file$6, 220, 4, 4535);
 
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5]
     			? "commentCard-dark"
     			: "commentCard-light") + " svelte-g7nkyv"));
 
-    			add_location(div, file$6, 217, 2, 4232);
+    			add_location(div, file$6, 217, 2, 4378);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -11117,47 +11118,47 @@ var app = (function () {
     			div5 = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(h3, "class", "svelte-g7nkyv");
-    			add_location(h3, file$6, 210, 0, 4086);
-    			add_location(i, file$6, 211, 3, 4109);
+    			add_location(h3, file$6, 210, 0, 4232);
+    			add_location(i, file$6, 211, 3, 4255);
     			attr_dev(p, "class", "svelte-g7nkyv");
-    			add_location(p, file$6, 211, 0, 4106);
+    			add_location(p, file$6, 211, 0, 4252);
     			attr_dev(h2, "class", "svelte-g7nkyv");
-    			add_location(h2, file$6, 212, 0, 4160);
+    			add_location(h2, file$6, 212, 0, 4306);
 
     			attr_dev(div0, "class", div0_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5]
     			? "commentCard-dark"
     			: "commentCard-light") + " svelte-g7nkyv"));
 
-    			add_location(div0, file$6, 209, 0, 4007);
+    			add_location(div0, file$6, 209, 0, 4153);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[5] ? "hoppy-dark" : "hoppy-light") + " svelte-g7nkyv"));
-    			add_location(h1, file$6, 227, 6, 4496);
+    			add_location(h1, file$6, 227, 6, 4642);
     			if (img.src !== (img_src_value = "/images/frog.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "frog");
     			attr_dev(img, "class", "svelte-g7nkyv");
-    			add_location(img, file$6, 228, 6, 4589);
+    			add_location(img, file$6, 228, 6, 4735);
     			attr_dev(div1, "class", "h1 svelte-g7nkyv");
-    			add_location(div1, file$6, 226, 2, 4473);
+    			add_location(div1, file$6, 226, 2, 4619);
     			attr_dev(header0, "class", "svelte-g7nkyv");
-    			add_location(header0, file$6, 233, 6, 4697);
+    			add_location(header0, file$6, 233, 6, 4843);
     			textarea0.value = "Anon";
     			attr_dev(textarea0, "class", "svelte-g7nkyv");
-    			add_location(textarea0, file$6, 234, 6, 4747);
+    			add_location(textarea0, file$6, 234, 6, 4893);
     			attr_dev(div2, "class", "userInput svelte-g7nkyv");
-    			add_location(div2, file$6, 232, 4, 4666);
+    			add_location(div2, file$6, 232, 4, 4812);
     			attr_dev(header1, "class", "svelte-g7nkyv");
-    			add_location(header1, file$6, 237, 6, 4866);
+    			add_location(header1, file$6, 237, 6, 5012);
     			attr_dev(div3, "class", "rating svelte-g7nkyv");
-    			add_location(div3, file$6, 236, 4, 4839);
+    			add_location(div3, file$6, 236, 4, 4985);
     			attr_dev(div4, "class", "User svelte-g7nkyv");
-    			add_location(div4, file$6, 231, 2, 4643);
+    			add_location(div4, file$6, 231, 2, 4789);
     			attr_dev(textarea1, "class", "commentInput svelte-g7nkyv");
-    			add_location(textarea1, file$6, 242, 2, 4994);
+    			add_location(textarea1, file$6, 242, 2, 5140);
     			attr_dev(div5, "class", "btnPad svelte-g7nkyv");
-    			add_location(div5, file$6, 243, 2, 5093);
+    			add_location(div5, file$6, 243, 2, 5239);
     			attr_dev(div6, "class", "comment svelte-g7nkyv");
-    			add_location(div6, file$6, 241, 2, 4970);
+    			add_location(div6, file$6, 241, 2, 5116);
     			attr_dev(div7, "class", "grid-container svelte-g7nkyv");
-    			add_location(div7, file$6, 225, 0, 4442);
+    			add_location(div7, file$6, 225, 0, 4588);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11345,7 +11346,7 @@ var app = (function () {
 
     	//GET is default if not specified
     	function getFeedback() {
-    		fetch(`${FEEDBACK_COMMENTS}`).then(res => {
+    		fetch("https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json").then(res => {
     			if (!res.ok) {
     				throw new Error("Get request failed");
     			}
@@ -11364,7 +11365,7 @@ var app = (function () {
     	function saveFeedback(data) {
     		if (data) {
     			//must be .json endpoint
-    			fetch(`${FEEDBACK_COMMENTS}`, {
+    			fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json`, {
     				method: "POST",
     				body: JSON.stringify(data),
     				headers: { "Content-Type": "application/json" }
@@ -15584,7 +15585,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (327:2) {#if hideButtonsforGame === false}
+    // (328:2) {#if hideButtonsforGame === false}
     function create_if_block_17(ctx) {
     	let div;
     	let custombutton0;
@@ -15605,7 +15606,7 @@ var app = (function () {
 
     	custombutton0 = new CustomButton({
     			props: {
-    				stateColour: /*mainPage*/ ctx[2] ? "selectedPage" : "",
+    				stateColour: /*mainPage*/ ctx[3] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
@@ -15613,11 +15614,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton0.$on("click", /*click_handler*/ ctx[37]);
+    	custombutton0.$on("click", /*click_handler*/ ctx[38]);
 
     	custombutton1 = new CustomButton({
     			props: {
-    				stateColour: /*aboutPage*/ ctx[9] ? "selectedPage" : "",
+    				stateColour: /*aboutPage*/ ctx[10] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
@@ -15625,11 +15626,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton1.$on("click", /*click_handler_1*/ ctx[38]);
+    	custombutton1.$on("click", /*click_handler_1*/ ctx[39]);
 
     	custombutton2 = new CustomButton({
     			props: {
-    				stateColour: /*playQuiz*/ ctx[3] ? "selectedPage" : "",
+    				stateColour: /*playQuiz*/ ctx[4] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
@@ -15637,11 +15638,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton2.$on("click", /*click_handler_2*/ ctx[39]);
+    	custombutton2.$on("click", /*click_handler_2*/ ctx[40]);
 
     	custombutton3 = new CustomButton({
     			props: {
-    				stateColour: /*goShop*/ ctx[4] ? "selectedPage" : "",
+    				stateColour: /*goShop*/ ctx[5] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
@@ -15649,11 +15650,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton3.$on("click", /*click_handler_3*/ ctx[40]);
+    	custombutton3.$on("click", /*click_handler_3*/ ctx[41]);
 
     	custombutton4 = new CustomButton({
     			props: {
-    				stateColour: /*feedback*/ ctx[10] ? "selectedPage" : "",
+    				stateColour: /*feedback*/ ctx[11] ? "selectedPage" : "",
     				btntype: "submit",
     				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
@@ -15661,12 +15662,12 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton4.$on("click", /*click_handler_4*/ ctx[41]);
+    	custombutton4.$on("click", /*click_handler_4*/ ctx[42]);
 
     	custombutton5 = new CustomButton({
     			props: {
     				btntype: "submit",
-    				stateColour: /*$darkModeOn*/ ctx[21]
+    				stateColour: /*$darkModeOn*/ ctx[22]
     				? "secondary-dark"
     				: "secondary-light",
     				$$slots: { default: [create_default_slot_7] },
@@ -15675,10 +15676,10 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton5.$on("click", /*showLogin*/ ctx[27]);
+    	custombutton5.$on("click", /*showLogin*/ ctx[28]);
 
     	function toggle_toggled_binding(value) {
-    		/*toggle_toggled_binding*/ ctx[42](value);
+    		/*toggle_toggled_binding*/ ctx[43](value);
     	}
 
     	let toggle_props = { hideLabel: true, label: "Custom label" };
@@ -15707,7 +15708,7 @@ var app = (function () {
     			t5 = space();
     			create_component(toggle.$$.fragment);
     			attr_dev(div, "class", "formControl svelte-8b9x78");
-    			add_location(div, file, 327, 4, 8509);
+    			add_location(div, file, 328, 4, 8541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -15728,52 +15729,52 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
-    			if (dirty[0] & /*mainPage*/ 4) custombutton0_changes.stateColour = /*mainPage*/ ctx[2] ? "selectedPage" : "";
+    			if (dirty[0] & /*mainPage*/ 8) custombutton0_changes.stateColour = /*mainPage*/ ctx[3] ? "selectedPage" : "";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
-    			if (dirty[0] & /*aboutPage*/ 512) custombutton1_changes.stateColour = /*aboutPage*/ ctx[9] ? "selectedPage" : "";
+    			if (dirty[0] & /*aboutPage*/ 1024) custombutton1_changes.stateColour = /*aboutPage*/ ctx[10] ? "selectedPage" : "";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton1.$set(custombutton1_changes);
     			const custombutton2_changes = {};
-    			if (dirty[0] & /*playQuiz*/ 8) custombutton2_changes.stateColour = /*playQuiz*/ ctx[3] ? "selectedPage" : "";
+    			if (dirty[0] & /*playQuiz*/ 16) custombutton2_changes.stateColour = /*playQuiz*/ ctx[4] ? "selectedPage" : "";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton2_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton2.$set(custombutton2_changes);
     			const custombutton3_changes = {};
-    			if (dirty[0] & /*goShop*/ 16) custombutton3_changes.stateColour = /*goShop*/ ctx[4] ? "selectedPage" : "";
+    			if (dirty[0] & /*goShop*/ 32) custombutton3_changes.stateColour = /*goShop*/ ctx[5] ? "selectedPage" : "";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton3_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton3.$set(custombutton3_changes);
     			const custombutton4_changes = {};
-    			if (dirty[0] & /*feedback*/ 1024) custombutton4_changes.stateColour = /*feedback*/ ctx[10] ? "selectedPage" : "";
+    			if (dirty[0] & /*feedback*/ 2048) custombutton4_changes.stateColour = /*feedback*/ ctx[11] ? "selectedPage" : "";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton4_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton4.$set(custombutton4_changes);
     			const custombutton5_changes = {};
 
-    			if (dirty[0] & /*$darkModeOn*/ 2097152) custombutton5_changes.stateColour = /*$darkModeOn*/ ctx[21]
+    			if (dirty[0] & /*$darkModeOn*/ 4194304) custombutton5_changes.stateColour = /*$darkModeOn*/ ctx[22]
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton5_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15825,14 +15826,14 @@ var app = (function () {
     		block,
     		id: create_if_block_17.name,
     		type: "if",
-    		source: "(327:2) {#if hideButtonsforGame === false}",
+    		source: "(328:2) {#if hideButtonsforGame === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:4) <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (330:4) <CustomButton stateColour="{mainPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -15852,14 +15853,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(329:4) <CustomButton stateColour=\\\"{mainPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(330:4) <CustomButton stateColour=\\\"{mainPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = true; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (330:4) <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}">
+    // (331:4) <CustomButton stateColour="{aboutPage ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -15879,14 +15880,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(330:4) <CustomButton stateColour=\\\"{aboutPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(331:4) <CustomButton stateColour=\\\"{aboutPage ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = false; mainPage = false; aboutPage = true; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:4) <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (332:4) <CustomButton stateColour="{playQuiz ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}">
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -15906,14 +15907,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(331:4) <CustomButton stateColour=\\\"{playQuiz ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(332:4) <CustomButton stateColour=\\\"{playQuiz ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = true; goShop = false; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false;}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:4) <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (333:4) <CustomButton stateColour="{goShop ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}">
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -15933,14 +15934,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(332:4) <CustomButton stateColour=\\\"{goShop ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(333:4) <CustomButton stateColour=\\\"{goShop ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = true; feedback = false; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:4) <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}">
+    // (334:4) <CustomButton stateColour="{feedback ? "selectedPage" : ''}" btntype="submit" on:click="{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}">
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -15960,14 +15961,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(333:4) <CustomButton stateColour=\\\"{feedback ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false;}}\\\">",
+    		source: "(334:4) <CustomButton stateColour=\\\"{feedback ? \\\"selectedPage\\\" : ''}\\\" btntype=\\\"submit\\\" on:click=\\\"{() => {goDashBoard = false; playQuiz = false; goShop = false; feedback = true; mainPage = false; aboutPage = false; openGallery = false; lillyPadEdit = false; showLeaderboard = false}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (334:4) <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">
+    // (335:4) <CustomButton btntype="submit" stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"}  on:click="{showLogin}">
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -15987,20 +15988,20 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(334:4) <CustomButton btntype=\\\"submit\\\" stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"}  on:click=\\\"{showLogin}\\\">",
+    		source: "(335:4) <CustomButton btntype=\\\"submit\\\" stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"}  on:click=\\\"{showLogin}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:4) {#if editMode === 'add'}
+    // (341:4) {#if editMode === 'add'}
     function create_if_block_16(ctx) {
     	let editadopt;
     	let current;
     	editadopt = new EditAdopt({ $$inline: true });
-    	editadopt.$on("adoption-submit", /*addFrog*/ ctx[24]);
-    	editadopt.$on("cancel", /*cancelForm*/ ctx[26]);
+    	editadopt.$on("adoption-submit", /*addFrog*/ ctx[25]);
+    	editadopt.$on("cancel", /*cancelForm*/ ctx[27]);
 
     	const block = {
     		c: function create() {
@@ -16029,14 +16030,14 @@ var app = (function () {
     		block,
     		id: create_if_block_16.name,
     		type: "if",
-    		source: "(340:4) {#if editMode === 'add'}",
+    		source: "(341:4) {#if editMode === 'add'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (344:4) {#if loginModal === 'log'}
+    // (345:4) {#if loginModal === 'log'}
     function create_if_block_13(ctx) {
     	let modal;
     	let current;
@@ -16053,7 +16054,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	modal.$on("cancel", /*cancel_handler*/ ctx[45]);
+    	modal.$on("cancel", /*cancel_handler*/ ctx[46]);
 
     	const block = {
     		c: function create() {
@@ -16066,7 +16067,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modal_changes = {};
 
-    			if (dirty[0] & /*loginModal, loggedInAsGuest*/ 4224 | dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[0] & /*loginModal, loggedInAsGuest*/ 8448 | dirty[1] & /*$$scope*/ 67108864) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16090,14 +16091,14 @@ var app = (function () {
     		block,
     		id: create_if_block_13.name,
     		type: "if",
-    		source: "(344:4) {#if loginModal === 'log'}",
+    		source: "(345:4) {#if loginModal === 'log'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (356:16) {#if !loggedIn || !loggedInAsGuest}
+    // (357:16) {#if !loggedIn || !loggedInAsGuest}
     function create_if_block_15(ctx) {
     	let p;
 
@@ -16105,7 +16106,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "You must sign in/register to view Dashboard";
-    			add_location(p, file, 356, 16, 10746);
+    			add_location(p, file, 357, 16, 10901);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -16119,14 +16120,14 @@ var app = (function () {
     		block,
     		id: create_if_block_15.name,
     		type: "if",
-    		source: "(356:16) {#if !loggedIn || !loggedInAsGuest}",
+    		source: "(357:16) {#if !loggedIn || !loggedInAsGuest}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (368:18) {:else}
+    // (369:18) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let form;
@@ -16146,13 +16147,13 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Sign In as Guest";
-    			add_location(div0, file, 370, 24, 11504);
+    			add_location(div0, file, 371, 24, 11659);
     			attr_dev(button, "class", "login svelte-8b9x78");
     			attr_dev(button, "type", "button");
-    			add_location(button, file, 377, 26, 11881);
-    			add_location(div1, file, 376, 24, 11849);
-    			add_location(form, file, 369, 22, 11448);
-    			add_location(div2, file, 368, 20, 11420);
+    			add_location(button, file, 378, 26, 12036);
+    			add_location(div1, file, 377, 24, 12004);
+    			add_location(form, file, 370, 22, 11603);
+    			add_location(div2, file, 369, 20, 11575);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -16164,8 +16165,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button, "click", prevent_default(/*click_handler_6*/ ctx[44]), false, true, false),
-    					listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[36]), false, true, false)
+    					listen_dev(button, "click", prevent_default(/*click_handler_6*/ ctx[45]), false, true, false),
+    					listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[37]), false, true, false)
     				];
 
     				mounted = true;
@@ -16185,20 +16186,20 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(368:18) {:else}",
+    		source: "(369:18) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (359:18) {#if loggedIn || loggedInAsGuest}
+    // (360:18) {#if loggedIn || loggedInAsGuest}
     function create_if_block_14(ctx) {
     	let div1;
     	let div0;
     	let h2;
     	let t0;
-    	let t1_value = (/*loggedIn*/ ctx[52] ? /*user*/ ctx[51].email : "Guest") + "";
+    	let t1_value = (/*loggedIn*/ ctx[54] ? /*user*/ ctx[53].email : "Guest") + "";
     	let t1;
     	let t2;
     	let custombutton;
@@ -16217,7 +16218,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton.$on("click", /*showDashBoard*/ ctx[31]);
+    	custombutton.$on("click", /*showDashBoard*/ ctx[32]);
 
     	const block = {
     		c: function create() {
@@ -16231,12 +16232,12 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Logout";
-    			add_location(h2, file, 361, 24, 10950);
+    			add_location(h2, file, 362, 24, 11105);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-8b9x78");
-    			add_location(button, file, 364, 24, 11239);
-    			add_location(div0, file, 360, 22, 10920);
-    			add_location(div1, file, 359, 20, 10892);
+    			add_location(button, file, 365, 24, 11394);
+    			add_location(div0, file, 361, 22, 11075);
+    			add_location(div1, file, 360, 20, 11047);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -16252,12 +16253,12 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button, "click", /*logOutGuest*/ ctx[28], false, false, false),
+    					listen_dev(button, "click", /*logOutGuest*/ ctx[29], false, false, false),
     					listen_dev(
     						button,
     						"click",
     						function () {
-    							if (is_function(/*logout*/ ctx[54])) /*logout*/ ctx[54].apply(this, arguments);
+    							if (is_function(/*logout*/ ctx[56])) /*logout*/ ctx[56].apply(this, arguments);
     						},
     						false,
     						false,
@@ -16270,10 +16271,10 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty[1] & /*loggedIn, user*/ 3145728) && t1_value !== (t1_value = (/*loggedIn*/ ctx[52] ? /*user*/ ctx[51].email : "Guest") + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty[1] & /*loggedIn, user*/ 12582912) && t1_value !== (t1_value = (/*loggedIn*/ ctx[54] ? /*user*/ ctx[53].email : "Guest") + "")) set_data_dev(t1, t1_value);
     			const custombutton_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16300,14 +16301,14 @@ var app = (function () {
     		block,
     		id: create_if_block_14.name,
     		type: "if",
-    		source: "(359:18) {#if loggedIn || loggedInAsGuest}",
+    		source: "(360:18) {#if loggedIn || loggedInAsGuest}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (364:24) <CustomButton btntype="submit" on:click={showDashBoard}>
+    // (365:24) <CustomButton btntype="submit" on:click={showDashBoard}>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -16327,26 +16328,26 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(364:24) <CustomButton btntype=\\\"submit\\\" on:click={showDashBoard}>",
+    		source: "(365:24) <CustomButton btntype=\\\"submit\\\" on:click={showDashBoard}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>
+    // (350:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>
     function create_default_slot_5(ctx) {
     	let t;
     	let current_block_type_index;
     	let if_block1;
     	let if_block1_anchor;
     	let current;
-    	let if_block0 = (!/*loggedIn*/ ctx[52] || !/*loggedInAsGuest*/ ctx[12]) && create_if_block_15(ctx);
+    	let if_block0 = (!/*loggedIn*/ ctx[54] || !/*loggedInAsGuest*/ ctx[13]) && create_if_block_15(ctx);
     	const if_block_creators = [create_if_block_14, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*loggedIn*/ ctx[52] || /*loggedInAsGuest*/ ctx[12]) return 0;
+    		if (/*loggedIn*/ ctx[54] || /*loggedInAsGuest*/ ctx[13]) return 0;
     		return 1;
     	}
 
@@ -16368,7 +16369,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!/*loggedIn*/ ctx[52] || !/*loggedInAsGuest*/ ctx[12]) {
+    			if (!/*loggedIn*/ ctx[54] || !/*loggedInAsGuest*/ ctx[13]) {
     				if (if_block0) ; else {
     					if_block0 = create_if_block_15(ctx);
     					if_block0.c();
@@ -16426,14 +16427,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(349:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>",
+    		source: "(350:16) <Auth                   useRedirect={true}                   let:user                   let:loggedIn                   let:loginWithGoogle                   let:logout>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (345:4) <Modal title="Proceed to Dashboard" on:cancel={()=>{loginModal = false}}>
+    // (346:4) <Modal title="Proceed to Dashboard" on:cancel={()=>{loginModal = false}}>
     function create_default_slot_4(ctx) {
     	let div1;
     	let div0;
@@ -16447,14 +16448,14 @@ var app = (function () {
     					default: [
     						create_default_slot_5,
     						({ user, loggedIn, loginWithGoogle, logout }) => ({
-    							51: user,
-    							52: loggedIn,
-    							53: loginWithGoogle,
-    							54: logout
+    							53: user,
+    							54: loggedIn,
+    							55: loginWithGoogle,
+    							56: logout
     						}),
     						({ user, loggedIn, loginWithGoogle, logout }) => [
     							0,
-    							(user ? 1048576 : 0) | (loggedIn ? 2097152 : 0) | (loginWithGoogle ? 4194304 : 0) | (logout ? 8388608 : 0)
+    							(user ? 4194304 : 0) | (loggedIn ? 8388608 : 0) | (loginWithGoogle ? 16777216 : 0) | (logout ? 33554432 : 0)
     						]
     					]
     				},
@@ -16469,8 +16470,8 @@ var app = (function () {
     			div0 = element("div");
     			create_component(auth.$$.fragment);
     			attr_dev(div0, "class", "wrapper");
-    			add_location(div0, file, 346, 12, 10418);
-    			add_location(div1, file, 345, 8, 10400);
+    			add_location(div0, file, 347, 12, 10573);
+    			add_location(div1, file, 346, 8, 10555);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -16481,7 +16482,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const auth_changes = {};
 
-    			if (dirty[0] & /*loggedInAsGuest*/ 4096 | dirty[1] & /*$$scope, logout, loggedIn, user*/ 28311552) {
+    			if (dirty[0] & /*loggedInAsGuest*/ 8192 | dirty[1] & /*$$scope, logout, loggedIn, user*/ 113246208) {
     				auth_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16506,14 +16507,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(345:4) <Modal title=\\\"Proceed to Dashboard\\\" on:cancel={()=>{loginModal = false}}>",
+    		source: "(346:4) <Modal title=\\\"Proceed to Dashboard\\\" on:cancel={()=>{loginModal = false}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (389:12) <CustomButton btntype="button" on:click="{() => {loginModal = false}}">
+    // (390:12) <CustomButton btntype="button" on:click="{() => {loginModal = false}}">
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -16533,14 +16534,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(389:12) <CustomButton btntype=\\\"button\\\" on:click=\\\"{() => {loginModal = false}}\\\">",
+    		source: "(390:12) <CustomButton btntype=\\\"button\\\" on:click=\\\"{() => {loginModal = false}}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:8) 
+    // (389:8) 
     function create_footer_slot(ctx) {
     	let div;
     	let custombutton;
@@ -16555,14 +16556,14 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton.$on("click", /*click_handler_5*/ ctx[43]);
+    	custombutton.$on("click", /*click_handler_5*/ ctx[44]);
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file, 387, 8, 12234);
+    			add_location(div, file, 388, 8, 12389);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -16572,7 +16573,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16597,21 +16598,21 @@ var app = (function () {
     		block,
     		id: create_footer_slot.name,
     		type: "slot",
-    		source: "(388:8) ",
+    		source: "(389:8) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (395:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
+    // (396:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
     function create_if_block_12(ctx) {
     	let dashboard;
     	let current;
     	dashboard = new Dashboard({ $$inline: true });
-    	dashboard.$on("memory-game", /*playGame*/ ctx[32]);
-    	dashboard.$on("view-gallery", /*viewGallery*/ ctx[34]);
-    	dashboard.$on("text-edit", /*editText*/ ctx[35]);
+    	dashboard.$on("memory-game", /*playGame*/ ctx[33]);
+    	dashboard.$on("view-gallery", /*viewGallery*/ ctx[35]);
+    	dashboard.$on("text-edit", /*editText*/ ctx[36]);
 
     	const block = {
     		c: function create() {
@@ -16640,24 +16641,24 @@ var app = (function () {
     		block,
     		id: create_if_block_12.name,
     		type: "if",
-    		source: "(395:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
+    		source: "(396:4) {#if goDashBoard === true && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (399:4) {#if showLeaderboard === true && gameInPlay === true}
+    // (400:4) {#if showLeaderboard === true && gameInPlay === true}
     function create_if_block_11(ctx) {
     	let leaderboard;
     	let current;
 
     	leaderboard = new Leaderboard({
-    			props: { score: /*score*/ ctx[19] },
+    			props: { score: /*score*/ ctx[20] },
     			$$inline: true
     		});
 
-    	leaderboard.$on("close-board", /*close_board_handler*/ ctx[46]);
+    	leaderboard.$on("close-board", /*close_board_handler*/ ctx[47]);
 
     	const block = {
     		c: function create() {
@@ -16669,7 +16670,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const leaderboard_changes = {};
-    			if (dirty[0] & /*score*/ 524288) leaderboard_changes.score = /*score*/ ctx[19];
+    			if (dirty[0] & /*score*/ 1048576) leaderboard_changes.score = /*score*/ ctx[20];
     			leaderboard.$set(leaderboard_changes);
     		},
     		i: function intro(local) {
@@ -16690,19 +16691,20 @@ var app = (function () {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(399:4) {#if showLeaderboard === true && gameInPlay === true}",
+    		source: "(400:4) {#if showLeaderboard === true && gameInPlay === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (403:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
+    // (404:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}
     function create_if_block_10(ctx) {
     	let game;
     	let current;
     	game = new Game({ $$inline: true });
-    	game.$on("game-over", /*endGame*/ ctx[33]);
+    	game.$on("game-over", /*endGame*/ ctx[34]);
+    	game.$on("game-started", /*game_started_handler*/ ctx[48]);
 
     	const block = {
     		c: function create() {
@@ -16731,21 +16733,21 @@ var app = (function () {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(403:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
+    		source: "(404:4) {#if gameInPlay === true && goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false && lillyPadEdit === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (407:4) {#if openGallery === true}
+    // (408:4) {#if openGallery === true}
     function create_if_block_9(ctx) {
     	let carousel;
     	let current;
 
     	carousel = new Carousel({
     			props: {
-    				images: /*images*/ ctx[23],
+    				images: /*images*/ ctx[24],
     				imageWidth: window.innerWidth < 900 ? "200" : "300",
     				imageSpacing: "30px"
     			},
@@ -16779,14 +16781,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(407:4) {#if openGallery === true}",
+    		source: "(408:4) {#if openGallery === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (411:4) {#if lillyPadEdit === true}
+    // (412:4) {#if lillyPadEdit === true}
     function create_if_block_8(ctx) {
     	let lillypadeditor;
     	let current;
@@ -16818,19 +16820,19 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(411:4) {#if lillyPadEdit === true}",
+    		source: "(412:4) {#if lillyPadEdit === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (416:4) {#if checkOutMode === 'checkOut'}
+    // (417:4) {#if checkOutMode === 'checkOut'}
     function create_if_block_7(ctx) {
     	let checkout;
     	let current;
     	checkout = new CheckOut({ $$inline: true });
-    	checkout.$on("cancel-checkOut", /*hideCheckOut*/ ctx[30]);
+    	checkout.$on("cancel-checkOut", /*hideCheckOut*/ ctx[31]);
 
     	const block = {
     		c: function create() {
@@ -16859,14 +16861,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(416:4) {#if checkOutMode === 'checkOut'}",
+    		source: "(417:4) {#if checkOutMode === 'checkOut'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (420:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
+    // (421:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}
     function create_if_block_6(ctx) {
     	let quiz;
     	let t;
@@ -16909,14 +16911,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(420:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}",
+    		source: "(421:4) {#if goDashBoard === false && playQuiz === true && goShop === false && feedback === false && mainPage === false && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (425:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}
+    // (426:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}
     function create_if_block_5(ctx) {
     	let feedback_1;
     	let current;
@@ -16956,14 +16958,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(425:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}",
+    		source: "(426:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === true && mainPage === false && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (430:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}
+    // (431:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}
     function create_if_block_3(ctx) {
     	let button;
     	let t0;
@@ -16989,14 +16991,14 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	let if_block = /*orphaned*/ ctx[18] === true && create_if_block_4(ctx);
+    	let if_block = /*orphaned*/ ctx[19] === true && create_if_block_4(ctx);
 
     	adoptgrid = new AdoptGrid({
-    			props: { frogs: /*frogs*/ ctx[20] },
+    			props: { frogs: /*frogs*/ ctx[21] },
     			$$inline: true
     		});
 
-    	adoptgrid.$on("toggle-favourite", /*toggleFavourite*/ ctx[25]);
+    	adoptgrid.$on("toggle-favourite", /*toggleFavourite*/ ctx[26]);
 
     	const block = {
     		c: function create() {
@@ -17011,10 +17013,10 @@ var app = (function () {
     			t4 = text("Current fogs in need of a home");
     			t5 = space();
     			create_component(adoptgrid.$$.fragment);
-    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
-    			add_location(button, file, 430, 4, 14069);
-    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 437, 4, 14502);
+    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
+    			add_location(button, file, 431, 4, 14265);
+    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
+    			add_location(h1, file, 438, 4, 14698);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -17031,28 +17033,28 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler_7*/ ctx[47], false, false, false);
+    				dispose = listen_dev(button, "click", /*click_handler_7*/ ctx[49], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*$darkModeOn*/ 2097152 && button_class_value !== (button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"))) {
+    			if (!current || dirty[0] & /*$darkModeOn*/ 4194304 && button_class_value !== (button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"))) {
     				attr_dev(button, "class", button_class_value);
     			}
 
     			const intro_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				intro_changes.$$scope = { dirty, ctx };
     			}
 
     			intro.$set(intro_changes);
 
-    			if (/*orphaned*/ ctx[18] === true) {
+    			if (/*orphaned*/ ctx[19] === true) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty[0] & /*orphaned*/ 262144) {
+    					if (dirty[0] & /*orphaned*/ 524288) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -17071,12 +17073,12 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty[0] & /*$darkModeOn*/ 2097152 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"))) {
+    			if (!current || dirty[0] & /*$darkModeOn*/ 4194304 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"))) {
     				attr_dev(h1, "class", h1_class_value);
     			}
 
     			const adoptgrid_changes = {};
-    			if (dirty[0] & /*frogs*/ 1048576) adoptgrid_changes.frogs = /*frogs*/ ctx[20];
+    			if (dirty[0] & /*frogs*/ 2097152) adoptgrid_changes.frogs = /*frogs*/ ctx[21];
     			adoptgrid.$set(adoptgrid_changes);
     		},
     		i: function intro$1(local) {
@@ -17111,14 +17113,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(430:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}",
+    		source: "(431:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === true && aboutPage === false && openGallery === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (432:4) <Intro>
+    // (433:4) <Intro>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -17138,14 +17140,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(432:4) <Intro>",
+    		source: "(433:4) <Intro>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (434:4) {#if orphaned === true}
+    // (435:4) {#if orphaned === true}
     function create_if_block_4(ctx) {
     	let h1;
     	let t0;
@@ -17155,11 +17157,11 @@ var app = (function () {
     	let current;
 
     	orphan = new Orphan({
-    			props: { orphans: /*orphans*/ ctx[17] },
+    			props: { orphans: /*orphans*/ ctx[18] },
     			$$inline: true
     		});
 
-    	orphan.$on("remove", /*remove_handler*/ ctx[48]);
+    	orphan.$on("remove", /*remove_handler*/ ctx[50]);
 
     	const block = {
     		c: function create() {
@@ -17167,8 +17169,8 @@ var app = (function () {
     			t0 = text("Your Re-homing Advert");
     			t1 = space();
     			create_component(orphan.$$.fragment);
-    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 434, 4, 14341);
+    			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
+    			add_location(h1, file, 435, 4, 14537);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -17178,12 +17180,12 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*$darkModeOn*/ 2097152 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "h1-dark" : "h1-light") + " svelte-8b9x78"))) {
+    			if (!current || dirty[0] & /*$darkModeOn*/ 4194304 && h1_class_value !== (h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"))) {
     				attr_dev(h1, "class", h1_class_value);
     			}
 
     			const orphan_changes = {};
-    			if (dirty[0] & /*orphans*/ 131072) orphan_changes.orphans = /*orphans*/ ctx[17];
+    			if (dirty[0] & /*orphans*/ 262144) orphan_changes.orphans = /*orphans*/ ctx[18];
     			orphan.$set(orphan_changes);
     		},
     		i: function intro(local) {
@@ -17206,14 +17208,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(434:4) {#if orphaned === true}",
+    		source: "(435:4) {#if orphaned === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (442:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}
+    // (443:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}
     function create_if_block_2(ctx) {
     	let about;
     	let current;
@@ -17245,14 +17247,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(442:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}",
+    		source: "(443:4) {#if goDashBoard === false && playQuiz === false && goShop === false && feedback === false && mainPage === false && aboutPage === true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (446:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}
+    // (447:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}
     function create_if_block(ctx) {
     	let div;
     	let custombutton0;
@@ -17265,7 +17267,7 @@ var app = (function () {
 
     	custombutton0 = new CustomButton({
     			props: {
-    				stateColour: /*$darkModeOn*/ ctx[21]
+    				stateColour: /*$darkModeOn*/ ctx[22]
     				? "secondary-dark"
     				: "secondary-light",
     				$$slots: { default: [create_default_slot_1] },
@@ -17274,11 +17276,11 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton0.$on("click", /*click_handler_8*/ ctx[49]);
+    	custombutton0.$on("click", /*click_handler_8*/ ctx[51]);
 
     	custombutton1 = new CustomButton({
     			props: {
-    				stateColour: /*$darkModeOn*/ ctx[21]
+    				stateColour: /*$darkModeOn*/ ctx[22]
     				? "secondary-dark"
     				: "secondary-light",
     				$$slots: { default: [create_default_slot] },
@@ -17287,8 +17289,8 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	custombutton1.$on("click", /*showCheckOut*/ ctx[29]);
-    	let if_block = /*showCart*/ ctx[5] && create_if_block_1(ctx);
+    	custombutton1.$on("click", /*showCheckOut*/ ctx[30]);
+    	let if_block = /*showCart*/ ctx[6] && create_if_block_1(ctx);
     	products = new Products({ $$inline: true });
 
     	const block = {
@@ -17302,7 +17304,7 @@ var app = (function () {
     			t2 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-8b9x78");
-    			add_location(div, file, 446, 4, 14972);
+    			add_location(div, file, 447, 4, 15168);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -17318,32 +17320,32 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const custombutton0_changes = {};
 
-    			if (dirty[0] & /*$darkModeOn*/ 2097152) custombutton0_changes.stateColour = /*$darkModeOn*/ ctx[21]
+    			if (dirty[0] & /*$darkModeOn*/ 4194304) custombutton0_changes.stateColour = /*$darkModeOn*/ ctx[22]
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton0_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton0.$set(custombutton0_changes);
     			const custombutton1_changes = {};
 
-    			if (dirty[0] & /*$darkModeOn*/ 2097152) custombutton1_changes.stateColour = /*$darkModeOn*/ ctx[21]
+    			if (dirty[0] & /*$darkModeOn*/ 4194304) custombutton1_changes.stateColour = /*$darkModeOn*/ ctx[22]
     			? "secondary-dark"
     			: "secondary-light";
 
-    			if (dirty[1] & /*$$scope*/ 16777216) {
+    			if (dirty[1] & /*$$scope*/ 67108864) {
     				custombutton1_changes.$$scope = { dirty, ctx };
     			}
 
     			custombutton1.$set(custombutton1_changes);
 
-    			if (/*showCart*/ ctx[5]) {
+    			if (/*showCart*/ ctx[6]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty[0] & /*showCart*/ 32) {
+    					if (dirty[0] & /*showCart*/ 64) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -17392,14 +17394,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(446:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}",
+    		source: "(447:4) {#if goDashBoard === false && playQuiz === false && goShop === true && feedback === false && mainPage === false && aboutPage === false}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (448:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
+    // (449:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click={() => {showCart = !showCart;}}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -17419,14 +17421,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(448:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click={() => {showCart = !showCart;}}>",
+    		source: "(449:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click={() => {showCart = !showCart;}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (451:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click="{showCheckOut}">
+    // (452:4) <CustomButton stateColour={$darkModeOn ? "secondary-dark" : "secondary-light"} on:click="{showCheckOut}">
     function create_default_slot(ctx) {
     	let t;
 
@@ -17446,20 +17448,20 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(451:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click=\\\"{showCheckOut}\\\">",
+    		source: "(452:4) <CustomButton stateColour={$darkModeOn ? \\\"secondary-dark\\\" : \\\"secondary-light\\\"} on:click=\\\"{showCheckOut}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (453:4) {#if showCart}
+    // (454:4) {#if showCart}
     function create_if_block_1(ctx) {
     	let cart;
     	let current;
 
     	cart = new Cart({
-    			props: { total: /*$total*/ ctx[22] },
+    			props: { total: /*$total*/ ctx[23] },
     			$$inline: true
     		});
 
@@ -17473,7 +17475,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const cart_changes = {};
-    			if (dirty[0] & /*$total*/ 4194304) cart_changes.total = /*$total*/ ctx[22];
+    			if (dirty[0] & /*$total*/ 8388608) cart_changes.total = /*$total*/ ctx[23];
     			cart.$set(cart_changes);
     		},
     		i: function intro(local) {
@@ -17494,7 +17496,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(453:4) {#if showCart}",
+    		source: "(454:4) {#if showCart}",
     		ctx
     	});
 
@@ -17524,20 +17526,20 @@ var app = (function () {
     	let div_class_value;
     	let current;
     	header = new Header({ $$inline: true });
-    	let if_block0 = /*hideButtonsforGame*/ ctx[13] === false && create_if_block_17(ctx);
-    	let if_block1 = /*editMode*/ ctx[6] === "add" && create_if_block_16(ctx);
-    	let if_block2 = /*loginModal*/ ctx[7] === "log" && create_if_block_13(ctx);
-    	let if_block3 = /*goDashBoard*/ ctx[11] === true && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && /*lillyPadEdit*/ ctx[16] === false && create_if_block_12(ctx);
-    	let if_block4 = /*showLeaderboard*/ ctx[14] === true && /*gameInPlay*/ ctx[1] === true && create_if_block_11(ctx);
-    	let if_block5 = /*gameInPlay*/ ctx[1] === true && /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && /*lillyPadEdit*/ ctx[16] === false && create_if_block_10(ctx);
-    	let if_block6 = /*openGallery*/ ctx[15] === true && create_if_block_9(ctx);
-    	let if_block7 = /*lillyPadEdit*/ ctx[16] === true && create_if_block_8(ctx);
-    	let if_block8 = /*checkOutMode*/ ctx[8] === "checkOut" && create_if_block_7(ctx);
-    	let if_block9 = /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === true && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && create_if_block_6(ctx);
-    	let if_block10 = /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === true && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && create_if_block_5(ctx);
-    	let if_block11 = /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === true && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && create_if_block_3(ctx);
-    	let if_block12 = /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === true && create_if_block_2(ctx);
-    	let if_block13 = /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === true && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && create_if_block(ctx);
+    	let if_block0 = /*hideButtonsforGame*/ ctx[14] === false && create_if_block_17(ctx);
+    	let if_block1 = /*editMode*/ ctx[7] === "add" && create_if_block_16(ctx);
+    	let if_block2 = /*loginModal*/ ctx[8] === "log" && create_if_block_13(ctx);
+    	let if_block3 = /*goDashBoard*/ ctx[12] === true && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && /*lillyPadEdit*/ ctx[17] === false && create_if_block_12(ctx);
+    	let if_block4 = /*showLeaderboard*/ ctx[15] === true && /*gameInPlay*/ ctx[1] === true && create_if_block_11(ctx);
+    	let if_block5 = /*gameInPlay*/ ctx[1] === true && /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && /*lillyPadEdit*/ ctx[17] === false && create_if_block_10(ctx);
+    	let if_block6 = /*openGallery*/ ctx[16] === true && create_if_block_9(ctx);
+    	let if_block7 = /*lillyPadEdit*/ ctx[17] === true && create_if_block_8(ctx);
+    	let if_block8 = /*checkOutMode*/ ctx[9] === "checkOut" && create_if_block_7(ctx);
+    	let if_block9 = /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === true && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && create_if_block_6(ctx);
+    	let if_block10 = /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === true && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && create_if_block_5(ctx);
+    	let if_block11 = /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === true && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && create_if_block_3(ctx);
+    	let if_block12 = /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === true && create_if_block_2(ctx);
+    	let if_block13 = /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === true && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && create_if_block(ctx);
     	footer = new Footer({ $$inline: true });
 
     	const block = {
@@ -17576,9 +17578,9 @@ var app = (function () {
     			t14 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-8b9x78");
-    			add_location(main, file, 325, 0, 8461);
-    			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "darkMode" : "lightMode") + " svelte-8b9x78"));
-    			add_location(div, file, 323, 0, 8398);
+    			add_location(main, file, 326, 0, 8493);
+    			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "darkMode" : "lightMode") + " svelte-8b9x78"));
+    			add_location(div, file, 324, 0, 8430);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17620,11 +17622,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*hideButtonsforGame*/ ctx[13] === false) {
+    			if (/*hideButtonsforGame*/ ctx[14] === false) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*hideButtonsforGame*/ 8192) {
+    					if (dirty[0] & /*hideButtonsforGame*/ 16384) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -17643,11 +17645,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*editMode*/ ctx[6] === "add") {
+    			if (/*editMode*/ ctx[7] === "add") {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty[0] & /*editMode*/ 64) {
+    					if (dirty[0] & /*editMode*/ 128) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -17666,11 +17668,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*loginModal*/ ctx[7] === "log") {
+    			if (/*loginModal*/ ctx[8] === "log") {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
 
-    					if (dirty[0] & /*loginModal*/ 128) {
+    					if (dirty[0] & /*loginModal*/ 256) {
     						transition_in(if_block2, 1);
     					}
     				} else {
@@ -17689,11 +17691,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === true && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && /*lillyPadEdit*/ ctx[16] === false) {
+    			if (/*goDashBoard*/ ctx[12] === true && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && /*lillyPadEdit*/ ctx[17] === false) {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
 
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery, lillyPadEdit*/ 101916) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery, lillyPadEdit*/ 203832) {
     						transition_in(if_block3, 1);
     					}
     				} else {
@@ -17712,11 +17714,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*showLeaderboard*/ ctx[14] === true && /*gameInPlay*/ ctx[1] === true) {
+    			if (/*showLeaderboard*/ ctx[15] === true && /*gameInPlay*/ ctx[1] === true) {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
 
-    					if (dirty[0] & /*showLeaderboard, gameInPlay*/ 16386) {
+    					if (dirty[0] & /*showLeaderboard, gameInPlay*/ 32770) {
     						transition_in(if_block4, 1);
     					}
     				} else {
@@ -17735,11 +17737,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*gameInPlay*/ ctx[1] === true && /*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false && /*lillyPadEdit*/ ctx[16] === false) {
+    			if (/*gameInPlay*/ ctx[1] === true && /*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false && /*lillyPadEdit*/ ctx[17] === false) {
     				if (if_block5) {
     					if_block5.p(ctx, dirty);
 
-    					if (dirty[0] & /*gameInPlay, goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery, lillyPadEdit*/ 101918) {
+    					if (dirty[0] & /*gameInPlay, goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery, lillyPadEdit*/ 203834) {
     						transition_in(if_block5, 1);
     					}
     				} else {
@@ -17758,11 +17760,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*openGallery*/ ctx[15] === true) {
+    			if (/*openGallery*/ ctx[16] === true) {
     				if (if_block6) {
     					if_block6.p(ctx, dirty);
 
-    					if (dirty[0] & /*openGallery*/ 32768) {
+    					if (dirty[0] & /*openGallery*/ 65536) {
     						transition_in(if_block6, 1);
     					}
     				} else {
@@ -17781,9 +17783,9 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*lillyPadEdit*/ ctx[16] === true) {
+    			if (/*lillyPadEdit*/ ctx[17] === true) {
     				if (if_block7) {
-    					if (dirty[0] & /*lillyPadEdit*/ 65536) {
+    					if (dirty[0] & /*lillyPadEdit*/ 131072) {
     						transition_in(if_block7, 1);
     					}
     				} else {
@@ -17802,11 +17804,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*checkOutMode*/ ctx[8] === "checkOut") {
+    			if (/*checkOutMode*/ ctx[9] === "checkOut") {
     				if (if_block8) {
     					if_block8.p(ctx, dirty);
 
-    					if (dirty[0] & /*checkOutMode*/ 256) {
+    					if (dirty[0] & /*checkOutMode*/ 512) {
     						transition_in(if_block8, 1);
     					}
     				} else {
@@ -17825,9 +17827,9 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === true && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false) {
+    			if (/*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === true && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false) {
     				if (if_block9) {
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 36380) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 72760) {
     						transition_in(if_block9, 1);
     					}
     				} else {
@@ -17846,9 +17848,9 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === true && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false) {
+    			if (/*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === true && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false) {
     				if (if_block10) {
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 36380) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 72760) {
     						transition_in(if_block10, 1);
     					}
     				} else {
@@ -17867,11 +17869,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === true && /*aboutPage*/ ctx[9] === false && /*openGallery*/ ctx[15] === false) {
+    			if (/*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === true && /*aboutPage*/ ctx[10] === false && /*openGallery*/ ctx[16] === false) {
     				if (if_block11) {
     					if_block11.p(ctx, dirty);
 
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 36380) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage, openGallery*/ 72760) {
     						transition_in(if_block11, 1);
     					}
     				} else {
@@ -17890,9 +17892,9 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === false && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === true) {
+    			if (/*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === false && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === true) {
     				if (if_block12) {
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage*/ 3612) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage*/ 7224) {
     						transition_in(if_block12, 1);
     					}
     				} else {
@@ -17911,11 +17913,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*goDashBoard*/ ctx[11] === false && /*playQuiz*/ ctx[3] === false && /*goShop*/ ctx[4] === true && /*feedback*/ ctx[10] === false && /*mainPage*/ ctx[2] === false && /*aboutPage*/ ctx[9] === false) {
+    			if (/*goDashBoard*/ ctx[12] === false && /*playQuiz*/ ctx[4] === false && /*goShop*/ ctx[5] === true && /*feedback*/ ctx[11] === false && /*mainPage*/ ctx[3] === false && /*aboutPage*/ ctx[10] === false) {
     				if (if_block13) {
     					if_block13.p(ctx, dirty);
 
-    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage*/ 3612) {
+    					if (dirty[0] & /*goDashBoard, playQuiz, goShop, feedback, mainPage, aboutPage*/ 7224) {
     						transition_in(if_block13, 1);
     					}
     				} else {
@@ -17934,7 +17936,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty[0] & /*$darkModeOn*/ 2097152 && div_class_value !== (div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[21] ? "darkMode" : "lightMode") + " svelte-8b9x78"))) {
+    			if (!current || dirty[0] & /*$darkModeOn*/ 4194304 && div_class_value !== (div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "darkMode" : "lightMode") + " svelte-8b9x78"))) {
     				attr_dev(div, "class", div_class_value);
     			}
     		},
@@ -18013,9 +18015,9 @@ var app = (function () {
     	let $darkModeOn;
     	let $total;
     	validate_store(darkModeOn, "darkModeOn");
-    	component_subscribe($$self, darkModeOn, $$value => $$invalidate(21, $darkModeOn = $$value));
+    	component_subscribe($$self, darkModeOn, $$value => $$invalidate(22, $darkModeOn = $$value));
     	validate_store(total, "total");
-    	component_subscribe($$self, total, $$value => $$invalidate(22, $total = $$value));
+    	component_subscribe($$self, total, $$value => $$invalidate(23, $total = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
     	firebase$1.initializeApp(firebaseConfig);
@@ -18036,6 +18038,7 @@ var app = (function () {
     	let showLeaderboard = false;
     	let openGallery = false;
     	let lillyPadEdit = false;
+    	let newGame = false;
     	let orphans = [{}];
     	let orphaned = false;
     	let score = 0;
@@ -18125,9 +18128,9 @@ var app = (function () {
     		};
 
     		if (title != "" && subtitle != "") {
-    			$$invalidate(17, orphans = newFrog);
-    			$$invalidate(6, editMode = null);
-    			$$invalidate(18, orphaned = true);
+    			$$invalidate(18, orphans = newFrog);
+    			$$invalidate(7, editMode = null);
+    			$$invalidate(19, orphaned = true);
     		}
     	}
 
@@ -18141,63 +18144,63 @@ var app = (function () {
     		const frogIndex = frogs.findIndex(m => m.id === id);
     		const updatedFrogs = [...frogs];
     		updatedFrogs[frogIndex] = updatedFrog;
-    		$$invalidate(20, frogs = updatedFrogs);
+    		$$invalidate(21, frogs = updatedFrogs);
     	}
 
     	function cancelForm(event) {
-    		$$invalidate(6, editMode = "null");
+    		$$invalidate(7, editMode = "null");
     	}
 
     	function showLogin(event) {
-    		$$invalidate(7, loginModal = "log");
+    		$$invalidate(8, loginModal = "log");
     	}
 
     	function logOutGuest(event) {
-    		$$invalidate(12, loggedInAsGuest = false);
+    		$$invalidate(13, loggedInAsGuest = false);
     	}
 
     	function showCheckOut(event) {
-    		$$invalidate(8, checkOutMode = "checkOut");
+    		$$invalidate(9, checkOutMode = "checkOut");
     	}
 
     	function hideCheckOut(event) {
-    		$$invalidate(8, checkOutMode = null);
+    		$$invalidate(9, checkOutMode = null);
     	}
 
     	function hideLogin(event) {
-    		$$invalidate(7, loginModal = null);
+    		$$invalidate(8, loginModal = null);
     	}
 
     	function showDashBoard(event) {
-    		$$invalidate(7, loginModal = null);
-    		$$invalidate(2, mainPage = false);
-    		$$invalidate(11, goDashBoard = true);
-    		$$invalidate(10, feedback = false);
-    		$$invalidate(4, goShop = false);
-    		$$invalidate(9, aboutPage = false);
-    		$$invalidate(3, playQuiz = false);
-    		$$invalidate(16, lillyPadEdit = false);
-    		$$invalidate(15, openGallery = false);
+    		$$invalidate(8, loginModal = null);
+    		$$invalidate(3, mainPage = false);
+    		$$invalidate(12, goDashBoard = true);
+    		$$invalidate(11, feedback = false);
+    		$$invalidate(5, goShop = false);
+    		$$invalidate(10, aboutPage = false);
+    		$$invalidate(4, playQuiz = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(16, openGallery = false);
     	}
 
     	function playGame() {
     		$$invalidate(1, gameInPlay = true);
-    		$$invalidate(11, goDashBoard = false);
+    		$$invalidate(12, goDashBoard = false);
     	}
 
     	function endGame(event) {
-    		$$invalidate(13, hideButtonsforGame = false);
-    		$$invalidate(14, showLeaderboard = true);
-    		$$invalidate(19, score = event.detail.score);
+    		$$invalidate(14, hideButtonsforGame = false);
+    		$$invalidate(15, showLeaderboard = true);
+    		$$invalidate(20, score = event.detail.score);
     		console.log(score);
     	}
 
     	function viewGallery(event) {
-    		$$invalidate(15, openGallery = true);
+    		$$invalidate(16, openGallery = true);
     	}
 
     	function editText(event) {
-    		$$invalidate(16, lillyPadEdit = true);
+    		$$invalidate(17, lillyPadEdit = true);
     	}
 
     	const writable_props = [];
@@ -18211,58 +18214,63 @@ var app = (function () {
     	}
 
     	const click_handler = () => {
-    		$$invalidate(11, goDashBoard = false);
-    		$$invalidate(3, playQuiz = false);
-    		$$invalidate(4, goShop = false);
-    		$$invalidate(10, feedback = false);
-    		$$invalidate(2, mainPage = true);
-    		$$invalidate(9, aboutPage = false);
-    		$$invalidate(15, openGallery = false);
-    		$$invalidate(16, lillyPadEdit = false);
+    		$$invalidate(12, goDashBoard = false);
+    		$$invalidate(4, playQuiz = false);
+    		$$invalidate(5, goShop = false);
+    		$$invalidate(11, feedback = false);
+    		$$invalidate(3, mainPage = true);
+    		$$invalidate(10, aboutPage = false);
+    		$$invalidate(16, openGallery = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
     	const click_handler_1 = () => {
-    		$$invalidate(11, goDashBoard = false);
-    		$$invalidate(3, playQuiz = false);
-    		$$invalidate(4, goShop = false);
-    		$$invalidate(10, feedback = false);
-    		$$invalidate(2, mainPage = false);
-    		$$invalidate(9, aboutPage = true);
-    		$$invalidate(15, openGallery = false);
-    		$$invalidate(16, lillyPadEdit = false);
+    		$$invalidate(12, goDashBoard = false);
+    		$$invalidate(4, playQuiz = false);
+    		$$invalidate(5, goShop = false);
+    		$$invalidate(11, feedback = false);
+    		$$invalidate(3, mainPage = false);
+    		$$invalidate(10, aboutPage = true);
+    		$$invalidate(16, openGallery = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
     	const click_handler_2 = () => {
-    		$$invalidate(11, goDashBoard = false);
-    		$$invalidate(3, playQuiz = true);
-    		$$invalidate(4, goShop = false);
-    		$$invalidate(10, feedback = false);
-    		$$invalidate(2, mainPage = false);
-    		$$invalidate(9, aboutPage = false);
-    		$$invalidate(15, openGallery = false);
-    		$$invalidate(16, lillyPadEdit = false);
+    		$$invalidate(12, goDashBoard = false);
+    		$$invalidate(4, playQuiz = true);
+    		$$invalidate(5, goShop = false);
+    		$$invalidate(11, feedback = false);
+    		$$invalidate(3, mainPage = false);
+    		$$invalidate(10, aboutPage = false);
+    		$$invalidate(16, openGallery = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
     	const click_handler_3 = () => {
-    		$$invalidate(11, goDashBoard = false);
-    		$$invalidate(3, playQuiz = false);
-    		$$invalidate(4, goShop = true);
-    		$$invalidate(10, feedback = false);
-    		$$invalidate(2, mainPage = false);
-    		$$invalidate(9, aboutPage = false);
-    		$$invalidate(15, openGallery = false);
-    		$$invalidate(16, lillyPadEdit = false);
+    		$$invalidate(12, goDashBoard = false);
+    		$$invalidate(4, playQuiz = false);
+    		$$invalidate(5, goShop = true);
+    		$$invalidate(11, feedback = false);
+    		$$invalidate(3, mainPage = false);
+    		$$invalidate(10, aboutPage = false);
+    		$$invalidate(16, openGallery = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
     	const click_handler_4 = () => {
-    		$$invalidate(11, goDashBoard = false);
-    		$$invalidate(3, playQuiz = false);
-    		$$invalidate(4, goShop = false);
-    		$$invalidate(10, feedback = true);
-    		$$invalidate(2, mainPage = false);
-    		$$invalidate(9, aboutPage = false);
-    		$$invalidate(15, openGallery = false);
-    		$$invalidate(16, lillyPadEdit = false);
+    		$$invalidate(12, goDashBoard = false);
+    		$$invalidate(4, playQuiz = false);
+    		$$invalidate(5, goShop = false);
+    		$$invalidate(11, feedback = true);
+    		$$invalidate(3, mainPage = false);
+    		$$invalidate(10, aboutPage = false);
+    		$$invalidate(16, openGallery = false);
+    		$$invalidate(17, lillyPadEdit = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
     	function toggle_toggled_binding(value) {
@@ -18271,30 +18279,34 @@ var app = (function () {
     	}
 
     	const click_handler_5 = () => {
-    		$$invalidate(7, loginModal = false);
+    		$$invalidate(8, loginModal = false);
     	};
 
     	const click_handler_6 = () => {
-    		$$invalidate(12, loggedInAsGuest = true);
+    		$$invalidate(13, loggedInAsGuest = true);
     	};
 
     	const cancel_handler = () => {
-    		$$invalidate(7, loginModal = false);
+    		$$invalidate(8, loginModal = false);
     	};
 
     	const close_board_handler = () => {
-    		$$invalidate(14, showLeaderboard = false);
+    		$$invalidate(15, showLeaderboard = false);
     	};
 
-    	const click_handler_7 = () => $$invalidate(6, editMode = "add");
+    	const game_started_handler = () => {
+    		$$invalidate(2, newGame = true);
+    	};
+
+    	const click_handler_7 = () => $$invalidate(7, editMode = "add");
 
     	const remove_handler = () => {
-    		$$invalidate(18, orphaned = false);
-    		$$invalidate(17, orphans = [{}]);
+    		$$invalidate(19, orphaned = false);
+    		$$invalidate(18, orphans = [{}]);
     	};
 
     	const click_handler_8 = () => {
-    		$$invalidate(5, showCart = !showCart);
+    		$$invalidate(6, showCart = !showCart);
     	};
 
     	$$self.$capture_state = () => ({
@@ -18342,6 +18354,7 @@ var app = (function () {
     		showLeaderboard,
     		openGallery,
     		lillyPadEdit,
+    		newGame,
     		orphans,
     		orphaned,
     		score,
@@ -18366,26 +18379,27 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("toggled" in $$props) $$invalidate(0, toggled = $$props.toggled);
-    		if ("mainPage" in $$props) $$invalidate(2, mainPage = $$props.mainPage);
-    		if ("playQuiz" in $$props) $$invalidate(3, playQuiz = $$props.playQuiz);
-    		if ("goShop" in $$props) $$invalidate(4, goShop = $$props.goShop);
-    		if ("showCart" in $$props) $$invalidate(5, showCart = $$props.showCart);
-    		if ("editMode" in $$props) $$invalidate(6, editMode = $$props.editMode);
-    		if ("loginModal" in $$props) $$invalidate(7, loginModal = $$props.loginModal);
-    		if ("checkOutMode" in $$props) $$invalidate(8, checkOutMode = $$props.checkOutMode);
-    		if ("aboutPage" in $$props) $$invalidate(9, aboutPage = $$props.aboutPage);
-    		if ("feedback" in $$props) $$invalidate(10, feedback = $$props.feedback);
-    		if ("goDashBoard" in $$props) $$invalidate(11, goDashBoard = $$props.goDashBoard);
+    		if ("mainPage" in $$props) $$invalidate(3, mainPage = $$props.mainPage);
+    		if ("playQuiz" in $$props) $$invalidate(4, playQuiz = $$props.playQuiz);
+    		if ("goShop" in $$props) $$invalidate(5, goShop = $$props.goShop);
+    		if ("showCart" in $$props) $$invalidate(6, showCart = $$props.showCart);
+    		if ("editMode" in $$props) $$invalidate(7, editMode = $$props.editMode);
+    		if ("loginModal" in $$props) $$invalidate(8, loginModal = $$props.loginModal);
+    		if ("checkOutMode" in $$props) $$invalidate(9, checkOutMode = $$props.checkOutMode);
+    		if ("aboutPage" in $$props) $$invalidate(10, aboutPage = $$props.aboutPage);
+    		if ("feedback" in $$props) $$invalidate(11, feedback = $$props.feedback);
+    		if ("goDashBoard" in $$props) $$invalidate(12, goDashBoard = $$props.goDashBoard);
     		if ("gameInPlay" in $$props) $$invalidate(1, gameInPlay = $$props.gameInPlay);
-    		if ("loggedInAsGuest" in $$props) $$invalidate(12, loggedInAsGuest = $$props.loggedInAsGuest);
-    		if ("hideButtonsforGame" in $$props) $$invalidate(13, hideButtonsforGame = $$props.hideButtonsforGame);
-    		if ("showLeaderboard" in $$props) $$invalidate(14, showLeaderboard = $$props.showLeaderboard);
-    		if ("openGallery" in $$props) $$invalidate(15, openGallery = $$props.openGallery);
-    		if ("lillyPadEdit" in $$props) $$invalidate(16, lillyPadEdit = $$props.lillyPadEdit);
-    		if ("orphans" in $$props) $$invalidate(17, orphans = $$props.orphans);
-    		if ("orphaned" in $$props) $$invalidate(18, orphaned = $$props.orphaned);
-    		if ("score" in $$props) $$invalidate(19, score = $$props.score);
-    		if ("frogs" in $$props) $$invalidate(20, frogs = $$props.frogs);
+    		if ("loggedInAsGuest" in $$props) $$invalidate(13, loggedInAsGuest = $$props.loggedInAsGuest);
+    		if ("hideButtonsforGame" in $$props) $$invalidate(14, hideButtonsforGame = $$props.hideButtonsforGame);
+    		if ("showLeaderboard" in $$props) $$invalidate(15, showLeaderboard = $$props.showLeaderboard);
+    		if ("openGallery" in $$props) $$invalidate(16, openGallery = $$props.openGallery);
+    		if ("lillyPadEdit" in $$props) $$invalidate(17, lillyPadEdit = $$props.lillyPadEdit);
+    		if ("newGame" in $$props) $$invalidate(2, newGame = $$props.newGame);
+    		if ("orphans" in $$props) $$invalidate(18, orphans = $$props.orphans);
+    		if ("orphaned" in $$props) $$invalidate(19, orphaned = $$props.orphaned);
+    		if ("score" in $$props) $$invalidate(20, score = $$props.score);
+    		if ("frogs" in $$props) $$invalidate(21, frogs = $$props.frogs);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -18405,10 +18419,10 @@ var app = (function () {
     			}
     		}
 
-    		if ($$self.$$.dirty[0] & /*gameInPlay*/ 2) {
-    			if (gameInPlay === true) {
+    		if ($$self.$$.dirty[0] & /*gameInPlay, newGame*/ 6) {
+    			if (gameInPlay === true && newGame) {
     				if (window.innerWidth < 900) {
-    					$$invalidate(13, hideButtonsforGame = true);
+    					$$invalidate(14, hideButtonsforGame = true);
     				}
     			}
     		}
@@ -18417,6 +18431,7 @@ var app = (function () {
     	return [
     		toggled,
     		gameInPlay,
+    		newGame,
     		mainPage,
     		playQuiz,
     		goShop,
@@ -18462,6 +18477,7 @@ var app = (function () {
     		click_handler_6,
     		cancel_handler,
     		close_board_handler,
+    		game_started_handler,
     		click_handler_7,
     		remove_handler,
     		click_handler_8

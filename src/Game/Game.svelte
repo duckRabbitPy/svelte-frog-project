@@ -79,6 +79,7 @@ import { darkModeOn } from "../UI/DarkModeStore.js";
 
 
   function startNewGame(){
+    dispatch('game-started')
     let music = document.querySelector(".music")
     music.play()
     score = 0;
