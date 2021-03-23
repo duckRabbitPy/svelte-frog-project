@@ -29,6 +29,7 @@
     quiz = getQuiz();
     gameOver = false;
     preventRestart = true;
+    activeQuestion = 0;
   }
 
   function addToScore() {
@@ -72,7 +73,7 @@
   {#if preventRestart === false}
   <button on:click={resetQuiz}>Start New Quiz</button>
   {:else}
-  <h3>My Score: {score}</h3>
+  <h3>My Score: {score} /10</h3>
   <h4>Question #{activeQuestion + 1}</h4>
   
 

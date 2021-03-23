@@ -1,4 +1,5 @@
 <script>
+  import { blur } from "svelte/transition";
   export let question;
   export let nextQuestion;
   export let addToScore;
@@ -83,6 +84,12 @@
     {@html answer.answer}
   </button>
 {/each}
+
+{#if isAnswered}
+{#each allAnswers as answer}
+  <h4 in:blur >{answer.correct ? `Answer is: ${answer.answer}` : ''}</h4>
+{/each}
+{/if}
 
 {#if isAnswered}
   <div>
