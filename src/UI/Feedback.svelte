@@ -39,7 +39,7 @@
 
   //GET is default if not specified
   function getFeedback(){
-  fetch(FEEDBACK_COMMENTS_API_KEY)
+  fetch('https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json')
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()
@@ -56,7 +56,7 @@
     if(data){
 
     //must be .json endpoint
-    fetch(FEEDBACK_COMMENTS_API_KEY, {
+    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/UserComments.json`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json'}
