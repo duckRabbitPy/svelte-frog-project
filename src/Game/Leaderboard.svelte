@@ -19,7 +19,7 @@
     console.log(score)
     let newObj = { username: name, score: score }
 
-    fetch("LEADERBOARD_USERNAME_AND_SCORE_API_KEY", {
+    fetch(`${LEADERBOARD_USERNAME}`, {
         method: "POST",
         body: JSON.stringify(newObj),
         headers: { 'Content-Type': 'application/json'}
@@ -36,7 +36,7 @@
 
 function collectPublicScores(){
 //GET is default if not specified
-  fetch("LEADERBOARD_USERNAME_AND_SCORE_API_KEY")
+  fetch(`${LEADERBOARD_USERNAME}`)
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()

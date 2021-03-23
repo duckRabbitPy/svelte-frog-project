@@ -42,7 +42,7 @@
     }
 
   //GET is default if not specified
-  fetch("NUMBER_OF_LIKES_API_KEY")
+  fetch(`${NUMBER_OF_LIKES}`)
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()
@@ -74,7 +74,7 @@
     disabled = true;
 
 
-    fetch("NUMBER_OF_LIKES_API_KEY", {
+    fetch(`${NUMBER_OF_LIKES}`, {
     method: "PUT",
     body: JSON.stringify(newObj),
     headers: { 'Content-Type': 'application/json'}
