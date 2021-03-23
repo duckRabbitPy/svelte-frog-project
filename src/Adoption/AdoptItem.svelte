@@ -42,7 +42,7 @@
     }
 
   //GET is default if not specified
-  fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`)
+  fetch(NUMBER_OF_LIKES_API_KEY)
   .then(res => {if (!res.ok ){
   throw new Error('Get request failed');}
   return res.json()
@@ -74,7 +74,7 @@
     disabled = true;
 
 
-    fetch(`https://svelte-firebase-bknd-default-rtdb.europe-west1.firebasedatabase.app/id.json`, {
+    fetch(NUMBER_OF_LIKES_API_KEY, {
     method: "PUT",
     body: JSON.stringify(newObj),
     headers: { 'Content-Type': 'application/json'}
