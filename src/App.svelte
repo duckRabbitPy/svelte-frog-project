@@ -118,7 +118,7 @@ let score = 0;
     {id: '1an',
         title: 'Rosie',
         subtitle: 'Dart frog',
-        description: 'Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet ',
+        description: 'Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs some peace and quiet ',
         imageUrl: '/images/dartFrog.jpeg',
         address: '321 Seven sisters road, Finsbury Park, N17 4FA, London',
         contact: 'adoptPhrogesLondon@gmail.com',
