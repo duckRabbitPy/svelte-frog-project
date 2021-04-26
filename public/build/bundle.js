@@ -6339,7 +6339,7 @@ var app = (function () {
     			t0 = text("Hi i'm Oli");
     			t1 = space();
     			h2 = element("h2");
-    			t2 = text("I'm an aspiring web developer from London");
+    			t2 = text("I'm a hobbyist web developer from London");
     			t3 = space();
     			h4 = element("h4");
     			t4 = text("My programming ambition is to build web applications that are fast, elegant and enjoyable to use.");
@@ -6386,7 +6386,7 @@ var app = (function () {
     			attr_dev(h2, "class", h2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-fwfx9p"));
     			add_location(h2, file$h, 104, 0, 1906);
     			attr_dev(h4, "class", h4_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-fwfx9p"));
-    			add_location(h4, file$h, 105, 0, 2004);
+    			add_location(h4, file$h, 105, 0, 2003);
 
     			attr_dev(a0, "class", a0_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
@@ -6394,9 +6394,9 @@ var app = (function () {
 
     			attr_dev(a0, "target", "blank");
     			attr_dev(a0, "href", "https://cyclone.pythonanywhere.com/");
-    			add_location(a0, file$h, 108, 364, 2528);
-    			add_location(br0, file$h, 109, 3, 2852);
-    			add_location(br1, file$h, 110, 3, 2860);
+    			add_location(a0, file$h, 108, 364, 2527);
+    			add_location(br0, file$h, 109, 3, 2851);
+    			add_location(br1, file$h, 110, 3, 2859);
 
     			attr_dev(a1, "class", a1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
@@ -6404,51 +6404,51 @@ var app = (function () {
 
     			attr_dev(a1, "target", "blank");
     			attr_dev(a1, "href", "https://duckrabbitpython.pythonanywhere.com/blackJack");
-    			add_location(a1, file$h, 111, 86, 2951);
-    			add_location(br2, file$h, 112, 3, 3277);
-    			add_location(br3, file$h, 113, 3, 3285);
+    			add_location(a1, file$h, 111, 86, 2950);
+    			add_location(br2, file$h, 112, 3, 3276);
+    			add_location(br3, file$h, 113, 3, 3284);
     			attr_dev(p, "class", p_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-fwfx9p"));
-    			add_location(p, file$h, 108, 0, 2164);
+    			add_location(p, file$h, 108, 0, 2163);
 
     			attr_dev(a2, "class", a2_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0]
     			? "darkModeLink"
     			: "lightModeLink") + " svelte-fwfx9p"));
 
     			attr_dev(a2, "href", "mailto:duck.rabbit.python@gmail.com");
-    			add_location(a2, file$h, 115, 28, 3750);
-    			add_location(address, file$h, 115, 19, 3741);
+    			add_location(a2, file$h, 115, 28, 3749);
+    			add_location(address, file$h, 115, 19, 3740);
     			attr_dev(h3, "class", h3_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[0] ? "darkMode" : "lightMode") + " svelte-fwfx9p"));
-    			add_location(h3, file$h, 116, 4, 3898);
+    			add_location(h3, file$h, 116, 4, 3897);
     			attr_dev(div0, "class", "textInfo svelte-fwfx9p");
     			add_location(div0, file$h, 102, 0, 1815);
     			attr_dev(img0, "class", "compIcons svelte-fwfx9p");
     			if (img0.src !== (img0_src_value = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "svelte logo");
-    			add_location(img0, file$h, 121, 4, 4028);
+    			add_location(img0, file$h, 121, 4, 4027);
     			attr_dev(img1, "class", "compIcons svelte-fwfx9p");
     			if (img1.src !== (img1_src_value = "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "javascript logo");
-    			add_location(img1, file$h, 122, 4, 4181);
+    			add_location(img1, file$h, 122, 4, 4180);
     			attr_dev(img2, "class", "compIcons svelte-fwfx9p");
     			if (img2.src !== (img2_src_value = "https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "css and html logo");
-    			add_location(img2, file$h, 123, 4, 4312);
+    			add_location(img2, file$h, 123, 4, 4311);
     			attr_dev(img3, "class", "compIcons svelte-fwfx9p");
     			if (img3.src !== (img3_src_value = "https://automationpanda.files.wordpress.com/2017/09/django-logo-negative.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "django logo");
-    			add_location(img3, file$h, 124, 4, 4431);
+    			add_location(img3, file$h, 124, 4, 4430);
     			attr_dev(img4, "class", "compIcons svelte-fwfx9p");
     			if (img4.src !== (img4_src_value = "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "python logo");
-    			add_location(img4, file$h, 125, 4, 4560);
+    			add_location(img4, file$h, 125, 4, 4559);
     			attr_dev(div1, "class", "iconContainer svelte-fwfx9p");
-    			add_location(div1, file$h, 119, 0, 3984);
+    			add_location(div1, file$h, 119, 0, 3983);
     			attr_dev(img5, "class", "profileImg svelte-fwfx9p");
     			if (img5.src !== (img5_src_value = "https://lh3.googleusercontent.com/pw/ACtC-3cb-aP7FxlsJshnVGZ1NCOpirBBTlAxygBxiuFzFrWG5W1OvTsctH5GxSgDDaWLrg5giPiuKAdv55pB9874sz-bj78IO-k_DUoTU3sHGKDNutDBs3RL8tbfBsLy1-gmf3TUTJATY75TrVusjmuSeckz=w1124-h1420-no?authuser=0")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "profile");
-    			add_location(img5, file$h, 129, 0, 4726);
+    			add_location(img5, file$h, 129, 0, 4725);
     			attr_dev(div2, "class", "profilePic svelte-fwfx9p");
-    			add_location(div2, file$h, 128, 0, 4701);
+    			add_location(div2, file$h, 128, 0, 4700);
     			attr_dev(div3, "class", "container svelte-fwfx9p");
     			add_location(div3, file$h, 100, 0, 1779);
     		},
@@ -15708,7 +15708,7 @@ var app = (function () {
     			t5 = space();
     			create_component(toggle.$$.fragment);
     			attr_dev(div, "class", "formControl svelte-8b9x78");
-    			add_location(div, file, 328, 4, 8541);
+    			add_location(div, file, 328, 4, 8543);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -16106,7 +16106,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "You must sign in/register to view Dashboard";
-    			add_location(p, file, 357, 16, 10901);
+    			add_location(p, file, 357, 16, 10903);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -16147,13 +16147,13 @@ var app = (function () {
     			div1 = element("div");
     			button = element("button");
     			button.textContent = "Sign In as Guest";
-    			add_location(div0, file, 371, 24, 11659);
+    			add_location(div0, file, 371, 24, 11661);
     			attr_dev(button, "class", "login svelte-8b9x78");
     			attr_dev(button, "type", "button");
-    			add_location(button, file, 378, 26, 12036);
-    			add_location(div1, file, 377, 24, 12004);
-    			add_location(form, file, 370, 22, 11603);
-    			add_location(div2, file, 369, 20, 11575);
+    			add_location(button, file, 378, 26, 12038);
+    			add_location(div1, file, 377, 24, 12006);
+    			add_location(form, file, 370, 22, 11605);
+    			add_location(div2, file, 369, 20, 11577);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -16232,12 +16232,12 @@ var app = (function () {
     			t3 = space();
     			button = element("button");
     			button.textContent = "Logout";
-    			add_location(h2, file, 362, 24, 11105);
+    			add_location(h2, file, 362, 24, 11107);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-8b9x78");
-    			add_location(button, file, 365, 24, 11394);
-    			add_location(div0, file, 361, 22, 11075);
-    			add_location(div1, file, 360, 20, 11047);
+    			add_location(button, file, 365, 24, 11396);
+    			add_location(div0, file, 361, 22, 11077);
+    			add_location(div1, file, 360, 20, 11049);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -16470,8 +16470,8 @@ var app = (function () {
     			div0 = element("div");
     			create_component(auth.$$.fragment);
     			attr_dev(div0, "class", "wrapper");
-    			add_location(div0, file, 347, 12, 10573);
-    			add_location(div1, file, 346, 8, 10555);
+    			add_location(div0, file, 347, 12, 10575);
+    			add_location(div1, file, 346, 8, 10557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -16563,7 +16563,7 @@ var app = (function () {
     			div = element("div");
     			create_component(custombutton.$$.fragment);
     			attr_dev(div, "slot", "footer");
-    			add_location(div, file, 388, 8, 12389);
+    			add_location(div, file, 388, 8, 12391);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -17014,9 +17014,9 @@ var app = (function () {
     			t5 = space();
     			create_component(adoptgrid.$$.fragment);
     			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "rehome-dark" : "rehome-light") + " svelte-8b9x78"));
-    			add_location(button, file, 431, 4, 14265);
+    			add_location(button, file, 431, 4, 14267);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 438, 4, 14698);
+    			add_location(h1, file, 438, 4, 14700);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -17170,7 +17170,7 @@ var app = (function () {
     			t1 = space();
     			create_component(orphan.$$.fragment);
     			attr_dev(h1, "class", h1_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "h1-dark" : "h1-light") + " svelte-8b9x78"));
-    			add_location(h1, file, 435, 4, 14537);
+    			add_location(h1, file, 435, 4, 14539);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -17304,7 +17304,7 @@ var app = (function () {
     			t2 = space();
     			create_component(products.$$.fragment);
     			attr_dev(div, "class", "toggle svelte-8b9x78");
-    			add_location(div, file, 447, 4, 15168);
+    			add_location(div, file, 447, 4, 15170);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -17578,9 +17578,9 @@ var app = (function () {
     			t14 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-8b9x78");
-    			add_location(main, file, 326, 0, 8493);
+    			add_location(main, file, 326, 0, 8495);
     			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*$darkModeOn*/ ctx[22] ? "darkMode" : "lightMode") + " svelte-8b9x78"));
-    			add_location(div, file, 324, 0, 8430);
+    			add_location(div, file, 324, 0, 8432);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18089,7 +18089,7 @@ var app = (function () {
     			id: "1an",
     			title: "Rosie",
     			subtitle: "Dart frog",
-    			description: "Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs to peace and quiet ",
+    			description: "Deceivingly clever and not to be messed with, rosie was rescued from an eccentric drug dealer and full time party person. She now needs some peace and quiet ",
     			imageUrl: "/images/dartFrog.jpeg",
     			address: "321 Seven sisters road, Finsbury Park, N17 4FA, London",
     			contact: "adoptPhrogesLondon@gmail.com",
