@@ -102,7 +102,7 @@ import { darkModeOn } from "./DarkModeStore.js";
     
 <div class="textInfo"> 
 <h1 class={$darkModeOn ? "darkMode" : "lightMode"}>Hi i'm Oli</h1>
-<h2 class={$darkModeOn ? "darkMode" : "lightMode"}>I'm a hobbyist web developer from London</h2>
+<h2 class={$darkModeOn ? "darkMode" : "lightMode"}>I'm an aspiring software developer from London</h2>
 <h4 class={$darkModeOn ? "darkMode" : "lightMode"}>
     My programming ambition is to build web applications that are fast, elegant and enjoyable to use.
 </h4>
